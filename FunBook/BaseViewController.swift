@@ -16,7 +16,6 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        //view.backgroundColor = UIColor(red: 53/255, green: 53/255, blue: 53/255, alpha: 1)
     }
     
     func showHUD() {
@@ -37,6 +36,14 @@ class BaseViewController: UIViewController {
             hud.hide(animated: true)
         }
     }
+    
+   func showAlert(title: String, message: String) {
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OK = UIAlertAction(title: "OK", style: .default, handler: nil )
+        
+        alertView.addAction(OK)
+        self.present(alertView, animated: true, completion: nil)
+    }
 }
 
 class BaseTableViewController: UITableViewController {
@@ -46,7 +53,6 @@ class BaseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-         //view.backgroundColor = UIColor(red: 53/255, green: 53/255, blue: 53/255, alpha: 1)
     }
     
     func showHUD() {
@@ -66,6 +72,14 @@ class BaseTableViewController: UITableViewController {
         if hud != nil {
             hud.hide(animated: true)
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OK = UIAlertAction(title: "OK", style: .default, handler: nil )
+        
+        alertView.addAction(OK)
+        self.present(alertView, animated: true, completion: nil)
     }
     
 }
@@ -77,7 +91,6 @@ class BaseCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        //collectionView?.backgroundColor = UIColor(red: 53/255, green: 53/255, blue: 53/255, alpha: 1)
     }
     
     func showHUD() {
@@ -98,14 +111,12 @@ class BaseCollectionViewController: UICollectionViewController {
             hud.hide(animated: true)
         }
     }
+    
+    func showAlert(title: String, message: String) {
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OK = UIAlertAction(title: "OK", style: .default, handler: nil )
+        
+        alertView.addAction(OK)
+        self.present(alertView, animated: true, completion: nil)
+    }
 }
-
-//extension UIViewController {
-//    
-//    func showAlert(_ title: String, msg: String) {
-//        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
-//        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-//        alert.addAction(action)
-//        self.present(alert, animated: true, completion: nil)
-//    }
-//}

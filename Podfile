@@ -10,5 +10,6 @@ target 'FunBook' do
     pod 'Gloss'
     pod 'Alamofire'
     pod 'SwiftyUserDefaults'
+     pod 'MBProgressHUD'
 
 end

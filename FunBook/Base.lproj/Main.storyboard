@@ -363,7 +363,7 @@
         <!--Create Account-->
         <scene sceneID="RzB-ws-ztI">
             <objects>
-                <tableViewController id="wXw-3u-VDG" sceneMemberID="viewController">
+                <tableViewController id="wXw-3u-VDG" customClass="RegisterTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="PsT-P4-asM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +385,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="ZeN-rR-sGD"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-BZ-1z8">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name .." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-BZ-1z8">
                                                     <rect key="frame" x="46" y="8" width="321" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -412,7 +412,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-Pa-8uH">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xO3-Pa-8uH">
                                                     <rect key="frame" x="46" y="8" width="321" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -453,7 +453,7 @@
                                                         <constraint firstAttribute="width" constant="30" id="bzj-97-DMr"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDs-pL-ns2">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tDs-pL-ns2">
                                                     <rect key="frame" x="46" y="8" width="321" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -556,6 +556,9 @@
                                                     <state key="normal" title="SIGNUP">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="loginButtonTapped:" destination="wXw-3u-VDG" eventType="touchUpInside" id="IJh-ZV-Rnk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -576,6 +579,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Create Account" id="JIP-eR-ix6"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="xO3-Pa-8uH" id="MbO-jy-VYW"/>
+                        <outlet property="fullNameTextField" destination="yoK-BZ-1z8" id="mgM-CI-Noz"/>
+                        <outlet property="passwordTextField" destination="tDs-pL-ns2" id="8nZ-Kr-TSs"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAV-OL-YIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

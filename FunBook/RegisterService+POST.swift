@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class RegisterPostService {
-    static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (LoginResponseModel) -> Void) {
+    static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (SuccessResponseModel) -> Void) {
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY]
         let URL = Constants.BASE_URL
@@ -18,14 +18,12 @@ class RegisterPostService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "login", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "register", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
                 
-                print(value)
-                
-                if let json = LoginResponseModel(json: value as! JSON) {
+                if let json = SuccessResponseModel(json: value as! JSON) {
                     completionHandler(json)
                 }
                 

@@ -31,8 +31,6 @@ class LoginTableViewController: BaseTableViewController {
         let password = passwordTextField.text!
         
         if email.removeAllSpaces().isEmpty {
-            
-            
             showAlert(title: "Error", message: "User id cannot be empty")
             
         } else if password.removeAllSpaces().isEmpty {

@@ -54,8 +54,19 @@ class LoginTableViewController: BaseTableViewController {
             
             if response.status == true && response.statusCode == 200 {
                 
-                
+                self.userLoginToHome(user: response.user)
+//                LoginUtils.setCurrentMemberUser(response.user)
+//                let application = UIApplication.shared.delegate as! AppDelegate
+//                application.setHomeUser()
             }
         }
+    }
+    
+    func userLoginToHome(user: UserModel) {
+        
+        LoginUtils.setCurrentMemberUser(user)
+        let application = UIApplication.shared.delegate as! AppDelegate
+        application.setHomeUser()
+    
     }
 }

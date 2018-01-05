@@ -10,7 +10,7 @@ import SwiftyUserDefaults
 
 class LoginUtils {
     
-    class func setCurrentMemberUser(_ user: LoginResponseModel) {
+    class func setCurrentMemberUser(_ user: UserModel) {
         if let login = getCurrentMemberUserLogin() {
             let tmpLogin = login
             //tmpLogin.user = user
@@ -20,7 +20,7 @@ class LoginUtils {
         }
     }
     
-    class func setCurrentMemberUserLogin(_ login: LoginResponseModel?) {
+    class func setCurrentMemberUserLogin(_ login: UserModel?) {
         if let login = login {
             
             Defaults[.user] = login.toJSON()
@@ -29,8 +29,8 @@ class LoginUtils {
         }
     }
     
-    class func getCurrentMemberUserLogin() -> LoginResponseModel? {
-        if let json = Defaults[.user], let user = LoginResponseModel(json: json) {
+    class func getCurrentMemberUserLogin() -> UserModel? {
+        if let json = Defaults[.user], let user = UserModel(json: json) {
             return user
         }
         return nil

@@ -15,13 +15,8 @@ struct LoginResponseModel: Gloss.Decodable {
     let statusCode: Int
     let success: String
     
-    // User
-    let deviceID: String
-    let email: String
-    let name: String
-    let picture: String
-    let userID: String
-    let userToken: String
+     // User
+    let user: UserModel
     
     init?(json: JSON) {
         
@@ -31,12 +26,7 @@ struct LoginResponseModel: Gloss.Decodable {
             let success: String = "success" <~~ json,
             
             // User
-            let deviceID: String = "data.userDetail.deviceID" <~~ json,
-            let email: String = "data.userDetail.email" <~~ json,
-            let name: String = "data.userDetail.name" <~~ json,
-            let picture: String = "data.userDetail.picture" <~~ json,
-            let userID: String = "data.userDetail.userID" <~~ json,
-            let userToken: String = "data.userDetail.userToken" <~~ json else { return nil }
+            let user: UserModel = "data.userDetail" <~~ json else { return nil }
         
         self.error = error
         self.status = status
@@ -44,12 +34,7 @@ struct LoginResponseModel: Gloss.Decodable {
         self.success = success
         
         // User
-        self.deviceID = deviceID
-        self.email = email
-        self.name = name
-        self.picture = picture
-        self.userID = userID
-        self.userToken = userToken
+        self.user = user
     }
     
     func toJSON() -> JSON? {
@@ -61,13 +46,7 @@ struct LoginResponseModel: Gloss.Decodable {
             "success" ~~> self.success,
             
             // User
-            "deviceID" ~~> self.deviceID,
-            "email" ~~> self.email,
-            "name" ~~> self.name,
-            "picture" ~~> self.picture,
-            "userID" ~~> self.userID,
-            "userToken" ~~> self.userToken
-            
+            "data.userDetail" ~~> self.user
             ])
     }
 }

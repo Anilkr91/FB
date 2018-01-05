@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wW0-EU-Xkn">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,7 +35,7 @@
                                     <color key="titleColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ESN-HB-xSN" kind="show" id="ovh-Qh-xYB"/>
+                                    <segue destination="2pw-h0-LWq" kind="show" id="0eZ-J8-u0c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,7 +54,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="177"/>
+            <point key="canvasLocation" x="2409" y="177"/>
         </scene>
         <!--Login-->
         <scene sceneID="NJS-he-r9N">
@@ -203,7 +203,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="loginButtonTapped:" destination="2pw-h0-LWq" eventType="touchUpInside" id="YNo-Qb-NHR"/>
-                                                        <segue destination="mxz-Wv-Y68" kind="show" id="VEx-sl-gX8"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -266,7 +265,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="raK-CE-chQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="177"/>
+            <point key="canvasLocation" x="3084" y="176.76161919040482"/>
         </scene>
         <!--Forgot Password-->
         <scene sceneID="lor-UU-ZYu">
@@ -358,7 +357,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfR-jU-cwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3156" y="-244"/>
+            <point key="canvasLocation" x="3969" y="177"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="RzB-ws-ztI">
@@ -587,12 +586,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAV-OL-YIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2145" y="958"/>
+            <point key="canvasLocation" x="3084" y="997"/>
         </scene>
         <!--My Account-->
         <scene sceneID="Se4-rQ-UqU">
             <objects>
-                <tableViewController id="mxz-Wv-Y68" sceneMemberID="viewController">
+                <tableViewController id="mxz-Wv-Y68" customClass="MyAccountTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="PDY-Jl-kGf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -655,6 +654,7 @@
                                                     <rect key="frame" x="8" y="8" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="7u4-RO-RUG"/>
+                                                        <constraint firstAttribute="width" secondItem="9Ea-6a-Slc" secondAttribute="height" multiplier="1:1" id="hDH-qC-egG"/>
                                                         <constraint firstAttribute="width" constant="25" id="kob-fA-3fX"/>
                                                     </constraints>
                                                 </imageView>
@@ -674,7 +674,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="2uJ-O4-8Dj" kind="show" id="caq-aB-EFw"/>
+                                            <segue destination="2uJ-O4-8Dj" kind="show" identifier="EditAcountSegue" id="caq-aB-EFw"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -688,10 +688,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Efx-1e-eNr">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Efx-1e-eNr">
                                                     <rect key="frame" x="8" y="8" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="4wR-zF-xDa"/>
+                                                        <constraint firstAttribute="width" secondItem="Efx-1e-eNr" secondAttribute="height" multiplier="1:1" id="7zj-Fz-GWp"/>
                                                         <constraint firstAttribute="height" constant="25" id="Y22-70-bnI"/>
                                                     </constraints>
                                                 </imageView>
@@ -722,9 +723,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uFt-fX-wZq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uFt-fX-wZq">
                                                     <rect key="frame" x="8" y="8" width="25" height="25"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="uFt-fX-wZq" secondAttribute="height" multiplier="1:1" id="78K-Tb-i35"/>
                                                         <constraint firstAttribute="height" constant="25" id="8EG-9X-y7N"/>
                                                         <constraint firstAttribute="width" constant="25" id="Qkc-Vh-MQc"/>
                                                     </constraints>
@@ -756,9 +758,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L8n-Kl-0E6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L8n-Kl-0E6">
                                                     <rect key="frame" x="8" y="8" width="25" height="25"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="L8n-Kl-0E6" secondAttribute="height" multiplier="1:1" id="D2r-ln-TvL"/>
                                                         <constraint firstAttribute="width" constant="25" id="Hgd-Jy-DZ5"/>
                                                         <constraint firstAttribute="height" constant="25" id="j32-AE-Jud"/>
                                                     </constraints>
@@ -790,9 +793,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QeL-Kx-SOw">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QeL-Kx-SOw">
                                                     <rect key="frame" x="8" y="8" width="25" height="25"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="QeL-Kx-SOw" secondAttribute="height" multiplier="1:1" id="CP8-7T-rZ4"/>
                                                         <constraint firstAttribute="height" constant="25" id="JPy-VM-xoR"/>
                                                         <constraint firstAttribute="width" constant="25" id="h1r-eQ-VQQ"/>
                                                     </constraints>
@@ -824,7 +828,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4V-xJ-9ox">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4V-xJ-9ox">
                                                     <rect key="frame" x="8" y="8" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="78l-pZ-owL"/>
@@ -858,7 +862,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1jq-sS-U72">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1jq-sS-U72">
                                                     <rect key="frame" x="8" y="8" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="jk3-sd-hcD"/>
@@ -892,11 +896,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RIM-VC-tNe">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RIM-VC-tNe">
                                                     <rect key="frame" x="8" y="8" width="25" height="25"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="25" id="S58-eJ-AzD"/>
                                                         <constraint firstAttribute="width" constant="25" id="bfs-sZ-JoM"/>
+                                                        <constraint firstAttribute="width" secondItem="RIM-VC-tNe" secondAttribute="height" multiplier="1:1" id="rRz-bN-p5W"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Star Program" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Uz-y8-nAo">
@@ -924,33 +929,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Account" id="IMJ-FB-kQa"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="SDy-1a-CQZ" id="FcW-LJ-lQB"/>
+                        <outlet property="nameLabelTextField" destination="3cu-z3-h7A" id="Dku-K7-rfz"/>
+                        <outlet property="userImageView" destination="jt7-R8-XLT" id="cHg-b7-d9l"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lA6-Fs-D2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3156" y="436"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="DP0-wQ-OR7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ESN-HB-xSN" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oLd-tL-J1K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="2pw-h0-LWq" kind="relationship" relationship="rootViewController" id="4AI-tG-tXb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UTd-SA-cLH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1350" y="177"/>
+            <point key="canvasLocation" x="4588" y="995"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="gXN-2a-fGb">
             <objects>
-                <tableViewController id="2uJ-O4-8Dj" sceneMemberID="viewController">
+                <tableViewController id="2uJ-O4-8Dj" customClass="EditProfileTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="KAq-xP-EoE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1084,10 +1076,51 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Profile" id="Cyw-3b-xUP"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="OSB-6u-MnP" id="Bfp-Tg-Dt0"/>
+                        <outlet property="passwordTextField" destination="D1a-1u-SDg" id="mh1-Lk-VbN"/>
+                        <outlet property="userImageView" destination="Q7x-Sl-nJl" id="LPM-pP-yuU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xbh-LV-4AH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3943" y="436"/>
+            <point key="canvasLocation" x="5422" y="994"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1pu-qz-X6n">
+            <objects>
+                <navigationController storyboardIdentifier="InitialViewController" automaticallyAdjustsScrollViewInsets="NO" id="wW0-EU-Xkn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pv6-Wr-JpP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P3F-Nr-HFd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxH-93-X5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="177"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qvz-ig-9i5">
+            <objects>
+                <navigationController storyboardIdentifier="HomeViewController" automaticallyAdjustsScrollViewInsets="NO" id="B2t-WR-gcn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tPr-v5-xzn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mxz-Wv-Y68" kind="relationship" relationship="rootViewController" id="X1J-c1-I78"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qB-WM-Ore" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3759" y="997"/>
         </scene>
     </scenes>
 </document>

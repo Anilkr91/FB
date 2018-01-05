@@ -673,9 +673,6 @@
                                                 <constraint firstItem="9Ea-6a-Slc" firstAttribute="top" secondItem="h9x-pP-Ucp" secondAttribute="top" constant="8" id="tCS-4X-Ccd"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="2uJ-O4-8Dj" kind="show" identifier="EditAcountSegue" id="caq-aB-EFw"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -933,6 +930,7 @@
                         <outlet property="emailTextField" destination="SDy-1a-CQZ" id="FcW-LJ-lQB"/>
                         <outlet property="nameLabelTextField" destination="3cu-z3-h7A" id="Dku-K7-rfz"/>
                         <outlet property="userImageView" destination="jt7-R8-XLT" id="cHg-b7-d9l"/>
+                        <segue destination="2uJ-O4-8Dj" kind="show" identifier="EditAcountSegue" id="w3z-wZ-ZrR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lA6-Fs-D2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -993,7 +991,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSB-6u-MnP">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edit Name...." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSB-6u-MnP">
                                                     <rect key="frame" x="54" y="16" width="305" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1007,7 +1005,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="LuG-6F-7Hw"/>
                                                     </constraints>
                                                 </imageView>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D1a-1u-SDg">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D1a-1u-SDg">
                                                     <rect key="frame" x="54" y="54" width="305" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1055,6 +1053,9 @@
                                                     <state key="normal" title="UPDATE">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="updateButtonTapped:" destination="2uJ-O4-8Dj" eventType="touchUpInside" id="Ztn-bY-IKA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1077,8 +1078,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Profile" id="Cyw-3b-xUP"/>
                     <connections>
-                        <outlet property="emailTextField" destination="OSB-6u-MnP" id="Bfp-Tg-Dt0"/>
-                        <outlet property="passwordTextField" destination="D1a-1u-SDg" id="mh1-Lk-VbN"/>
+                        <outlet property="emailTextField" destination="D1a-1u-SDg" id="MN4-X6-wvW"/>
+                        <outlet property="nameTextField" destination="OSB-6u-MnP" id="VPd-By-Vae"/>
                         <outlet property="userImageView" destination="Q7x-Sl-nJl" id="LPM-pP-yuU"/>
                     </connections>
                 </tableViewController>

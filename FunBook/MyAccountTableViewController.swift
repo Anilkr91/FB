@@ -9,17 +9,17 @@
 import UIKit
 
 class MyAccountTableViewController: BaseTableViewController {
-
+    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabelTextField: UILabel!
     @IBOutlet weak var emailTextField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,5 +47,10 @@ class MyAccountTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.section)
+        
+        if indexPath.section == 1 {
+        performSegue(withIdentifier: "EditAcountSegue", sender: self)
+            
+        }
     }
 }

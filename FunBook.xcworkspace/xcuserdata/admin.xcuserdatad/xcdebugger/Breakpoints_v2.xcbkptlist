@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FunBook/MyAccountTableViewController.swift"
-            timestampString = "536827435.768193"
+            filePath = "FunBook/EditProfileTableViewController.swift"
+            timestampString = "536830732.179893"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "editprofile(param:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

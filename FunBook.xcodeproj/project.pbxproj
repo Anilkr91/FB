@@ -32,6 +32,7 @@
 		84E09DE81FFF39CF00D8D66B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DE71FFF39CF00D8D66B /* UserModel.swift */; };
 		84E09DEA1FFF437A00D8D66B /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */; };
 		84E09DEC1FFF51F800D8D66B /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */; };
+		84E09DEE1FFF583500D8D66B /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		84E09DE71FFF39CF00D8D66B /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
 		84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 				84E09DE71FFF39CF00D8D66B /* UserModel.swift */,
 				84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */,
 				84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */,
+				84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				84D79ED31FF4ADFF00D26134 /* LoginService+POST.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
 				84D79EBF1FF3758100D26134 /* ViewController.swift in Sources */,
+				84E09DEE1FFF583500D8D66B /* EditProfileService+POST.swift in Sources */,
 				84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */,
 				84E09DE81FFF39CF00D8D66B /* UserModel.swift in Sources */,
 				84E09DDE1FFE3ABC00D8D66B /* BaseViewController.swift in Sources */,

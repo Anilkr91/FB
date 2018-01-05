@@ -11,8 +11,8 @@ import UIKit
 class EditProfileTableViewController: BaseTableViewController {
 
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
     // User
     let user = LoginUtils.getCurrentMemberUserLogin()!
@@ -23,15 +23,60 @@ class EditProfileTableViewController: BaseTableViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.selectionStyle = .none
+    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupViewWithUserData() {
+        nameTextField.text = user.name
+        emailTextField.text = user.email
+    }
+   
+    @IBAction func updateButtonTapped(_ sender: Any) {
+        
+        let name = nameTextField.text!
+        
+        
+        if name.removeAllSpaces().isEmpty {
+            showAlert(title: "Error", message: "User id cannot be empty")
+            
+        } else {
+            
+            print("validation passed hit api")
+            let param = ["name": name]
+            
+            editprofile(param: param)
+        }
     }
     
-    func setupViewWithUserData() {
+    func editprofile(param: [String: Any]) {
         
-        emailTextField.text = user.email
+        EditProfilePostService.executeRequest(param, vc: self) { (response) in
+            
+            print(response)
+            
+            if response.status == true && response.statusCode == 200 {
+               print("Success")
+                
+                 LoginUtils.setCurrentMemberUserLogin(response.user)
+                
+                self.showSucessAlert(title: "Success", message: response.success)
+//                self.showAlert
+                
+            }
+        }
+    }
+    
+    
+    func showSucessAlert(title: String, message: String) {
         
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        alertView.addAction(OKAction)
+        self.present(alertView, animated: true, completion: nil)
     }
 }

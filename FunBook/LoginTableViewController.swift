@@ -45,19 +45,20 @@ class LoginTableViewController: BaseTableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.selectionStyle = .none
+    }
+    
     func login(param: [String: Any]) {
         
         let param = ["email": "anil.techximum@gmail.com","password": "123456789","deviceType": "2","deviceID" : "234567890"]
         LoginPostService.executeRequest(param, vc: self) { (response) in
-        
+            
             print(response)
             
             if response.status == true && response.statusCode == 200 {
-                
                 self.userLoginToHome(user: response.user)
-//                LoginUtils.setCurrentMemberUser(response.user)
-//                let application = UIApplication.shared.delegate as! AppDelegate
-//                application.setHomeUser()
+                
             }
         }
     }
@@ -67,6 +68,6 @@ class LoginTableViewController: BaseTableViewController {
         LoginUtils.setCurrentMemberUser(user)
         let application = UIApplication.shared.delegate as! AppDelegate
         application.setHomeUser()
-    
+        
     }
 }

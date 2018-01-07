@@ -53,4 +53,13 @@ class MyAccountTableViewController: BaseTableViewController {
             
         }
     }
+    
+    
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        
+        
+        LoginUtils.setCurrentMemberUserLogin(nil)
+        let application = UIApplication.shared.delegate as! AppDelegate
+        application.setHomeGuest()
+    }
 }

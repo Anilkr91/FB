@@ -33,6 +33,13 @@
 		84E09DEA1FFF437A00D8D66B /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */; };
 		84E09DEC1FFF51F800D8D66B /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */; };
 		84E09DEE1FFF583500D8D66B /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */; };
+		84E09DF01FFF6EFB00D8D66B /* ImageUploadService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DEF1FFF6EFB00D8D66B /* ImageUploadService+POST.swift */; };
+		84E09DF21FFFA66900D8D66B /* ForgotPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DF11FFFA66900D8D66B /* ForgotPasswordService+POST.swift */; };
+		84E09DF41FFFA82500D8D66B /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DF31FFFA82500D8D66B /* ForgotPasswordTableViewController.swift */; };
+		84E09E14200296A000D8D66B /* OTPVerifyService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E13200296A000D8D66B /* OTPVerifyService+POST.swift */; };
+		84E09E162002972000D8D66B /* ResetPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */; };
+		84E09E18200297CB00D8D66B /* OTPVerifyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */; };
+		84E09E1A200298DB00D8D66B /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +71,13 @@
 		84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
 		84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
+		84E09DEF1FFF6EFB00D8D66B /* ImageUploadService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageUploadService+POST.swift"; sourceTree = "<group>"; };
+		84E09DF11FFFA66900D8D66B /* ForgotPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordService+POST.swift"; sourceTree = "<group>"; };
+		84E09DF31FFFA82500D8D66B /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
+		84E09E13200296A000D8D66B /* OTPVerifyService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTPVerifyService+POST.swift"; sourceTree = "<group>"; };
+		84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResetPasswordService+POST.swift"; sourceTree = "<group>"; };
+		84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyTableViewController.swift; sourceTree = "<group>"; };
+		84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +144,13 @@
 				84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */,
 				84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */,
 				84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */,
+				84E09DEF1FFF6EFB00D8D66B /* ImageUploadService+POST.swift */,
+				84E09DF11FFFA66900D8D66B /* ForgotPasswordService+POST.swift */,
+				84E09DF31FFFA82500D8D66B /* ForgotPasswordTableViewController.swift */,
+				84E09E13200296A000D8D66B /* OTPVerifyService+POST.swift */,
+				84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */,
+				84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */,
+				84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -296,15 +317,22 @@
 			files = (
 				84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */,
 				84E09DC11FFE121000D8D66B /* LoginResponseModel.swift in Sources */,
+				84E09DF21FFFA66900D8D66B /* ForgotPasswordService+POST.swift in Sources */,
 				84E09DE21FFE569D00D8D66B /* SuccessResponseModel.swift in Sources */,
+				84E09E1A200298DB00D8D66B /* ResetPasswordTableViewController.swift in Sources */,
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
 				84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */,
 				84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */,
 				84E09DE01FFE48F100D8D66B /* RegisterTableViewController.swift in Sources */,
+				84E09E18200297CB00D8D66B /* OTPVerifyTableViewController.swift in Sources */,
+				84E09DF41FFFA82500D8D66B /* ForgotPasswordTableViewController.swift in Sources */,
+				84E09DF01FFF6EFB00D8D66B /* ImageUploadService+POST.swift in Sources */,
 				84D79ED51FF4AE1C00D26134 /* RegisterService+POST.swift in Sources */,
+				84E09E14200296A000D8D66B /* OTPVerifyService+POST.swift in Sources */,
 				84E09DEC1FFF51F800D8D66B /* EditProfileTableViewController.swift in Sources */,
 				84E09DC91FFE20F100D8D66B /* ErrorResponseModel.swift in Sources */,
 				84E09DC71FFE1FD600D8D66B /* RegisterRequestModel.swift in Sources */,
+				84E09E162002972000D8D66B /* ResetPasswordService+POST.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
 				84D79ED31FF4ADFF00D26134 /* LoginService+POST.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,

@@ -12,10 +12,11 @@ class OTPVerifyTableViewController: BaseTableViewController {
     
     @IBOutlet weak var otpTextField: UITextField!
     var email: String?
+    var token: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.performSegue(withIdentifier: "showResetSegue", sender: self) 
+//        self.performSegue(withIdentifier: "showResetSegue", sender: self) 
     }
     
     
@@ -31,9 +32,15 @@ class OTPVerifyTableViewController: BaseTableViewController {
             if let email = email {
                 let param = ["email": email ,"otp": otp]
         
-                OTPVerifyPostService.executeRequest(param, vc: self, completionHandler: { (response) in
+                OTPVerifyPostService.executeRequest(param, vc: self, completionHandler: { (otpModel, errorModel) in
                     
-                    if response.status == true && response.statusCode == 200 {
+                if let message =  errorModel {
+                    self.showAlert(title: "Error", message: message.error!)
+                        
+                    }
+                    
+                    if let message = otpModel {
+                        self.token = message.passwordToken
                         self.performSegue(withIdentifier: "showResetSegue", sender: self)
                         
                     }
@@ -46,6 +53,7 @@ class OTPVerifyTableViewController: BaseTableViewController {
         if segue.identifier == "showResetSegue" {
             let dvc = segue.destination as! ResetPasswordTableViewController
             dvc.email = email
+            dvc.token = token
         }
     }
 }

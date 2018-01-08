@@ -11,7 +11,7 @@ import Gloss
 
 class ForgotPasswordPostService {
     
-    static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (LoginResponseModel) -> Void) {
+    static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (SuccessResponseModel?, ErrorResponseModel?) -> Void) {
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY]
         
@@ -27,8 +27,21 @@ class ForgotPasswordPostService {
                 
                 print(value)
                 
-                if let json = LoginResponseModel(json: value as! JSON) {
-                    completionHandler(json)
+                if let json = SuccessResponseModel(json: value as! JSON) {
+                    
+                    if json.status == true {
+                        completionHandler(json, nil)
+                        
+                    }
+                }
+                
+                
+                if let error = ErrorResponseModel(json: value as! JSON) {
+                    
+                    if error.status == false {
+                         completionHandler(nil, error)
+                        
+                    }
                 }
                 
             case .failure(let error):

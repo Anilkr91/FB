@@ -15,7 +15,7 @@ class ForgotPasswordTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-         self.performSegue(withIdentifier: "showOTPSegue", sender: self)
+//         self.performSegue(withIdentifier: "showOTPSegue", sender: self)
         // Do any additional setup after loading the view.
     }
     
@@ -39,14 +39,30 @@ class ForgotPasswordTableViewController: BaseTableViewController {
     }
     
     func forgotPassword(param: [String: Any]) {
-        ForgotPasswordPostService.executeRequest(param, vc: self) { (response) in
-            if response.status == true && response.statusCode == 200 {
-                self.showAlert(title: "Success", message: response.success)
+        ForgotPasswordPostService.executeRequest(param, vc: self) { (successModel, errorModel) in
+            
+            
+            if let message =  errorModel {
+              self.showAlert(title: "Error", message: message.email!)
                 
-                self.performSegue(withIdentifier: "showOTPSegue", sender: self)
+            }
+            
+            if let message = successModel {
+                self.showSucessAlert(title: "Success", message: message.success)
                 
             }
         }
+        
+//        executeRequest(param, vc: self) { (response) in
+//            if response.status == true && response.statusCode == 200 {
+////                self.showAlert(title: "Success", message: response.success)
+//                
+//                self.showSucessAlert(title: "Success", message: response.success)
+//                
+//               
+//                
+//            }
+//        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,5 +74,18 @@ class ForgotPasswordTableViewController: BaseTableViewController {
             
             
         }
+    }
+    
+    func showSucessAlert(title: String, message: String) {
+        
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+//            self.navigationController?.popViewController(animated: true)
+            
+             self.performSegue(withIdentifier: "showOTPSegue", sender: self)
+        }
+        
+        alertView.addAction(OKAction)
+        self.present(alertView, animated: true, completion: nil)
     }
 }

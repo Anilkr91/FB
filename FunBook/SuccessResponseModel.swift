@@ -13,6 +13,7 @@ struct SuccessResponseModel {
     let status: Bool
     let statusCode: Int
     let success: String
+    
 
     init?(json: JSON) {
         

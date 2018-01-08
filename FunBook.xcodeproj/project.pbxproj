@@ -40,6 +40,7 @@
 		84E09E162002972000D8D66B /* ResetPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */; };
 		84E09E18200297CB00D8D66B /* OTPVerifyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */; };
 		84E09E1A200298DB00D8D66B /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */; };
+		84E09E1C20033E7900D8D66B /* OTPVerifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E1B20033E7900D8D66B /* OTPVerifyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResetPasswordService+POST.swift"; sourceTree = "<group>"; };
 		84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyTableViewController.swift; sourceTree = "<group>"; };
 		84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
+		84E09E1B20033E7900D8D66B /* OTPVerifyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyModel.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 				84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */,
 				84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */,
 				84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */,
+				84E09E1B20033E7900D8D66B /* OTPVerifyModel.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */,
 				84E09DC11FFE121000D8D66B /* LoginResponseModel.swift in Sources */,
+				84E09E1C20033E7900D8D66B /* OTPVerifyModel.swift in Sources */,
 				84E09DF21FFFA66900D8D66B /* ForgotPasswordService+POST.swift in Sources */,
 				84E09DE21FFE569D00D8D66B /* SuccessResponseModel.swift in Sources */,
 				84E09E1A200298DB00D8D66B /* ResetPasswordTableViewController.swift in Sources */,

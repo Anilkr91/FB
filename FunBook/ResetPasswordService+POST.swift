@@ -11,7 +11,7 @@ import Gloss
 
 class ResetPasswordPostService {
     
-    static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (LoginResponseModel) -> Void) {
+    static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (SuccessResponseModel) -> Void) {
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY]
         
@@ -20,14 +20,13 @@ class ResetPasswordPostService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "profile/change_password", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "resetPasword", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
                 
-                print(value)
-                
-                if let json = LoginResponseModel(json: value as! JSON) {
+               
+                if let json = SuccessResponseModel(json: value as! JSON) {
                     completionHandler(json)
                 }
                 

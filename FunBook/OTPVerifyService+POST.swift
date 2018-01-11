@@ -26,7 +26,7 @@ class OTPVerifyPostService {
             case .success(let value) :
                 
 //                print(value)
-                                
+                
                if let json = OTPVerifyModel(json: value as! JSON) {
                     
                     if json.status == true {

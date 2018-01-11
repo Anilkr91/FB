@@ -54,18 +54,18 @@ class EditProfileTableViewController: BaseTableViewController {
         
         
         if name.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "User id cannot be empty")
+            showAlert("Error", message: "User id cannot be empty")
             
         } else {
             
             print("validation passed hit api")
             let param = ["name": name]
             
-            editprofile(param: param)
+            editprofile(param)
         }
     }
     
-    func editprofile(param: [String: Any]) {
+    func editprofile(_ param: [String: Any]) {
         
         EditProfilePostService.executeRequest(param, vc: self) { (response) in
             
@@ -73,14 +73,14 @@ class EditProfileTableViewController: BaseTableViewController {
         
                  LoginUtils.setCurrentMemberUserLogin(response.user)
                 
-                self.showSucessAlert(title: "Success", message: response.success)
+                self.showSucessAlert("Success", message: response.success)
                 
             }
         }
     }
     
     
-    func showSucessAlert(title: String, message: String) {
+    func showSucessAlert(_ title: String, message: String) {
         
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in

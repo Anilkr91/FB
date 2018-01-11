@@ -30,25 +30,25 @@ class ForgotPasswordTableViewController: BaseTableViewController {
         
         if email.removeAllSpaces().isEmpty {
             
-            showAlert(title: "Error", message: "Email field is empty")
+            showAlert("Error", message: "Email field is empty")
         } else {
             
             let param = ["email": email]
-            forgotPassword(param: param)
+            forgotPassword(param)
         }
     }
     
-    func forgotPassword(param: [String: Any]) {
+    func forgotPassword(_ param: [String: Any]) {
         ForgotPasswordPostService.executeRequest(param, vc: self) { (successModel, errorModel) in
             
             
             if let message =  errorModel {
-              self.showAlert(title: "Error", message: message.email!)
+              self.showAlert("Error", message: message.email!)
                 
             }
             
             if let message = successModel {
-                self.showSucessAlert(title: "Success", message: message.success)
+                self.showSucessAlert("Success", message: message.success)
                 
             }
         }
@@ -76,7 +76,7 @@ class ForgotPasswordTableViewController: BaseTableViewController {
         }
     }
     
-    func showSucessAlert(title: String, message: String) {
+    func showSucessAlert(_ title: String, message: String) {
         
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in

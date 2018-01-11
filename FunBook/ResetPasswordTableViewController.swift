@@ -30,33 +30,37 @@ class ResetPasswordTableViewController: BaseTableViewController {
         let confirmPassword = confirmPasswordTextField.text!
         
         if password.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "User id cannot be empty")
+            showAlert("Error", message: "User id cannot be empty")
             
         } else if confirmPassword.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "Password cannot be empty")
+            showAlert("Error", message: "Password cannot be empty")
+            
+        } else if password != confirmPassword {
+            
+           showAlert("Error", message: "password and confirm password mismatch")
             
         } else {
             
             if let email = email {
             let param = ["email": email,"password": password,"confirm_password": confirmPassword,"passwordToken" : token!]
-            resetPassword(param: param)
+            resetPassword(param)
             
             }
         }
     }
     
-    func resetPassword(param: [String: Any]) {
+    func resetPassword(_ param: [String: Any]) {
         
         ResetPasswordPostService.executeRequest(param, vc: self, completionHandler: { (response) in
             
             if response.status == true && response.statusCode == 200 {
-                self.showSucessAlert(title: "Success", message: response.success)
+                self.showSucessAlert("Success", message: response.success)
                 
             }
         })
     }
     
-    func showSucessAlert(title: String, message: String) {
+    func showSucessAlert(_ title: String, message: String) {
         
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in

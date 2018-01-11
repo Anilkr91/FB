@@ -37,7 +37,7 @@ class BaseViewController: UIViewController {
         }
     }
     
-   func showAlert(title: String, message: String) {
+   func showAlert(_ title: String, message: String) {
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OK = UIAlertAction(title: "OK", style: .default, handler: nil )
         
@@ -74,7 +74,7 @@ class BaseTableViewController: UITableViewController {
         }
     }
     
-    func showAlert(title: String, message: String) {
+    func showAlert(_ title: String, message: String) {
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OK = UIAlertAction(title: "OK", style: .default, handler: nil )
         
@@ -112,7 +112,7 @@ class BaseCollectionViewController: UICollectionViewController {
         }
     }
     
-    func showAlert(title: String, message: String) {
+    func showAlert(_ title: String, message: String) {
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OK = UIAlertAction(title: "OK", style: .default, handler: nil )
         

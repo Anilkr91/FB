@@ -25,7 +25,7 @@ class UploadImagePostService {
         
         let request =  manager.upload(multipartFormData:{ multipartFormData in
             
-            multipartFormData.append(data, withName: "profilePic", fileName: "image", mimeType: "image/jpg")
+            multipartFormData.append(data, withName: "profilePic", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpg")
             
         },
                                       usingThreshold:UInt64.init(),

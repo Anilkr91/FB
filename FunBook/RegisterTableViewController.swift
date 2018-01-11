@@ -51,34 +51,34 @@ class RegisterTableViewController: BaseTableViewController {
         let password = passwordTextField.text!
         
         if name.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "Name Field is Empty")
+            showAlert("Error", message: "Name Field is Empty")
             
         } else if email.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "Email cannot be empty")
+            showAlert("Error", message: "Email cannot be empty")
             
         } else if password.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "Password cannot be empty")
+            showAlert("Error", message: "Password cannot be empty")
             
         } else {
             
             print("validation passed hit api")
             
             let param = ["name": name,"email": email,"password": password]
-            register(param: param)
+            register(param)
         }
     }
     
-    func register(param: [String: Any]) {
+    func register(_ param: [String: Any]) {
 
         RegisterPostService.executeRequest(param, vc: self) { (response) in
             
             if response.status == true && response.statusCode == 200 {
-               self.showSucessAlert(title: "Success", message: response.success)
+               self.showSucessAlert("Success", message: response.success)
             }
         }
     }
     
-    func showSucessAlert(title: String, message: String) {
+    func showSucessAlert(_ title: String, message: String) {
         
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in

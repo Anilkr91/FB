@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7FF694E26A8C276316FA29DE /* Pods_FunBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */; };
+		84CE9B2A20074A57002BBD3F /* PrepareAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9B2920074A57002BBD3F /* PrepareAlbumModel.swift */; };
 		84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBC1FF3758100D26134 /* AppDelegate.swift */; };
-		84D79EBF1FF3758100D26134 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBE1FF3758100D26134 /* ViewController.swift */; };
+		84D79EBF1FF3758100D26134 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBE1FF3758100D26134 /* GalleryViewController.swift */; };
 		84D79EC21FF3758100D26134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC01FF3758100D26134 /* Main.storyboard */; };
 		84D79EC41FF3758100D26134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC31FF3758100D26134 /* Assets.xcassets */; };
 		84D79EC71FF3758100D26134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC51FF3758100D26134 /* LaunchScreen.storyboard */; };
 		84D79ED31FF4ADFF00D26134 /* LoginService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79ED21FF4ADFF00D26134 /* LoginService+POST.swift */; };
 		84D79ED51FF4AE1C00D26134 /* RegisterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79ED41FF4AE1C00D26134 /* RegisterService+POST.swift */; };
+		84DA156E2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA156D2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift */; };
+		84DA15702006125200FC4C85 /* SelectedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA156F2006125200FC4C85 /* SelectedImageCollectionViewCell.swift */; };
 		84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DBE1FFE009600D8D66B /* FunBookConstants.swift */; };
 		84E09DC11FFE121000D8D66B /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DC01FFE121000D8D66B /* LoginResponseModel.swift */; };
 		84E09DC31FFE164C00D8D66B /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DC21FFE164C00D8D66B /* LoginTableViewController.swift */; };
@@ -45,15 +48,18 @@
 
 /* Begin PBXFileReference section */
 		0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.debug.xcconfig"; sourceTree = "<group>"; };
+		84CE9B2920074A57002BBD3F /* PrepareAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareAlbumModel.swift; sourceTree = "<group>"; };
 		84D79EB91FF3758100D26134 /* FunBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D79EBC1FF3758100D26134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84D79EBE1FF3758100D26134 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84D79EBE1FF3758100D26134 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		84D79EC11FF3758100D26134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84D79EC31FF3758100D26134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D79EC61FF3758100D26134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D79EC81FF3758100D26134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84D79ED21FF4ADFF00D26134 /* LoginService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginService+POST.swift"; sourceTree = "<group>"; };
 		84D79ED41FF4AE1C00D26134 /* RegisterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterService+POST.swift"; sourceTree = "<group>"; };
+		84DA156D2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		84DA156F2006125200FC4C85 /* SelectedImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		84E09DBE1FFE009600D8D66B /* FunBookConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunBookConstants.swift; sourceTree = "<group>"; };
 		84E09DC01FFE121000D8D66B /* LoginResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		84E09DC21FFE164C00D8D66B /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
@@ -129,7 +135,7 @@
 				84E09DCA1FFE33A900D8D66B /* Extensions */,
 				84E09DBE1FFE009600D8D66B /* FunBookConstants.swift */,
 				84D79EBC1FF3758100D26134 /* AppDelegate.swift */,
-				84D79EBE1FF3758100D26134 /* ViewController.swift */,
+				84D79EBE1FF3758100D26134 /* GalleryViewController.swift */,
 				84D79EC01FF3758100D26134 /* Main.storyboard */,
 				84D79EC31FF3758100D26134 /* Assets.xcassets */,
 				84D79EC51FF3758100D26134 /* LaunchScreen.storyboard */,
@@ -154,6 +160,9 @@
 				84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */,
 				84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */,
 				84E09E1B20033E7900D8D66B /* OTPVerifyModel.swift */,
+				84DA156D2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift */,
+				84DA156F2006125200FC4C85 /* SelectedImageCollectionViewCell.swift */,
+				84CE9B2920074A57002BBD3F /* PrepareAlbumModel.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 					84D79EB81FF3758100D26134 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Z8HU92LYAQ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -281,6 +291,7 @@
 				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -289,6 +300,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpalImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +339,7 @@
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
 				84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */,
 				84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */,
+				84CE9B2A20074A57002BBD3F /* PrepareAlbumModel.swift in Sources */,
 				84E09DE01FFE48F100D8D66B /* RegisterTableViewController.swift in Sources */,
 				84E09E18200297CB00D8D66B /* OTPVerifyTableViewController.swift in Sources */,
 				84E09DF41FFFA82500D8D66B /* ForgotPasswordTableViewController.swift in Sources */,
@@ -334,13 +347,15 @@
 				84D79ED51FF4AE1C00D26134 /* RegisterService+POST.swift in Sources */,
 				84E09E14200296A000D8D66B /* OTPVerifyService+POST.swift in Sources */,
 				84E09DEC1FFF51F800D8D66B /* EditProfileTableViewController.swift in Sources */,
+				84DA156E2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift in Sources */,
 				84E09DC91FFE20F100D8D66B /* ErrorResponseModel.swift in Sources */,
 				84E09DC71FFE1FD600D8D66B /* RegisterRequestModel.swift in Sources */,
+				84DA15702006125200FC4C85 /* SelectedImageCollectionViewCell.swift in Sources */,
 				84E09E162002972000D8D66B /* ResetPasswordService+POST.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
 				84D79ED31FF4ADFF00D26134 /* LoginService+POST.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
-				84D79EBF1FF3758100D26134 /* ViewController.swift in Sources */,
+				84D79EBF1FF3758100D26134 /* GalleryViewController.swift in Sources */,
 				84E09DEE1FFF583500D8D66B /* EditProfileService+POST.swift in Sources */,
 				84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */,
 				84E09DE81FFF39CF00D8D66B /* UserModel.swift in Sources */,

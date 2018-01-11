@@ -25,7 +25,7 @@ class OTPVerifyTableViewController: BaseTableViewController {
         let otp = otpTextField.text!
         
         if otp.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "Otp Field is Empty")
+            showAlert("Error", message: "Otp Field is Empty")
             
         } else {
             
@@ -35,7 +35,7 @@ class OTPVerifyTableViewController: BaseTableViewController {
                 OTPVerifyPostService.executeRequest(param, vc: self, completionHandler: { (otpModel, errorModel) in
                     
                 if let message =  errorModel {
-                    self.showAlert(title: "Error", message: message.error!)
+                    self.showAlert("Error", message: message.error!)
                         
                     }
                     

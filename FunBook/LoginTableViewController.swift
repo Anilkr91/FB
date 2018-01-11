@@ -31,17 +31,17 @@ class LoginTableViewController: BaseTableViewController {
         let password = passwordTextField.text!
         
         if email.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "User id cannot be empty")
+            showAlert("Error", message: "User id cannot be empty")
             
         } else if password.removeAllSpaces().isEmpty {
-            showAlert(title: "Error", message: "Password cannot be empty")
+            showAlert("Error", message: "Password cannot be empty")
             
         } else {
             
             print("validation passed hit login api")
             let param = ["email": email,"password": password,"deviceType": "2","deviceID" : "234567890"]
             
-            login(param: param)
+            login(param)
         }
     }
     
@@ -49,21 +49,21 @@ class LoginTableViewController: BaseTableViewController {
         cell.selectionStyle = .none
     }
     
-    func login(param: [String: Any]) {
+    func login(_ param: [String: Any]) {
         
-        let param = ["email": "anil.techximum@gmail.com","password": "123456789","deviceType": "2","deviceID" : "234567890"]
+//        let param = ["email": email,"password": password,"deviceType": "2","deviceID" : "234567890"]
         LoginPostService.executeRequest(param, vc: self) { (response) in
             
             print(response)
             
             if response.status == true && response.statusCode == 200 {
-                self.userLoginToHome(user: response.user)
+                self.userLoginToHome(response.user)
                 
             }
         }
     }
     
-    func userLoginToHome(user: UserModel) {
+    func userLoginToHome(_ user: UserModel) {
         
         LoginUtils.setCurrentMemberUser(user)
         let application = UIApplication.shared.delegate as! AppDelegate

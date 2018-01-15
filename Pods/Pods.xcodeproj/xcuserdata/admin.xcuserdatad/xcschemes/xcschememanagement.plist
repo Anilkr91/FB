@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftDate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyUserDefaults.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D928972EFE094ED59971C67AC781CDB</key>
+		<key>45C509F715E1DF1AAF1BC935E90B6D40</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6F712943B3C5592E82604940D11CE08A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7C1CF0D4CB12427E9896CA6CB2096412</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -83,6 +83,16 @@
 			<true/>
 		</dict>
 		<key>A4F4961AD67247AEB20CB2EAE6302179</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D54B68AEEF9B2B68A1EE0FB745261DBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D728F4E2F3E73369BBCC2AFFC0C421F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

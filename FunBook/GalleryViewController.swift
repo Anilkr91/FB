@@ -7,25 +7,25 @@
 //
 
 import UIKit
-//import Gallery
-//import Lightbox
-//import AVFoundation
-//import AVKit
-
 import OpalImagePicker
 import Photos
 import Alamofire
 
-
-class GalleryViewController: UIViewController {
+class GalleryViewController: BaseViewController {
     
-    //    var gallery: GalleryController!
     var array: [UIImage] = []
-    //    var albumModel: [PrepareAlbumModel] = []
+    var albumName: String = ""
+    var albumId: String = ""
+    var albumModel: [AlbumResponseModel] = []
+    @IBOutlet weak var tableview: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableview.delegate = self
+        tableview.dataSource = self
+        getAllAlbums()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,19 +35,80 @@ class GalleryViewController: UIViewController {
     
     @IBAction func openGallery(_ sender: UIButton) {
         
-        let imagePicker = OpalImagePickerController()
-        imagePicker.imagePickerDelegate = self
-        present(imagePicker, animated: true, completion: nil)
         
+        let alertController = UIAlertController(title: "Add Album Title", message: "", preferredStyle: .alert)
+        alertController.addTextField { (textField : UITextField) -> Void in
+            
+            textField.placeholder = "Enter .."
+            //            textField.isSecureTextEntry = true
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
+            }
+            let okAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
+                
+                if let field = alertController.textFields![0] as UITextField? {
+                    
+                    if field.text!.isEmpty {
+                        print("empty")
+                        
+                    } else {
+                        self.albumName = field.text!
+                        
+                        let imagePicker = OpalImagePickerController()
+                        imagePicker.imagePickerDelegate = self
+                        self.present(imagePicker, animated: true, completion: nil)
+                        
+                    }
+                }
+            }
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+}
+
+
+extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return albumModel.count
     }
     
-    func login() {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let param = ["email": "anil.techximum@gmail.com","password": "123456789","deviceType": "2","deviceID" : "234567890"]
-        LoginPostService.executeRequest(param, vc: self) { (response) in
-            
-            print(response)
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AlbumTableViewCell
+        
+        cell.info = albumModel[indexPath.section]
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        albumId = albumModel[indexPath.section].albumID
+        self.performSegue(withIdentifier: "showAlbumDetail", sender: self)
     }
 }
 
@@ -98,12 +159,12 @@ extension GalleryViewController: OpalImagePickerControllerDelegate {
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
                                    "userToken": user.userToken,
                                    "userID": user.userID ]
-
+        
         
         let r =  Alamofire.upload(multipartFormData: { multipartFormData in
             
             for image in images {
-            
+                
                 if let imageData = image.jpeg(.highest)  {
                     multipartFormData.append(imageData, withName: "gallery[]", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg")
                 }
@@ -113,33 +174,35 @@ extension GalleryViewController: OpalImagePickerControllerDelegate {
                 multipartFormData.append(caption.data(using: String.Encoding.utf8)!, withName: "caption[]")
             }
             
-            multipartFormData.append("Album1".data(using: String.Encoding.utf8)!, withName: "albumName")
-             multipartFormData.append("1".data(using: String.Encoding.utf8)!, withName: "address")
+            multipartFormData.append(self.albumName.data(using: String.Encoding.utf8)!, withName: "albumName")
+            multipartFormData.append("4".data(using: .utf8)!, withName: "addressID")
             
         },
-                                    
-                                    usingThreshold:UInt64.init(),
-                                    to: URL + "profile/create_album",
-                                    method:.post,
-                                    headers: header,
-                                    
-                                    encodingCompletion: { encodingResult in
-                                        debugPrint(request)
-                                        switch encodingResult {
-                                        case .success(let upload, _, _):
-                                            debugPrint(upload)
-                                            upload.responseJSON { response in
-                                                
-                                                print(response)
-                                                
-                                            }
-                                        case .failure(let error):
-                                            print(error)
+                                  
+                                  usingThreshold:UInt64.init(),
+                                  to: URL + "profile/create_album",
+                                  method:.post,
+                                  headers: header,
+                                  
+                                  encodingCompletion: { encodingResult in
+                                    debugPrint(request)
+                                    switch encodingResult {
+                                    case .success(let upload, _, _):
+                                        debugPrint(upload)
+                                        upload.responseJSON { response in
+                                            
+                                            print(response)
+                                            
+                                            picker.dismiss(animated: true, completion: nil)
+                                            
                                         }
-                                        
+                                    case .failure(let error):
+                                        print(error)
+                                    }
+                                    
         })
         debugPrint(r)
-    
+        
     }
     func imagePicker(_ picker: OpalImagePickerController, didFinishPickingAssets assets: [PHAsset]) {
         
@@ -158,6 +221,23 @@ extension GalleryViewController: OpalImagePickerControllerDelegate {
             let dvc = segue.destination as! SelectedImagesCollectionViewController
             dvc.array = array
             print(dvc)
+            
+        } else if segue.identifier == "showAlbumDetail" {
+            
+            let dvc = segue.destination as! AlbumDetailTableViewController
+            dvc.albumId = albumId
+        }
+    }
+}
+
+extension GalleryViewController {
+    
+    func getAllAlbums() {
+        
+        AlbumListingGetService.executeRequest(vc: self) { (response) in
+            print(response)
+            self.albumModel = response
+            self.tableview.reloadData()
             
         }
     }

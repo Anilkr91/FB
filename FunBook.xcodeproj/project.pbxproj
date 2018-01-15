@@ -8,7 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		7FF694E26A8C276316FA29DE /* Pods_FunBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */; };
+		84CD8C9F200C6C350047A57E /* AlbumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8C9E200C6C350047A57E /* AlbumResponseModel.swift */; };
+		84CD8CA1200C6CF70047A57E /* AlbumResponseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA0200C6CF70047A57E /* AlbumResponseArrayModel.swift */; };
+		84CD8CA3200C70060047A57E /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA2200C70060047A57E /* AlbumListingService+GET.swift */; };
+		84CD8CA5200C83800047A57E /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA4200C83800047A57E /* AlbumDetailTableViewController.swift */; };
+		84CD8CA7200C83AE0047A57E /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA6200C83AE0047A57E /* AlbumDetailService+GET.swift */; };
+		84CD8CA9200C9B410047A57E /* ImageOperationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA8200C9B410047A57E /* ImageOperationsTableViewController.swift */; };
+		84CD8CAB200CBB760047A57E /* AlbumImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CAA200CBB760047A57E /* AlbumImagesModel.swift */; };
+		84CD8CAD200CBD1E0047A57E /* AlbumDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CAC200CBD1E0047A57E /* AlbumDetailModel.swift */; };
 		84CE9B2A20074A57002BBD3F /* PrepareAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9B2920074A57002BBD3F /* PrepareAlbumModel.swift */; };
+		84CE9B2C20079D74002BBD3F /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9B2B20079D74002BBD3F /* AlbumTableViewCell.swift */; };
 		84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBC1FF3758100D26134 /* AppDelegate.swift */; };
 		84D79EBF1FF3758100D26134 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBE1FF3758100D26134 /* GalleryViewController.swift */; };
 		84D79EC21FF3758100D26134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC01FF3758100D26134 /* Main.storyboard */; };
@@ -48,7 +57,16 @@
 
 /* Begin PBXFileReference section */
 		0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.debug.xcconfig"; sourceTree = "<group>"; };
+		84CD8C9E200C6C350047A57E /* AlbumResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumResponseModel.swift; sourceTree = "<group>"; };
+		84CD8CA0200C6CF70047A57E /* AlbumResponseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumResponseArrayModel.swift; path = Extensions/AlbumResponseArrayModel.swift; sourceTree = "<group>"; };
+		84CD8CA2200C70060047A57E /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
+		84CD8CA4200C83800047A57E /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
+		84CD8CA6200C83AE0047A57E /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
+		84CD8CA8200C9B410047A57E /* ImageOperationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperationsTableViewController.swift; sourceTree = "<group>"; };
+		84CD8CAA200CBB760047A57E /* AlbumImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumImagesModel.swift; sourceTree = "<group>"; };
+		84CD8CAC200CBD1E0047A57E /* AlbumDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailModel.swift; sourceTree = "<group>"; };
 		84CE9B2920074A57002BBD3F /* PrepareAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareAlbumModel.swift; sourceTree = "<group>"; };
+		84CE9B2B20079D74002BBD3F /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		84D79EB91FF3758100D26134 /* FunBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D79EBC1FF3758100D26134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D79EBE1FF3758100D26134 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +181,15 @@
 				84DA156D2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift */,
 				84DA156F2006125200FC4C85 /* SelectedImageCollectionViewCell.swift */,
 				84CE9B2920074A57002BBD3F /* PrepareAlbumModel.swift */,
+				84CE9B2B20079D74002BBD3F /* AlbumTableViewCell.swift */,
+				84CD8CA0200C6CF70047A57E /* AlbumResponseArrayModel.swift */,
+				84CD8C9E200C6C350047A57E /* AlbumResponseModel.swift */,
+				84CD8CA2200C70060047A57E /* AlbumListingService+GET.swift */,
+				84CD8CA4200C83800047A57E /* AlbumDetailTableViewController.swift */,
+				84CD8CA6200C83AE0047A57E /* AlbumDetailService+GET.swift */,
+				84CD8CA8200C9B410047A57E /* ImageOperationsTableViewController.swift */,
+				84CD8CAA200CBB760047A57E /* AlbumImagesModel.swift */,
+				84CD8CAC200CBD1E0047A57E /* AlbumDetailModel.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -292,6 +319,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -301,6 +329,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpalImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,13 +359,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84CD8CAD200CBD1E0047A57E /* AlbumDetailModel.swift in Sources */,
+				84CD8CA5200C83800047A57E /* AlbumDetailTableViewController.swift in Sources */,
 				84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */,
 				84E09DC11FFE121000D8D66B /* LoginResponseModel.swift in Sources */,
 				84E09E1C20033E7900D8D66B /* OTPVerifyModel.swift in Sources */,
 				84E09DF21FFFA66900D8D66B /* ForgotPasswordService+POST.swift in Sources */,
+				84CD8CA1200C6CF70047A57E /* AlbumResponseArrayModel.swift in Sources */,
 				84E09DE21FFE569D00D8D66B /* SuccessResponseModel.swift in Sources */,
 				84E09E1A200298DB00D8D66B /* ResetPasswordTableViewController.swift in Sources */,
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
+				84CD8CA3200C70060047A57E /* AlbumListingService+GET.swift in Sources */,
 				84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */,
 				84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */,
 				84CE9B2A20074A57002BBD3F /* PrepareAlbumModel.swift in Sources */,
@@ -344,14 +377,18 @@
 				84E09E18200297CB00D8D66B /* OTPVerifyTableViewController.swift in Sources */,
 				84E09DF41FFFA82500D8D66B /* ForgotPasswordTableViewController.swift in Sources */,
 				84E09DF01FFF6EFB00D8D66B /* ImageUploadService+POST.swift in Sources */,
+				84CD8CA9200C9B410047A57E /* ImageOperationsTableViewController.swift in Sources */,
 				84D79ED51FF4AE1C00D26134 /* RegisterService+POST.swift in Sources */,
 				84E09E14200296A000D8D66B /* OTPVerifyService+POST.swift in Sources */,
 				84E09DEC1FFF51F800D8D66B /* EditProfileTableViewController.swift in Sources */,
+				84CD8CA7200C83AE0047A57E /* AlbumDetailService+GET.swift in Sources */,
 				84DA156E2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift in Sources */,
 				84E09DC91FFE20F100D8D66B /* ErrorResponseModel.swift in Sources */,
 				84E09DC71FFE1FD600D8D66B /* RegisterRequestModel.swift in Sources */,
 				84DA15702006125200FC4C85 /* SelectedImageCollectionViewCell.swift in Sources */,
+				84CE9B2C20079D74002BBD3F /* AlbumTableViewCell.swift in Sources */,
 				84E09E162002972000D8D66B /* ResetPasswordService+POST.swift in Sources */,
+				84CD8CAB200CBB760047A57E /* AlbumImagesModel.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
 				84D79ED31FF4ADFF00D26134 /* LoginService+POST.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
@@ -360,6 +397,7 @@
 				84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */,
 				84E09DE81FFF39CF00D8D66B /* UserModel.swift in Sources */,
 				84E09DDE1FFE3ABC00D8D66B /* BaseViewController.swift in Sources */,
+				84CD8C9F200C6C350047A57E /* AlbumResponseModel.swift in Sources */,
 				84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */,
 				84E09DC31FFE164C00D8D66B /* LoginTableViewController.swift in Sources */,
 				84E09DEA1FFF437A00D8D66B /* MyAccountTableViewController.swift in Sources */,

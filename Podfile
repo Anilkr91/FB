@@ -10,16 +10,8 @@ target 'FunBook' do
     pod 'Gloss'
     pod 'Alamofire'
     pod 'SwiftyUserDefaults'
-    pod 'MBProgressHUD'
-    #    pod 'Gallery' , '~> 1.3.0'
-    #    pod 'Lightbox'
-    #        pod 'BSImagePicker' '~> 2.4'
-    #    pod 'BSImagePicker', '~> 2.4'
-    
-    #    pod "BSImagePicker", "~> 2.4"
-    
-    #    pod 'ImagePicker', '~> 2.1.1'
-    
+    pod 'MBProgressHUD'    
     pod 'OpalImagePicker', '~> 1.4.0'
+    pod 'SwiftDate', '~> 4.3.0'
     
 end

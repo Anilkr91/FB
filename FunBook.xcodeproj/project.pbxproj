@@ -8,110 +8,108 @@
 
 /* Begin PBXBuildFile section */
 		7FF694E26A8C276316FA29DE /* Pods_FunBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */; };
-		8425BFB7200F127E002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFB6200F127E002CFEF6 /* AlbumDetailTableViewCell.swift */; };
-		8425BFB9200F171A002CFEF6 /* AlbumInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFB8200F171A002CFEF6 /* AlbumInformationTableViewController.swift */; };
-		8425BFBB200F1A45002CFEF6 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBA200F1A45002CFEF6 /* AlbumModel.swift */; };
-		84CD8C9F200C6C350047A57E /* AlbumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8C9E200C6C350047A57E /* AlbumResponseModel.swift */; };
-		84CD8CA1200C6CF70047A57E /* AlbumResponseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA0200C6CF70047A57E /* AlbumResponseArrayModel.swift */; };
-		84CD8CA3200C70060047A57E /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA2200C70060047A57E /* AlbumListingService+GET.swift */; };
-		84CD8CA5200C83800047A57E /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA4200C83800047A57E /* AlbumDetailTableViewController.swift */; };
-		84CD8CA7200C83AE0047A57E /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA6200C83AE0047A57E /* AlbumDetailService+GET.swift */; };
-		84CD8CA9200C9B410047A57E /* ImageOperationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA8200C9B410047A57E /* ImageOperationsTableViewController.swift */; };
-		84CD8CAB200CBB760047A57E /* AlbumImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CAA200CBB760047A57E /* AlbumImagesModel.swift */; };
-		84CD8CAD200CBD1E0047A57E /* AlbumDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CAC200CBD1E0047A57E /* AlbumDetailModel.swift */; };
-		84CD8CAF200CBEF50047A57E /* AlbumDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CAE200CBEF50047A57E /* AlbumDetailResponseModel.swift */; };
-		84CD8CB1200CCE140047A57E /* PrepareAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CB0200CCE140047A57E /* PrepareAlbumModel.swift */; };
-		84CE9B2C20079D74002BBD3F /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9B2B20079D74002BBD3F /* AlbumTableViewCell.swift */; };
+		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
+		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
+		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
+		8425BFE8200F8B59002CFEF6 /* ForgotPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC0200F8B59002CFEF6 /* ForgotPasswordService+POST.swift */; };
+		8425BFE9200F8B59002CFEF6 /* ImageUploadService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC1200F8B59002CFEF6 /* ImageUploadService+POST.swift */; };
+		8425BFEA200F8B59002CFEF6 /* LoginService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC2200F8B59002CFEF6 /* LoginService+POST.swift */; };
+		8425BFEB200F8B59002CFEF6 /* OTPVerifyService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC3200F8B59002CFEF6 /* OTPVerifyService+POST.swift */; };
+		8425BFEC200F8B59002CFEF6 /* RegisterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC4200F8B59002CFEF6 /* RegisterService+POST.swift */; };
+		8425BFED200F8B59002CFEF6 /* ResetPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC5200F8B59002CFEF6 /* ResetPasswordService+POST.swift */; };
+		8425BFEE200F8B59002CFEF6 /* AlbumDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC7200F8B59002CFEF6 /* AlbumDetailModel.swift */; };
+		8425BFEF200F8B59002CFEF6 /* AlbumDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC8200F8B59002CFEF6 /* AlbumDetailResponseModel.swift */; };
+		8425BFF0200F8B59002CFEF6 /* AlbumImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC9200F8B59002CFEF6 /* AlbumImagesModel.swift */; };
+		8425BFF1200F8B59002CFEF6 /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFCA200F8B59002CFEF6 /* AlbumModel.swift */; };
+		8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFCB200F8B59002CFEF6 /* AlbumResponseArrayModel.swift */; };
+		8425BFF3200F8B59002CFEF6 /* AlbumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFCC200F8B59002CFEF6 /* AlbumResponseModel.swift */; };
+		8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFCD200F8B59002CFEF6 /* ErrorResponseModel.swift */; };
+		8425BFF5200F8B59002CFEF6 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFCE200F8B59002CFEF6 /* LoginResponseModel.swift */; };
+		8425BFF6200F8B59002CFEF6 /* OTPVerifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFCF200F8B59002CFEF6 /* OTPVerifyModel.swift */; };
+		8425BFF7200F8B59002CFEF6 /* PrepareAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD0200F8B59002CFEF6 /* PrepareAlbumModel.swift */; };
+		8425BFF8200F8B59002CFEF6 /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD1200F8B59002CFEF6 /* RegisterRequestModel.swift */; };
+		8425BFF9200F8B59002CFEF6 /* SuccessResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD2200F8B59002CFEF6 /* SuccessResponseModel.swift */; };
+		8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD3200F8B59002CFEF6 /* UserModel.swift */; };
+		8425BFFB200F8B59002CFEF6 /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */; };
+		8425BFFC200F8B59002CFEF6 /* AlbumInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD6200F8B59002CFEF6 /* AlbumInformationTableViewController.swift */; };
+		8425BFFD200F8B59002CFEF6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */; };
+		8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */; };
+		8425BFFF200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD9200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift */; };
+		8425C000200F8B59002CFEF6 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDA200F8B59002CFEF6 /* GalleryViewController.swift */; };
+		8425C001200F8B59002CFEF6 /* ImageOperationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDB200F8B59002CFEF6 /* ImageOperationsTableViewController.swift */; };
+		8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */; };
+		8425C003200F8B59002CFEF6 /* OTPVerifyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDD200F8B59002CFEF6 /* OTPVerifyTableViewController.swift */; };
+		8425C004200F8B59002CFEF6 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDE200F8B59002CFEF6 /* RegisterTableViewController.swift */; };
+		8425C005200F8B59002CFEF6 /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDF200F8B59002CFEF6 /* ResetPasswordTableViewController.swift */; };
+		8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE0200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift */; };
+		8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE2200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift */; };
+		8425C008200F8B59002CFEF6 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE3200F8B59002CFEF6 /* AlbumTableViewCell.swift */; };
+		8425C009200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE4200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift */; };
 		84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBC1FF3758100D26134 /* AppDelegate.swift */; };
-		84D79EBF1FF3758100D26134 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBE1FF3758100D26134 /* GalleryViewController.swift */; };
 		84D79EC21FF3758100D26134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC01FF3758100D26134 /* Main.storyboard */; };
 		84D79EC41FF3758100D26134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC31FF3758100D26134 /* Assets.xcassets */; };
 		84D79EC71FF3758100D26134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC51FF3758100D26134 /* LaunchScreen.storyboard */; };
-		84D79ED31FF4ADFF00D26134 /* LoginService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79ED21FF4ADFF00D26134 /* LoginService+POST.swift */; };
-		84D79ED51FF4AE1C00D26134 /* RegisterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79ED41FF4AE1C00D26134 /* RegisterService+POST.swift */; };
-		84DA156E2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA156D2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift */; };
-		84DA15702006125200FC4C85 /* SelectedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DA156F2006125200FC4C85 /* SelectedImageCollectionViewCell.swift */; };
 		84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DBE1FFE009600D8D66B /* FunBookConstants.swift */; };
-		84E09DC11FFE121000D8D66B /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DC01FFE121000D8D66B /* LoginResponseModel.swift */; };
-		84E09DC31FFE164C00D8D66B /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DC21FFE164C00D8D66B /* LoginTableViewController.swift */; };
-		84E09DC71FFE1FD600D8D66B /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DC61FFE1FD600D8D66B /* RegisterRequestModel.swift */; };
-		84E09DC91FFE20F100D8D66B /* ErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DC81FFE20F100D8D66B /* ErrorResponseModel.swift */; };
 		84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DCC1FFE33A900D8D66B /* DefaultKeys.swift */; };
 		84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DCD1FFE33A900D8D66B /* DeviceType+Helper.swift */; };
 		84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DCE1FFE33A900D8D66B /* ErrorUtils.swift */; };
 		84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DCF1FFE33A900D8D66B /* Extension+Helpers.swift */; };
 		84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DD11FFE33A900D8D66B /* LoginUtils.swift */; };
 		84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DD31FFE33A900D8D66B /* UIImageView+Helper.swift */; };
-		84E09DDE1FFE3ABC00D8D66B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DDD1FFE3ABC00D8D66B /* BaseViewController.swift */; };
-		84E09DE01FFE48F100D8D66B /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DDF1FFE48F100D8D66B /* RegisterTableViewController.swift */; };
-		84E09DE21FFE569D00D8D66B /* SuccessResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DE11FFE569D00D8D66B /* SuccessResponseModel.swift */; };
-		84E09DE81FFF39CF00D8D66B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DE71FFF39CF00D8D66B /* UserModel.swift */; };
-		84E09DEA1FFF437A00D8D66B /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */; };
-		84E09DEC1FFF51F800D8D66B /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */; };
-		84E09DEE1FFF583500D8D66B /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */; };
-		84E09DF01FFF6EFB00D8D66B /* ImageUploadService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DEF1FFF6EFB00D8D66B /* ImageUploadService+POST.swift */; };
-		84E09DF21FFFA66900D8D66B /* ForgotPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DF11FFFA66900D8D66B /* ForgotPasswordService+POST.swift */; };
-		84E09DF41FFFA82500D8D66B /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DF31FFFA82500D8D66B /* ForgotPasswordTableViewController.swift */; };
-		84E09E14200296A000D8D66B /* OTPVerifyService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E13200296A000D8D66B /* OTPVerifyService+POST.swift */; };
-		84E09E162002972000D8D66B /* ResetPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */; };
-		84E09E18200297CB00D8D66B /* OTPVerifyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */; };
-		84E09E1A200298DB00D8D66B /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */; };
-		84E09E1C20033E7900D8D66B /* OTPVerifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09E1B20033E7900D8D66B /* OTPVerifyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.debug.xcconfig"; sourceTree = "<group>"; };
-		8425BFB6200F127E002CFEF6 /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
-		8425BFB8200F171A002CFEF6 /* AlbumInformationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInformationTableViewController.swift; sourceTree = "<group>"; };
-		8425BFBA200F1A45002CFEF6 /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
-		84CD8C9E200C6C350047A57E /* AlbumResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumResponseModel.swift; sourceTree = "<group>"; };
-		84CD8CA0200C6CF70047A57E /* AlbumResponseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumResponseArrayModel.swift; path = Extensions/AlbumResponseArrayModel.swift; sourceTree = "<group>"; };
-		84CD8CA2200C70060047A57E /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
-		84CD8CA4200C83800047A57E /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
-		84CD8CA6200C83AE0047A57E /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
-		84CD8CA8200C9B410047A57E /* ImageOperationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperationsTableViewController.swift; sourceTree = "<group>"; };
-		84CD8CAA200CBB760047A57E /* AlbumImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumImagesModel.swift; sourceTree = "<group>"; };
-		84CD8CAC200CBD1E0047A57E /* AlbumDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailModel.swift; sourceTree = "<group>"; };
-		84CD8CAE200CBEF50047A57E /* AlbumDetailResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailResponseModel.swift; sourceTree = "<group>"; };
-		84CD8CB0200CCE140047A57E /* PrepareAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareAlbumModel.swift; sourceTree = "<group>"; };
-		84CE9B2B20079D74002BBD3F /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
+		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
+		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
+		8425BFC0200F8B59002CFEF6 /* ForgotPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordService+POST.swift"; sourceTree = "<group>"; };
+		8425BFC1200F8B59002CFEF6 /* ImageUploadService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageUploadService+POST.swift"; sourceTree = "<group>"; };
+		8425BFC2200F8B59002CFEF6 /* LoginService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginService+POST.swift"; sourceTree = "<group>"; };
+		8425BFC3200F8B59002CFEF6 /* OTPVerifyService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTPVerifyService+POST.swift"; sourceTree = "<group>"; };
+		8425BFC4200F8B59002CFEF6 /* RegisterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterService+POST.swift"; sourceTree = "<group>"; };
+		8425BFC5200F8B59002CFEF6 /* ResetPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResetPasswordService+POST.swift"; sourceTree = "<group>"; };
+		8425BFC7200F8B59002CFEF6 /* AlbumDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailModel.swift; sourceTree = "<group>"; };
+		8425BFC8200F8B59002CFEF6 /* AlbumDetailResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailResponseModel.swift; sourceTree = "<group>"; };
+		8425BFC9200F8B59002CFEF6 /* AlbumImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumImagesModel.swift; sourceTree = "<group>"; };
+		8425BFCA200F8B59002CFEF6 /* AlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumModel.swift; sourceTree = "<group>"; };
+		8425BFCB200F8B59002CFEF6 /* AlbumResponseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumResponseArrayModel.swift; sourceTree = "<group>"; };
+		8425BFCC200F8B59002CFEF6 /* AlbumResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumResponseModel.swift; sourceTree = "<group>"; };
+		8425BFCD200F8B59002CFEF6 /* ErrorResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponseModel.swift; sourceTree = "<group>"; };
+		8425BFCE200F8B59002CFEF6 /* LoginResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		8425BFCF200F8B59002CFEF6 /* OTPVerifyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyModel.swift; sourceTree = "<group>"; };
+		8425BFD0200F8B59002CFEF6 /* PrepareAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareAlbumModel.swift; sourceTree = "<group>"; };
+		8425BFD1200F8B59002CFEF6 /* RegisterRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
+		8425BFD2200F8B59002CFEF6 /* SuccessResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessResponseModel.swift; sourceTree = "<group>"; };
+		8425BFD3200F8B59002CFEF6 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
+		8425BFD6200F8B59002CFEF6 /* AlbumInformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumInformationTableViewController.swift; sourceTree = "<group>"; };
+		8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
+		8425BFD9200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
+		8425BFDA200F8B59002CFEF6 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		8425BFDB200F8B59002CFEF6 /* ImageOperationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperationsTableViewController.swift; sourceTree = "<group>"; };
+		8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
+		8425BFDD200F8B59002CFEF6 /* OTPVerifyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyTableViewController.swift; sourceTree = "<group>"; };
+		8425BFDE200F8B59002CFEF6 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
+		8425BFDF200F8B59002CFEF6 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
+		8425BFE0200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		8425BFE2200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
+		8425BFE3200F8B59002CFEF6 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		8425BFE4200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		84D79EB91FF3758100D26134 /* FunBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D79EBC1FF3758100D26134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84D79EBE1FF3758100D26134 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		84D79EC11FF3758100D26134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84D79EC31FF3758100D26134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D79EC61FF3758100D26134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D79EC81FF3758100D26134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84D79ED21FF4ADFF00D26134 /* LoginService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginService+POST.swift"; sourceTree = "<group>"; };
-		84D79ED41FF4AE1C00D26134 /* RegisterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterService+POST.swift"; sourceTree = "<group>"; };
-		84DA156D2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImagesCollectionViewController.swift; sourceTree = "<group>"; };
-		84DA156F2006125200FC4C85 /* SelectedImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		84E09DBE1FFE009600D8D66B /* FunBookConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunBookConstants.swift; sourceTree = "<group>"; };
-		84E09DC01FFE121000D8D66B /* LoginResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
-		84E09DC21FFE164C00D8D66B /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
-		84E09DC61FFE1FD600D8D66B /* RegisterRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
-		84E09DC81FFE20F100D8D66B /* ErrorResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponseModel.swift; sourceTree = "<group>"; };
 		84E09DCC1FFE33A900D8D66B /* DefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
 		84E09DCD1FFE33A900D8D66B /* DeviceType+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeviceType+Helper.swift"; sourceTree = "<group>"; };
 		84E09DCE1FFE33A900D8D66B /* ErrorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorUtils.swift; sourceTree = "<group>"; };
 		84E09DCF1FFE33A900D8D66B /* Extension+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Helpers.swift"; sourceTree = "<group>"; };
 		84E09DD11FFE33A900D8D66B /* LoginUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
 		84E09DD31FFE33A900D8D66B /* UIImageView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
-		84E09DDD1FFE3ABC00D8D66B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		84E09DDF1FFE48F100D8D66B /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
-		84E09DE11FFE569D00D8D66B /* SuccessResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessResponseModel.swift; sourceTree = "<group>"; };
-		84E09DE71FFF39CF00D8D66B /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
-		84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
-		84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
-		84E09DEF1FFF6EFB00D8D66B /* ImageUploadService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageUploadService+POST.swift"; sourceTree = "<group>"; };
-		84E09DF11FFFA66900D8D66B /* ForgotPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordService+POST.swift"; sourceTree = "<group>"; };
-		84E09DF31FFFA82500D8D66B /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
-		84E09E13200296A000D8D66B /* OTPVerifyService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTPVerifyService+POST.swift"; sourceTree = "<group>"; };
-		84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResetPasswordService+POST.swift"; sourceTree = "<group>"; };
-		84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyTableViewController.swift; sourceTree = "<group>"; };
-		84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
-		84E09E1B20033E7900D8D66B /* OTPVerifyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyModel.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -136,6 +134,71 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8425BFBC200F8B59002CFEF6 /* API Services */ = {
+			isa = PBXGroup;
+			children = (
+				8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */,
+				8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */,
+				8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */,
+				8425BFC0200F8B59002CFEF6 /* ForgotPasswordService+POST.swift */,
+				8425BFC1200F8B59002CFEF6 /* ImageUploadService+POST.swift */,
+				8425BFC2200F8B59002CFEF6 /* LoginService+POST.swift */,
+				8425BFC3200F8B59002CFEF6 /* OTPVerifyService+POST.swift */,
+				8425BFC4200F8B59002CFEF6 /* RegisterService+POST.swift */,
+				8425BFC5200F8B59002CFEF6 /* ResetPasswordService+POST.swift */,
+			);
+			path = "API Services";
+			sourceTree = "<group>";
+		};
+		8425BFC6200F8B59002CFEF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8425BFC7200F8B59002CFEF6 /* AlbumDetailModel.swift */,
+				8425BFC8200F8B59002CFEF6 /* AlbumDetailResponseModel.swift */,
+				8425BFC9200F8B59002CFEF6 /* AlbumImagesModel.swift */,
+				8425BFCA200F8B59002CFEF6 /* AlbumModel.swift */,
+				8425BFCB200F8B59002CFEF6 /* AlbumResponseArrayModel.swift */,
+				8425BFCC200F8B59002CFEF6 /* AlbumResponseModel.swift */,
+				8425BFCD200F8B59002CFEF6 /* ErrorResponseModel.swift */,
+				8425BFCE200F8B59002CFEF6 /* LoginResponseModel.swift */,
+				8425BFCF200F8B59002CFEF6 /* OTPVerifyModel.swift */,
+				8425BFD0200F8B59002CFEF6 /* PrepareAlbumModel.swift */,
+				8425BFD1200F8B59002CFEF6 /* RegisterRequestModel.swift */,
+				8425BFD2200F8B59002CFEF6 /* SuccessResponseModel.swift */,
+				8425BFD3200F8B59002CFEF6 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8425BFD4200F8B59002CFEF6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */,
+				8425BFD6200F8B59002CFEF6 /* AlbumInformationTableViewController.swift */,
+				8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */,
+				8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */,
+				8425BFD9200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift */,
+				8425BFDA200F8B59002CFEF6 /* GalleryViewController.swift */,
+				8425BFDB200F8B59002CFEF6 /* ImageOperationsTableViewController.swift */,
+				8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */,
+				8425BFDD200F8B59002CFEF6 /* OTPVerifyTableViewController.swift */,
+				8425BFDE200F8B59002CFEF6 /* RegisterTableViewController.swift */,
+				8425BFDF200F8B59002CFEF6 /* ResetPasswordTableViewController.swift */,
+				8425BFE0200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8425BFE1200F8B59002CFEF6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8425BFE2200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift */,
+				8425BFE3200F8B59002CFEF6 /* AlbumTableViewCell.swift */,
+				8425BFE4200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84D79EB01FF3758100D26134 = {
 			isa = PBXGroup;
 			children = (
@@ -157,51 +220,17 @@
 		84D79EBB1FF3758100D26134 /* FunBook */ = {
 			isa = PBXGroup;
 			children = (
-				84E09DDD1FFE3ABC00D8D66B /* BaseViewController.swift */,
+				8425BFBC200F8B59002CFEF6 /* API Services */,
+				8425BFD4200F8B59002CFEF6 /* Controllers */,
+				8425BFC6200F8B59002CFEF6 /* Model */,
+				8425BFE1200F8B59002CFEF6 /* Views */,
 				84E09DCA1FFE33A900D8D66B /* Extensions */,
 				84E09DBE1FFE009600D8D66B /* FunBookConstants.swift */,
 				84D79EBC1FF3758100D26134 /* AppDelegate.swift */,
-				84D79EBE1FF3758100D26134 /* GalleryViewController.swift */,
 				84D79EC01FF3758100D26134 /* Main.storyboard */,
 				84D79EC31FF3758100D26134 /* Assets.xcassets */,
 				84D79EC51FF3758100D26134 /* LaunchScreen.storyboard */,
 				84D79EC81FF3758100D26134 /* Info.plist */,
-				84D79ED21FF4ADFF00D26134 /* LoginService+POST.swift */,
-				84D79ED41FF4AE1C00D26134 /* RegisterService+POST.swift */,
-				84E09DC01FFE121000D8D66B /* LoginResponseModel.swift */,
-				84E09DC21FFE164C00D8D66B /* LoginTableViewController.swift */,
-				84E09DC61FFE1FD600D8D66B /* RegisterRequestModel.swift */,
-				84E09DC81FFE20F100D8D66B /* ErrorResponseModel.swift */,
-				84E09DDF1FFE48F100D8D66B /* RegisterTableViewController.swift */,
-				84E09DE11FFE569D00D8D66B /* SuccessResponseModel.swift */,
-				84E09DE71FFF39CF00D8D66B /* UserModel.swift */,
-				84E09DE91FFF437A00D8D66B /* MyAccountTableViewController.swift */,
-				84E09DEB1FFF51F800D8D66B /* EditProfileTableViewController.swift */,
-				84E09DED1FFF583500D8D66B /* EditProfileService+POST.swift */,
-				84E09DEF1FFF6EFB00D8D66B /* ImageUploadService+POST.swift */,
-				84E09DF11FFFA66900D8D66B /* ForgotPasswordService+POST.swift */,
-				84E09DF31FFFA82500D8D66B /* ForgotPasswordTableViewController.swift */,
-				84E09E13200296A000D8D66B /* OTPVerifyService+POST.swift */,
-				84E09E152002972000D8D66B /* ResetPasswordService+POST.swift */,
-				84E09E17200297CB00D8D66B /* OTPVerifyTableViewController.swift */,
-				84E09E19200298DB00D8D66B /* ResetPasswordTableViewController.swift */,
-				84E09E1B20033E7900D8D66B /* OTPVerifyModel.swift */,
-				84DA156D2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift */,
-				84DA156F2006125200FC4C85 /* SelectedImageCollectionViewCell.swift */,
-				84CE9B2B20079D74002BBD3F /* AlbumTableViewCell.swift */,
-				84CD8CA0200C6CF70047A57E /* AlbumResponseArrayModel.swift */,
-				84CD8C9E200C6C350047A57E /* AlbumResponseModel.swift */,
-				84CD8CA2200C70060047A57E /* AlbumListingService+GET.swift */,
-				84CD8CA4200C83800047A57E /* AlbumDetailTableViewController.swift */,
-				84CD8CA6200C83AE0047A57E /* AlbumDetailService+GET.swift */,
-				84CD8CA8200C9B410047A57E /* ImageOperationsTableViewController.swift */,
-				84CD8CAA200CBB760047A57E /* AlbumImagesModel.swift */,
-				84CD8CAC200CBD1E0047A57E /* AlbumDetailModel.swift */,
-				84CD8CAE200CBEF50047A57E /* AlbumDetailResponseModel.swift */,
-				84CD8CB0200CCE140047A57E /* PrepareAlbumModel.swift */,
-				8425BFB6200F127E002CFEF6 /* AlbumDetailTableViewCell.swift */,
-				8425BFB8200F171A002CFEF6 /* AlbumInformationTableViewController.swift */,
-				8425BFBA200F1A45002CFEF6 /* AlbumModel.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -373,52 +402,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8425BFB7200F127E002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */,
-				8425BFBB200F1A45002CFEF6 /* AlbumModel.swift in Sources */,
-				84CD8CAD200CBD1E0047A57E /* AlbumDetailModel.swift in Sources */,
-				84CD8CA5200C83800047A57E /* AlbumDetailTableViewController.swift in Sources */,
+				8425C001200F8B59002CFEF6 /* ImageOperationsTableViewController.swift in Sources */,
+				8425BFF5200F8B59002CFEF6 /* LoginResponseModel.swift in Sources */,
+				8425BFEE200F8B59002CFEF6 /* AlbumDetailModel.swift in Sources */,
+				8425C008200F8B59002CFEF6 /* AlbumTableViewCell.swift in Sources */,
+				8425BFFD200F8B59002CFEF6 /* BaseViewController.swift in Sources */,
+				8425BFFC200F8B59002CFEF6 /* AlbumInformationTableViewController.swift in Sources */,
+				8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */,
 				84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */,
-				84E09DC11FFE121000D8D66B /* LoginResponseModel.swift in Sources */,
-				84E09E1C20033E7900D8D66B /* OTPVerifyModel.swift in Sources */,
-				84E09DF21FFFA66900D8D66B /* ForgotPasswordService+POST.swift in Sources */,
-				84CD8CA1200C6CF70047A57E /* AlbumResponseArrayModel.swift in Sources */,
-				84E09DE21FFE569D00D8D66B /* SuccessResponseModel.swift in Sources */,
-				84E09E1A200298DB00D8D66B /* ResetPasswordTableViewController.swift in Sources */,
+				8425BFEB200F8B59002CFEF6 /* OTPVerifyService+POST.swift in Sources */,
+				8425BFFB200F8B59002CFEF6 /* AlbumDetailTableViewController.swift in Sources */,
+				8425BFEF200F8B59002CFEF6 /* AlbumDetailResponseModel.swift in Sources */,
+				8425C009200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift in Sources */,
+				8425BFEA200F8B59002CFEF6 /* LoginService+POST.swift in Sources */,
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
-				84CD8CA3200C70060047A57E /* AlbumListingService+GET.swift in Sources */,
+				8425BFE8200F8B59002CFEF6 /* ForgotPasswordService+POST.swift in Sources */,
+				8425BFF1200F8B59002CFEF6 /* AlbumModel.swift in Sources */,
 				84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */,
+				8425BFF3200F8B59002CFEF6 /* AlbumResponseModel.swift in Sources */,
+				8425C004200F8B59002CFEF6 /* RegisterTableViewController.swift in Sources */,
+				8425BFED200F8B59002CFEF6 /* ResetPasswordService+POST.swift in Sources */,
+				8425BFF8200F8B59002CFEF6 /* RegisterRequestModel.swift in Sources */,
+				8425BFF0200F8B59002CFEF6 /* AlbumImagesModel.swift in Sources */,
+				8425BFE9200F8B59002CFEF6 /* ImageUploadService+POST.swift in Sources */,
 				84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */,
-				84E09DE01FFE48F100D8D66B /* RegisterTableViewController.swift in Sources */,
-				84E09E18200297CB00D8D66B /* OTPVerifyTableViewController.swift in Sources */,
-				84E09DF41FFFA82500D8D66B /* ForgotPasswordTableViewController.swift in Sources */,
-				84E09DF01FFF6EFB00D8D66B /* ImageUploadService+POST.swift in Sources */,
-				84CD8CB1200CCE140047A57E /* PrepareAlbumModel.swift in Sources */,
-				84CD8CA9200C9B410047A57E /* ImageOperationsTableViewController.swift in Sources */,
-				84D79ED51FF4AE1C00D26134 /* RegisterService+POST.swift in Sources */,
-				84E09E14200296A000D8D66B /* OTPVerifyService+POST.swift in Sources */,
-				84E09DEC1FFF51F800D8D66B /* EditProfileTableViewController.swift in Sources */,
-				84CD8CA7200C83AE0047A57E /* AlbumDetailService+GET.swift in Sources */,
-				84DA156E2004F8CE00FC4C85 /* SelectedImagesCollectionViewController.swift in Sources */,
-				84E09DC91FFE20F100D8D66B /* ErrorResponseModel.swift in Sources */,
-				84E09DC71FFE1FD600D8D66B /* RegisterRequestModel.swift in Sources */,
-				84DA15702006125200FC4C85 /* SelectedImageCollectionViewCell.swift in Sources */,
-				84CE9B2C20079D74002BBD3F /* AlbumTableViewCell.swift in Sources */,
-				84CD8CAF200CBEF50047A57E /* AlbumDetailResponseModel.swift in Sources */,
-				84E09E162002972000D8D66B /* ResetPasswordService+POST.swift in Sources */,
-				84CD8CAB200CBB760047A57E /* AlbumImagesModel.swift in Sources */,
+				8425BFF7200F8B59002CFEF6 /* PrepareAlbumModel.swift in Sources */,
+				8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */,
+				8425C003200F8B59002CFEF6 /* OTPVerifyTableViewController.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
-				84D79ED31FF4ADFF00D26134 /* LoginService+POST.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
-				84D79EBF1FF3758100D26134 /* GalleryViewController.swift in Sources */,
-				84E09DEE1FFF583500D8D66B /* EditProfileService+POST.swift in Sources */,
 				84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */,
-				8425BFB9200F171A002CFEF6 /* AlbumInformationTableViewController.swift in Sources */,
-				84E09DE81FFF39CF00D8D66B /* UserModel.swift in Sources */,
-				84E09DDE1FFE3ABC00D8D66B /* BaseViewController.swift in Sources */,
-				84CD8C9F200C6C350047A57E /* AlbumResponseModel.swift in Sources */,
+				8425C005200F8B59002CFEF6 /* ResetPasswordTableViewController.swift in Sources */,
+				8425BFEC200F8B59002CFEF6 /* RegisterService+POST.swift in Sources */,
 				84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */,
-				84E09DC31FFE164C00D8D66B /* LoginTableViewController.swift in Sources */,
-				84E09DEA1FFF437A00D8D66B /* MyAccountTableViewController.swift in Sources */,
+				8425BFF9200F8B59002CFEF6 /* SuccessResponseModel.swift in Sources */,
+				8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */,
+				8425BFF6200F8B59002CFEF6 /* OTPVerifyModel.swift in Sources */,
+				8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */,
+				8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */,
+				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
+				8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */,
+				8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */,
+				8425C000200F8B59002CFEF6 /* GalleryViewController.swift in Sources */,
+				8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */,
+				8425BFFF200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift in Sources */,
+				8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

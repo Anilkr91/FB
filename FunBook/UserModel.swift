@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct UserModel: Gloss.Decodable {
+struct UserModel: JSONDecodable {
     
     let deviceID: String
     let email: String

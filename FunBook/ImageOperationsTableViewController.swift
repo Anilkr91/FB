@@ -9,23 +9,39 @@
 import UIKit
 import SwiftDate
 
+
+protocol passAlbumDataDelegte {
+    
+    func didAddCaptionWithDate(caption: String, date: String, index: Int)
+}
+
 class ImageOperationsTableViewController: BaseTableViewController {
+    
+    var delegate: passAlbumDataDelegte?
     
     @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var captionTextField: UITextField!
     @IBOutlet weak var selectDateTextField: UITextField!
     
+    var object: PrepareAlbumModel?
     lazy var datePicker = UIDatePicker()
     let dateFormatter = "YYYY-MM-dd"
  
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBarButton()
         datePicker.datePickerMode = .date
         selectDateTextField.inputView = datePicker
-        selectDateTextField.addTarget(self, action: #selector(ImageOperationsTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
+        datePicker.addTarget(self, action: #selector(ImageOperationsTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
 
         // Do any additional setup after loading the view.
+        
+        if let object = object {
+            albumImageView.image = object.image
+            captionTextField.text = object.caption 
+            selectDateTextField.text = object.date
+        }
     }
 
     func getDate(sender: Any) {
@@ -37,6 +53,17 @@ class ImageOperationsTableViewController: BaseTableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setupBarButton() {
+        
+        let rightBarButton = UIBarButtonItem(title: "Dismiss", style: UIBarButtonItemStyle.plain, target: self, action: #selector(ImageOperationsTableViewController.dismissController))
+        self.navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    func dismissController() {
+        self.dismiss(animated: true, completion: nil)
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -61,7 +88,12 @@ class ImageOperationsTableViewController: BaseTableViewController {
     
     @IBAction func submitButtonTapped(_ sender: Any) {
         
+        let caption = captionTextField.text! 
+        let date = selectDateTextField.text!
         
+        self.dismiss(animated: true) {
+            self.delegate?.didAddCaptionWithDate(caption: caption, date: date, index: self.object!.index)
+            
+        }
     }
-    
 }

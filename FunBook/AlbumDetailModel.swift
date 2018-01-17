@@ -8,42 +8,38 @@
 
 import Gloss
 
-struct AlbumDetailModel: Gloss.Decodable {
+struct AlbumDetailModel: JSONDecodable {
     
-    let deviceID: String
-    let email: String
-    let name: String
-    let picture: String
-    let userID: String
-    let userToken: String
+    let albumID: String
+    let albumName: String
+    let address: String
+    let created: String
+    let images: [AlbumImagesModel]
     
     init?(json: JSON) {
         // User
-        guard let deviceID: String = "deviceID" <~~ json,
-            let email: String = "email" <~~ json,
-            let name: String = "name" <~~ json,
-            let picture: String = "picture" <~~ json,
-            let userID: String = "userID" <~~ json,
-            let userToken: String = "userToken" <~~ json else { return nil }
+        guard let albumID: String = "albumID" <~~ json,
+        let albumName: String = "albumName" <~~ json,
+        let address: String = "address" <~~ json,
+        let created: String = "created" <~~ json,
+        let images: [AlbumImagesModel] = "images" <~~ json else { return nil }
         
-        // User
-        self.deviceID = deviceID
-        self.email = email
-        self.name = name
-        self.picture = picture
-        self.userID = userID
-        self.userToken = userToken
+        self.albumID = albumID
+        self.albumName = albumName
+        self.address = address
+        self.created = created
+        self.images = images
+        
     }
     
     func toJSON() -> JSON? {
         return jsonify([
-            // User
-            "deviceID" ~~> self.deviceID,
-            "email" ~~> self.email,
-            "name" ~~> self.name,
-            "picture" ~~> self.picture,
-            "userID" ~~> self.userID,
-            "userToken" ~~> self.userToken
+            
+            "albumID" ~~> self.albumID,
+            "albumName" ~~> self.albumName,
+            "address" ~~> self.address,
+            "created" ~~> self.created,
+            "images" ~~> self.images
             
             ])
     }

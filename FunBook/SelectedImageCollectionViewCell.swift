@@ -13,9 +13,10 @@ class SelectedImageCollectionViewCell: UICollectionViewCell {
     
 //    var index: Int
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     
-    var info: UIImage? {
+    var info: PrepareAlbumModel? {
         didSet {
             if let image = info {
                 didSetCategory(image)
@@ -37,10 +38,13 @@ class SelectedImageCollectionViewCell: UICollectionViewCell {
         backgroundColor = UIColor.clear
     }
     
-    func didSetCategory(_ image: UIImage) {
+    func didSetCategory(_ info: PrepareAlbumModel) {
         
-        print(image)
-        imageView.image = image
-        label.text = "\(index)"
+//        print(image)
+        imageView.image = info.image
+        captionLabel.text = info.caption
+        dateLabel.text = info.date
+        
+//        label.text = "\(index)"
     }
 }

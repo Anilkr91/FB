@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct AlbumResponseModel: Gloss.Decodable {
+struct AlbumResponseModel: JSONDecodable {
     
     let albumID: String
     let albumName: String

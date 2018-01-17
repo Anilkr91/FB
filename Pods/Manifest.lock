@@ -1,8 +1,8 @@
 PODS:
-  - Alamofire (4.5.1)
-  - Gloss (1.2.4)
-  - Kingfisher (4.1.0)
-  - MBProgressHUD (1.0.0)
+  - Alamofire (4.6.0)
+  - Gloss (2.0.0)
+  - Kingfisher (4.6.1)
+  - MBProgressHUD (1.1.0)
   - OpalImagePicker (1.4.0)
   - SwiftDate (4.3.0)
   - SwiftyUserDefaults (3.0.0)
@@ -17,10 +17,10 @@ DEPENDENCIES:
   - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
-  Kingfisher: f14df8cbe576bf55f211fa589e9869bceb4ea87d
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Gloss: b67617f327406adfd47adf20172d00680a3a31bd
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   OpalImagePicker: 64c2d87f8e1839d1233a6720d3909a22504e3c5d
   SwiftDate: 64e2312711c5c506f7b51794308ce91f19eb494a
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4

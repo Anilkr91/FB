@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct AlbumImagesModel: Gloss.Decodable {
+struct AlbumImagesModel: JSONDecodable {
     
     let small: String
     let large: String

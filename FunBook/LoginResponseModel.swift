@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct LoginResponseModel: Gloss.Decodable {
+struct LoginResponseModel: JSONDecodable {
     
     let error: String
     let status: Bool

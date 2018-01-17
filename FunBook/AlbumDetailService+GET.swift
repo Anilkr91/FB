@@ -26,7 +26,11 @@ class AlbumDetailGetService {
         let request = manager.request( URL + "profile/album_detail/\(albumId)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
+                
             case .success(let value) :
+                
+                print(value)
+                
                 if let json = AlbumDetailResponseModel(json: value as! JSON) {
                     completionHandler(json.data.images)
                     

@@ -44,45 +44,7 @@ class GalleryViewController: BaseViewController {
     
     @IBAction func openGallery(_ sender: UIButton) {
         performSegue(withIdentifier: "showAlbumSegue", sender: self)
-        
-//        let alertController = UIAlertController(title: "Add Album Title", message: "", preferredStyle: .alert)
-//        alertController.addTextField { (textField : UITextField) -> Void in
-//
-//            textField.placeholder = "Enter Album Name.."
-            //            textField.isSecureTextEntry = true
-            
-//            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { (result : UIAlertAction) -> Void in
-//            }
-//            let okAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in
-            
-//                if let field = alertController.textFields![0] as UITextField? {
-//
-//                    if field.text!.isEmpty {
-//                        print("empty")
-//
-//                    } else {
-//                        self.albumName = field.text!
-//
-//                        let imagePicker = OpalImagePickerController()
-//                        imagePicker.maximumSelectionsAllowed = 3
-//
-//                        let configuration = OpalImagePickerConfiguration()
-//                        configuration.maximumSelectionsAllowedMessage = NSLocalizedString("You cannot select that many images!", comment: "")
-//                        imagePicker.configuration = configuration
-//
-//                        imagePicker.imagePickerDelegate = self
-//                        self.present(imagePicker, animated: true, completion: nil)
-//
-//                    }
-//                }
-//            }
-            
-//            alertController.addAction(cancelAction)
-//            alertController.addAction(okAction)
-//            self.present(alertController, animated: true, completion: nil)
-//        }
-//
-//
+    
 //        alertController.addTextField { (textField : UITextField) -> Void in
 //
 //            textField.placeholder = "Enter Album Description.."
@@ -118,13 +80,8 @@ class GalleryViewController: BaseViewController {
 //            alertController.addAction(okAction)
 //            self.present(alertController, animated: true, completion: nil)
 //        }
-//
-//
-//
-//
     }
 }
-
 
 extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
     
@@ -204,7 +161,6 @@ extension GalleryViewController: OpalImagePickerControllerDelegate {
     func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage]) {
         
         for image in images.enumerated() {
-            
            array.append(PrepareAlbumModel(image: image.element, caption: "", date: "", index: image.offset))
         }
         
@@ -276,13 +232,13 @@ extension GalleryViewController: OpalImagePickerControllerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "showSelectedImagesSegue" {
-            
-            let dvc = segue.destination as! SelectedImagesCollectionViewController
-            dvc.array = array
-            print(dvc)
-            
-        } else if segue.identifier == "showAlbumDetail" {
+//        if segue.identifier == "showSelectedImagesSegue" {
+//
+//            let dvc = segue.destination as! SelectedImagesCollectionViewController
+//            dvc.array = array
+//            print(dvc)
+        
+         if segue.identifier == "showAlbumDetail" {
             
             let dvc = segue.destination as! AlbumDetailTableViewController
             dvc.navigationItem.title = album?.albumName

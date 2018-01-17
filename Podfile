@@ -10,8 +10,9 @@ target 'FunBook' do
     pod 'Gloss'
     pod 'Alamofire'
     pod 'SwiftyUserDefaults'
-    pod 'MBProgressHUD'    
+    pod 'MBProgressHUD'
     pod 'OpalImagePicker', '~> 1.4.0'
     pod 'SwiftDate', '~> 4.3.0'
+    pod 'IQKeyboardManager'
     
 end

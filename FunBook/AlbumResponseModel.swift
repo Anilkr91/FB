@@ -13,29 +13,33 @@ struct AlbumResponseModel: JSONDecodable {
     let albumID: String
     let albumName: String
     let thumbNail: String
-    let created: String
+    let albumDate: String
+    let albumDescription: String
     
     init?(json: JSON) {
         
         guard let albumID: String = "albumID" <~~ json,
             let albumName: String = "albumName" <~~ json,
             let thumbNail: String = "thumb" <~~ json,
-            let created: String = "created" <~~ json else { return nil }
+            let albumDate: String = "albumDate" <~~ json,
+            let albumDescription: String = "albumDescription" <~~ json else { return nil }
         
         self.albumID = albumID
         self.albumName = albumName
         self.thumbNail = thumbNail
-        self.created = created
+        self.albumDate = albumDate
+        self.albumDescription =  albumDescription
         
     }
     
     func toJSON() -> JSON? {
         return jsonify([
-            // User
+            
             "albumID" ~~> self.albumID,
             "albumName" ~~> self.albumName,
             "thumb" ~~> self.thumbNail,
-            "created" ~~> self.created
+            "albumDate" ~~> self.albumDate,
+            "albumDescription"  ~~> self.albumDescription
             
             ])
     }

@@ -28,12 +28,8 @@ class AlbumListingGetService {
             switch response.result {
             case .success(let value) :
                 
-                print(value)
-                
                 if let json = AlbumResponseArrayModel(json: value as! JSON) {
                     completionHandler(json.data)
-                    
-                    
                 }
                 
             case .failure(let error):

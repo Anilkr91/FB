@@ -13,16 +13,19 @@ struct AlbumImagesModel: JSONDecodable {
     let small: String
     let large: String
     let caption: String
+    let date: String
     
     init?(json: JSON) {
         
         guard let small: String = "small" <~~ json,
             let large: String = "large" <~~ json,
-            let caption: String = "caption" <~~ json else { return nil }
+            let caption: String = "caption" <~~ json,
+            let date: String = "date" <~~ json else { return nil }
         
         self.small = small
         self.large = large
         self.caption = caption
+        self.date = date
         
     }
     
@@ -31,7 +34,8 @@ struct AlbumImagesModel: JSONDecodable {
             
             "small" ~~> self.small,
             "large" ~~> self.large,
-            "caption" ~~> self.caption
+            "caption" ~~> self.caption,
+            "date" ~~> self.date,
             
             ])
     }

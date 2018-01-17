@@ -1242,7 +1242,7 @@
         <!--Album Detail Table View Controller-->
         <scene sceneID="dxv-6f-jwy">
             <objects>
-                <tableViewController id="gxn-bU-MNy" customClass="AlbumDetailTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="gxn-bU-MNy" customClass="AlbumDetailTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="noP-kK-z0N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1317,10 +1317,10 @@
             </objects>
             <point key="canvasLocation" x="3558" y="2051"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Album Information Table View Controller-->
         <scene sceneID="lWe-tN-UPE">
             <objects>
-                <tableViewController id="F0I-rs-RWX" sceneMemberID="viewController">
+                <tableViewController id="F0I-rs-RWX" customClass="AlbumInformationTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ysK-ik-eaA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1419,6 +1419,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3A-kQ-ulw">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                                     <state key="normal" title="Next"/>
+                                                    <connections>
+                                                        <action selector="nextButtonTapped:" destination="F0I-rs-RWX" eventType="touchUpInside" id="5Zl-Ix-tzQ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1438,6 +1441,9 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="albumDescriptionTextField" destination="4F0-sN-aLr" id="ojr-HR-BhK"/>
+                        <outlet property="albumNameTextField" destination="TA6-aR-hEv" id="cyd-4s-ngb"/>
+                        <outlet property="selectDateTextField" destination="LkX-J5-0Bj" id="0Gb-yp-yph"/>
                         <segue destination="S4e-rV-hPf" kind="show" identifier="showSelectedImagesSegue" id="zDD-np-xOK"/>
                     </connections>
                 </tableViewController>
@@ -1526,7 +1532,13 @@
                             <outlet property="delegate" destination="S4e-rV-hPf" id="oHC-0D-FUZ"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Selected Images" id="mQJ-H3-FHk"/>
+                    <navigationItem key="navigationItem" title="Selected Images" id="mQJ-H3-FHk">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="action" id="o7o-Jl-dZf">
+                            <connections>
+                                <action selector="uploadAlbumButton:" destination="S4e-rV-hPf" id="jSt-N0-PRe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="rOx-Ny-trP" kind="presentation" identifier="showImageSegue" id="FbG-GB-fFK"/>
                     </connections>
@@ -1624,10 +1636,92 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="" id="pKK-u5-I08">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MT7-El-avr">
+                                        <rect key="frame" x="0.0" y="607" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MT7-El-avr" id="DIB-wl-NJK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vzs-H0-OoB">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy this caption to all images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymb-Pt-DKB">
+                                                    <rect key="frame" x="8" y="14" width="302" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VTS-vU-cPD">
+                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Vzs-H0-OoB" firstAttribute="top" secondItem="DIB-wl-NJK" secondAttribute="top" id="RTp-aN-hMJ"/>
+                                                <constraint firstItem="VTS-vU-cPD" firstAttribute="centerY" secondItem="Vzs-H0-OoB" secondAttribute="centerY" id="RoA-pT-QCE"/>
+                                                <constraint firstItem="ymb-Pt-DKB" firstAttribute="centerY" secondItem="Vzs-H0-OoB" secondAttribute="centerY" id="T8o-mE-qW7"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vzs-H0-OoB" secondAttribute="trailing" constant="8" id="YTX-6Q-Sse"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vzs-H0-OoB" secondAttribute="bottom" id="aLb-Gj-8Ol"/>
+                                                <constraint firstItem="Vzs-H0-OoB" firstAttribute="centerY" secondItem="DIB-wl-NJK" secondAttribute="centerY" id="bUn-uh-mbe"/>
+                                                <constraint firstAttribute="trailing" secondItem="VTS-vU-cPD" secondAttribute="trailing" constant="8" id="nfk-8w-SaV"/>
+                                                <constraint firstItem="Vzs-H0-OoB" firstAttribute="leading" secondItem="DIB-wl-NJK" secondAttribute="leading" constant="8" id="qZN-1u-u4W"/>
+                                                <constraint firstItem="ymb-Pt-DKB" firstAttribute="leading" secondItem="DIB-wl-NJK" secondAttribute="leading" constant="8" id="tbd-38-w1A"/>
+                                                <constraint firstItem="VTS-vU-cPD" firstAttribute="leading" secondItem="ymb-Pt-DKB" secondAttribute="trailing" constant="8" id="vyQ-es-C4N"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="qmt-1D-vKS">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="elz-am-mmI">
+                                        <rect key="frame" x="0.0" y="687" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="elz-am-mmI" id="xu2-Mn-tmb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k9n-09-mfz">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="43.5"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make This Image as a Cover Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqO-wa-Ko0">
+                                                    <rect key="frame" x="8" y="14" width="302" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QIg-Mq-TP4">
+                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="k9n-09-mfz" secondAttribute="bottom" id="7qB-jx-JAz"/>
+                                                <constraint firstItem="k9n-09-mfz" firstAttribute="leading" secondItem="xu2-Mn-tmb" secondAttribute="leading" constant="8" id="8IZ-zI-1dL"/>
+                                                <constraint firstItem="QIg-Mq-TP4" firstAttribute="leading" secondItem="SqO-wa-Ko0" secondAttribute="trailing" constant="8" id="Hpe-6x-p3v"/>
+                                                <constraint firstAttribute="trailing" secondItem="QIg-Mq-TP4" secondAttribute="trailing" constant="8" id="Oep-g7-V6r"/>
+                                                <constraint firstItem="k9n-09-mfz" firstAttribute="top" secondItem="xu2-Mn-tmb" secondAttribute="top" id="T6V-IB-wQI"/>
+                                                <constraint firstItem="SqO-wa-Ko0" firstAttribute="centerY" secondItem="k9n-09-mfz" secondAttribute="centerY" id="eN4-VI-uNr"/>
+                                                <constraint firstItem="SqO-wa-Ko0" firstAttribute="leading" secondItem="xu2-Mn-tmb" secondAttribute="leading" constant="8" id="gPV-5V-OQo"/>
+                                                <constraint firstItem="QIg-Mq-TP4" firstAttribute="centerY" secondItem="k9n-09-mfz" secondAttribute="centerY" id="ghl-II-aIq"/>
+                                                <constraint firstAttribute="trailing" secondItem="k9n-09-mfz" secondAttribute="trailing" constant="8" id="xdv-gK-ldg"/>
+                                                <constraint firstItem="k9n-09-mfz" firstAttribute="centerY" secondItem="xu2-Mn-tmb" secondAttribute="centerY" id="z8I-3J-rAe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                             <tableViewSection headerTitle="" id="pu1-KS-8uz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="izH-Fg-gll">
-                                        <rect key="frame" x="0.0" y="607" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="767" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="izH-Fg-gll" id="L4q-9I-78d">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -1660,7 +1754,9 @@
                     <navigationItem key="navigationItem" id="bJe-Vu-H3u"/>
                     <connections>
                         <outlet property="albumImageView" destination="ta4-rc-H4e" id="BbT-X3-PvR"/>
+                        <outlet property="captionSwitch" destination="VTS-vU-cPD" id="AXb-9S-trN"/>
                         <outlet property="captionTextField" destination="eUB-ua-l4X" id="od6-WG-It3"/>
+                        <outlet property="coverImageSwitch" destination="QIg-Mq-TP4" id="wmR-9o-gEL"/>
                         <outlet property="selectDateTextField" destination="Xcy-pD-lBB" id="Yry-8h-pG8"/>
                     </connections>
                 </tableViewController>

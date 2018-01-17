@@ -7,16 +7,13 @@
 //
 
 import UIKit
-
-
 struct PrepareAlbumModel {
-    
+   
     let image: UIImage
     let caption: String
     let date: String
     let index: Int
-    
-    
+
     init(image: UIImage, caption: String, date: String, index: Int) {
         
         self.image = image

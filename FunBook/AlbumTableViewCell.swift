@@ -46,6 +46,6 @@ extension AlbumTableViewCell {
         let placeholderImage = UIImage(named: "loader")
         albumImageView.kf.setImage(with: url, placeholder: placeholderImage)
         albumNameLabel.text = info.albumName
-        dateLabel.text = info.created
+        dateLabel.text = info.albumDescription
     }
 }

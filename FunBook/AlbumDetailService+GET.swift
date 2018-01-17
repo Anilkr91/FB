@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class AlbumDetailGetService {
-    static func executeRequest (_ albumId:String, vc: UIViewController, completionHandler: @escaping ([AlbumResponseModel]) -> Void) {
+    static func executeRequest (_ albumId:String, vc: UIViewController, completionHandler: @escaping ([AlbumImagesModel]) -> Void) {
         
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
@@ -27,11 +27,8 @@ class AlbumDetailGetService {
             
             switch response.result {
             case .success(let value) :
-                
-                print(value)
-                
-                if let json = AlbumResponseArrayModel(json: value as! JSON) {
-                    completionHandler(json.data)
+                if let json = AlbumDetailResponseModel(json: value as! JSON) {
+                    completionHandler(json.data.images)
                     
                     
                 }

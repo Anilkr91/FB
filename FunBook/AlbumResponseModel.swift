@@ -15,7 +15,6 @@ struct AlbumResponseModel: JSONDecodable {
     let thumbNail: String
     let created: String
     
-    
     init?(json: JSON) {
         
         guard let albumID: String = "albumID" <~~ json,

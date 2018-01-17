@@ -1239,17 +1239,17 @@
             </objects>
             <point key="canvasLocation" x="2614" y="2051"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Album Detail Table View Controller-->
         <scene sceneID="dxv-6f-jwy">
             <objects>
-                <tableViewController id="gxn-bU-MNy" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="noP-kK-z0N">
+                <tableViewController id="gxn-bU-MNy" customClass="AlbumDetailTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="noP-kK-z0N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="o5S-iw-SHu" customClass="AlbumTableViewCell" customModule="FunBook" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="o5S-iw-SHu" customClass="AlbumDetailTableViewCell" customModule="FunBook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o5S-iw-SHu" id="hS8-GU-Kj3">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -1300,9 +1300,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="albumImageView" destination="0vR-fO-ucb" id="GPi-88-Twa"/>
-                                    <outlet property="albumNameLabel" destination="WPN-82-ATv" id="gkD-gD-H1F"/>
-                                    <outlet property="dateLabel" destination="x6p-wX-jMs" id="SP8-fE-grv"/>
+                                    <outlet property="albumImageView" destination="0vR-fO-ucb" id="G3b-j8-ZGG"/>
+                                    <outlet property="captionLabel" destination="WPN-82-ATv" id="olb-t9-reS"/>
+                                    <outlet property="dateLabel" destination="x6p-wX-jMs" id="OdS-rJ-EgE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -7,7 +7,6 @@
 //
 
 import Gloss
-
 struct AlbumDetailResponseModel: JSONDecodable {
    
     let status: Bool
@@ -20,7 +19,6 @@ struct AlbumDetailResponseModel: JSONDecodable {
         guard let status: Bool = "status" <~~ json,
             let statusCode: Int = "statusCode" <~~ json,
             let success: String = "success" <~~ json,
-            
             let data: AlbumDetailModel = "data.album" <~~ json else { return nil }
         
         self.status = status

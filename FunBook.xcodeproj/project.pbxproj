@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7FF694E26A8C276316FA29DE /* Pods_FunBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */; };
+		8425BFB7200F127E002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFB6200F127E002CFEF6 /* AlbumDetailTableViewCell.swift */; };
 		84CD8C9F200C6C350047A57E /* AlbumResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8C9E200C6C350047A57E /* AlbumResponseModel.swift */; };
 		84CD8CA1200C6CF70047A57E /* AlbumResponseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA0200C6CF70047A57E /* AlbumResponseArrayModel.swift */; };
 		84CD8CA3200C70060047A57E /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CD8CA2200C70060047A57E /* AlbumListingService+GET.swift */; };
@@ -58,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.debug.xcconfig"; sourceTree = "<group>"; };
+		8425BFB6200F127E002CFEF6 /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
 		84CD8C9E200C6C350047A57E /* AlbumResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumResponseModel.swift; sourceTree = "<group>"; };
 		84CD8CA0200C6CF70047A57E /* AlbumResponseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumResponseArrayModel.swift; path = Extensions/AlbumResponseArrayModel.swift; sourceTree = "<group>"; };
 		84CD8CA2200C70060047A57E /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				84CD8CAC200CBD1E0047A57E /* AlbumDetailModel.swift */,
 				84CD8CAE200CBEF50047A57E /* AlbumDetailResponseModel.swift */,
 				84CD8CB0200CCE140047A57E /* PrepareAlbumModel.swift */,
+				8425BFB6200F127E002CFEF6 /* AlbumDetailTableViewCell.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8425BFB7200F127E002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */,
 				84CD8CAD200CBD1E0047A57E /* AlbumDetailModel.swift in Sources */,
 				84CD8CA5200C83800047A57E /* AlbumDetailTableViewController.swift in Sources */,
 				84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */,

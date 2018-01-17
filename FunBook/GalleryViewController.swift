@@ -15,7 +15,7 @@ class GalleryViewController: BaseViewController {
     
     var array: [PrepareAlbumModel] = []
     var albumName: String = ""
-    var albumId: String = ""
+    var album: AlbumResponseModel?
     var albumModel: [AlbumResponseModel] = []
     @IBOutlet weak var tableview: UITableView!
     
@@ -43,7 +43,6 @@ class GalleryViewController: BaseViewController {
     }
     
     @IBAction func openGallery(_ sender: UIButton) {
-    
         performSegue(withIdentifier: "showAlbumSegue", sender: self)
         
 //        let alertController = UIAlertController(title: "Add Album Title", message: "", preferredStyle: .alert)
@@ -145,7 +144,6 @@ extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 2
     }
@@ -163,8 +161,7 @@ extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        albumId = albumModel[indexPath.section].albumID
+        album = albumModel[indexPath.section]
         self.performSegue(withIdentifier: "showAlbumDetail", sender: self)
     }
 }
@@ -288,7 +285,8 @@ extension GalleryViewController: OpalImagePickerControllerDelegate {
         } else if segue.identifier == "showAlbumDetail" {
             
             let dvc = segue.destination as! AlbumDetailTableViewController
-            dvc.albumId = albumId
+            dvc.navigationItem.title = album?.albumName
+            dvc.albumId = album!.albumID
         }
     }
 }

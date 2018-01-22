@@ -1,5 +1,5 @@
 //
-//  AllAddressService+GET.swift
+//  EditAddressService+POST.swift
 //  FunBook
 //
 //  Created by admin on 22/01/18.
@@ -9,8 +9,8 @@
 import Alamofire
 import Gloss
 
-class AllAddressGetService {
-    static func executeRequest ( vc: UIViewController, completionHandler: @escaping (AlbumTypeDetailModel) -> Void) {
+class EditAddressPostService {
+    static func executeRequest (addressId:String, params:[String: Any], vc: UIViewController, completionHandler: @escaping (LoginResponseModel) -> Void) {
         
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
@@ -23,17 +23,15 @@ class AllAddressGetService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "profile/addresses", method: .get, parameters: nil, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "profile/update_address/\(addressId)", method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
-                
             case .success(let value) :
                 
                 print(value)
                 
-                if let json = AlbumTypeDetailResponseModel(json: value as! JSON) {
-                    completionHandler(json.data)
-                    
+                if let json = LoginResponseModel(json: value as! JSON) {
+                    completionHandler(json)
                 }
                 
             case .failure(let error):
@@ -43,5 +41,3 @@ class AllAddressGetService {
         debugPrint(request)
     }
 }
-
-

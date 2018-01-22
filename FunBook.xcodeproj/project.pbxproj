@@ -15,6 +15,8 @@
 		8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D11E2015BC1900036376 /* AddAddressService+POST.swift */; };
 		8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1202015C64100036376 /* AllAddressService+GET.swift */; };
 		8420D1232015CAAE00036376 /* AddressDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */; };
+		8420D1252015CB4600036376 /* EditAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1242015CB4600036376 /* EditAddressService+POST.swift */; };
+		8420D1272015CF5500036376 /* DeleteAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */; };
 		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
 		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
 		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
@@ -81,6 +83,8 @@
 		8420D11E2015BC1900036376 /* AddAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAddressService+POST.swift"; sourceTree = "<group>"; };
 		8420D1202015C64100036376 /* AllAddressService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllAddressService+GET.swift"; sourceTree = "<group>"; };
 		8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressDetailService+GET.swift"; sourceTree = "<group>"; };
+		8420D1242015CB4600036376 /* EditAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditAddressService+POST.swift"; sourceTree = "<group>"; };
+		8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeleteAddressService+POST.swift"; sourceTree = "<group>"; };
 		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 				8420D11E2015BC1900036376 /* AddAddressService+POST.swift */,
 				8420D1202015C64100036376 /* AllAddressService+GET.swift */,
 				8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */,
+				8420D1242015CB4600036376 /* EditAddressService+POST.swift */,
+				8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 				8425BFFD200F8B59002CFEF6 /* BaseViewController.swift in Sources */,
 				840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */,
 				8425BFFC200F8B59002CFEF6 /* AlbumInformationTableViewController.swift in Sources */,
+				8420D1272015CF5500036376 /* DeleteAddressService+POST.swift in Sources */,
 				8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */,
 				8471E74F2011BFF100D6BA7F /* AlbumTypeService+GET.swift in Sources */,
 				8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */,
@@ -496,6 +503,7 @@
 				84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */,
 				8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */,
 				840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */,
+				8420D1252015CB4600036376 /* EditAddressService+POST.swift in Sources */,
 				8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */,
 				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
 				8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */,

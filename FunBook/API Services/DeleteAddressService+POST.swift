@@ -28,8 +28,6 @@ class DeleteAddressPostService {
             switch response.result {
             case .success(let value) :
                 
-                print(value)
-                
                 if let json = LoginResponseModel(json: value as! JSON) {
                     completionHandler(json)
                 }
@@ -41,4 +39,3 @@ class DeleteAddressPostService {
         debugPrint(request)
     }
 }
-

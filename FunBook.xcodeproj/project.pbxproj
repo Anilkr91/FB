@@ -14,6 +14,7 @@
 		840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */; };
 		8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D11E2015BC1900036376 /* AddAddressService+POST.swift */; };
 		8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1202015C64100036376 /* AllAddressService+GET.swift */; };
+		8420D1232015CAAE00036376 /* AddressDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */; };
 		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
 		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
 		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
@@ -79,6 +80,7 @@
 		840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailTableViewController.swift; sourceTree = "<group>"; };
 		8420D11E2015BC1900036376 /* AddAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAddressService+POST.swift"; sourceTree = "<group>"; };
 		8420D1202015C64100036376 /* AllAddressService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllAddressService+GET.swift"; sourceTree = "<group>"; };
+		8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */,
 				8420D11E2015BC1900036376 /* AddAddressService+POST.swift */,
 				8420D1202015C64100036376 /* AllAddressService+GET.swift */,
+				8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
 				8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */,
 				8425BFE8200F8B59002CFEF6 /* ForgotPasswordService+POST.swift in Sources */,
+				8420D1232015CAAE00036376 /* AddressDetailService+GET.swift in Sources */,
 				8425BFF1200F8B59002CFEF6 /* AlbumModel.swift in Sources */,
 				84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */,
 				8425BFF3200F8B59002CFEF6 /* AlbumResponseModel.swift in Sources */,

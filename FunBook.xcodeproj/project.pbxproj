@@ -13,6 +13,7 @@
 		840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */; };
 		840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */; };
 		8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D11E2015BC1900036376 /* AddAddressService+POST.swift */; };
+		8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1202015C64100036376 /* AllAddressService+GET.swift */; };
 		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
 		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
 		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
@@ -77,6 +78,7 @@
 		840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailResponseModel.swift; sourceTree = "<group>"; };
 		840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailTableViewController.swift; sourceTree = "<group>"; };
 		8420D11E2015BC1900036376 /* AddAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAddressService+POST.swift"; sourceTree = "<group>"; };
+		8420D1202015C64100036376 /* AllAddressService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllAddressService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				8471E74E2011BFF100D6BA7F /* AlbumTypeService+GET.swift */,
 				840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */,
 				8420D11E2015BC1900036376 /* AddAddressService+POST.swift */,
+				8420D1202015C64100036376 /* AllAddressService+GET.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */,
 				8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */,
 				840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */,
+				8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */,
 				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
 				8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */,
 				8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */,

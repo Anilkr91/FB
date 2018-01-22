@@ -17,11 +17,6 @@ struct AlbumModel {
     let date: String
     var images: [PrepareAlbumModel]
     
-//    let image: UIImage
-//    let caption: String
-//    let date: String
-//    let index: Int
-    
     init(coverImage: Int, name: String, description: String, date: String, images:  [PrepareAlbumModel]) {
         
         self.coverImage = coverImage

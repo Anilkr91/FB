@@ -1,18 +1,19 @@
 //
-//  AlbumResponseArrayModel.swift
+//  AlbumTypeDetailResponseModel.swift
 //  FunBook
 //
-//  Created by admin on 15/01/18.
+//  Created by admin on 19/01/18.
 //  Copyright © 2018 Techximum. All rights reserved.
 //
 
 import Gloss
 
-struct AlbumResponseArrayModel: JSONDecodable {
+struct AlbumTypeDetailResponseModel: JSONDecodable {
+   
     let status: Bool
     let statusCode: Int
     let success: String
-    let data: [AlbumResponseModel]
+    let data: AlbumTypeDetailModel
     
     init?(json: JSON) {
         
@@ -20,7 +21,7 @@ struct AlbumResponseArrayModel: JSONDecodable {
             let statusCode: Int = "statusCode" <~~ json,
             let success: String = "success" <~~ json,
             
-            let data: [AlbumResponseModel] = "data.album" <~~ json else { return nil }
+            let data: AlbumTypeDetailModel = "data.detail" <~~ json else { return nil }
         
         self.status = status
         self.statusCode = statusCode
@@ -35,7 +36,8 @@ struct AlbumResponseArrayModel: JSONDecodable {
             "status" ~~> self.status,
             "statusCode" ~~> self.statusCode,
             "success" ~~> self.success,
-            "data.album" ~~> self.data
+            "data.type" ~~> self.data
             ])
     }
 }
+

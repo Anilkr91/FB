@@ -10,65 +10,71 @@ import UIKit
 import SwiftDate
 
 protocol passAlbumDataDelegte {
-    
     func didAddCaptionWithDate(caption: String, date: String, index: Int, isCopyToAll: Bool, coverImageIndex: Int)
 }
 
-class ImageOperationsTableViewController: BaseTableViewController {
+class ImageOperationsTableViewController: BaseTableViewController, CropViewControllerDelegate {
     
     var delegate: passAlbumDataDelegte?
+    var object: PrepareAlbumModel?
     var isCaptionAll: Bool = false
-    var coverImageIndex: Int = 0
+    var coverImageIndex: Int?
     
+    // Crop Properties
+    private var image: UIImage?
+    private var croppingStyle = CropViewCroppingStyle.default
+    private var croppedRect = CGRect.zero
+    private var croppedAngle = 0
+    
+    // IBOutlets
     @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var captionTextField: UITextField!
     @IBOutlet weak var selectDateTextField: UITextField!
     @IBOutlet weak var captionSwitch: UISwitch!
     @IBOutlet weak var coverImageSwitch: UISwitch!
     
-    var object: PrepareAlbumModel?
     lazy var datePicker = UIDatePicker()
-    let dateFormatter = "YYYY-MM-dd"
- 
+    let dateFormatter = "yyyy-MM-dd"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupBarButton()
+
         datePicker.datePickerMode = .date
         selectDateTextField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(ImageOperationsTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
         captionSwitch.addTarget(self, action: #selector(ImageOperationsTableViewController.stateChanged(sender:)), for: UIControlEvents.valueChanged)
+        coverImageSwitch.addTarget(self, action: #selector(ImageOperationsTableViewController.setCoverImage(sender:)), for: UIControlEvents.valueChanged)
         
-         coverImageSwitch.addTarget(self, action: #selector(ImageOperationsTableViewController.setCoverImage(sender:)), for: UIControlEvents.valueChanged)
-
         // Do any additional setup after loading the view.
         
         if let object = object {
             albumImageView.image = object.image
             captionTextField.text = object.caption 
             selectDateTextField.text = object.date
+            
+            if object.index == coverImageIndex {
+                coverImageSwitch.isOn = true
+                
+            } else {
+                coverImageSwitch.isOn = false
+            }
         }
     }
     
     func stateChanged(sender: UISwitch) {
         if sender.isOn {
-           print ("The Switch is On")
-            
             isCaptionAll = true
         } else {
-            print( "The Switch is Off")
-             isCaptionAll = true
+            isCaptionAll = true
         }
     }
     
     func setCoverImage(sender: UISwitch) {
         if sender.isOn {
-            print ("The Switch is On")
             if let object = object {
                 coverImageIndex = object.index
             }
         } else {
-            print( "The Switch is Off")
             coverImageIndex = 0
         }
     }
@@ -82,17 +88,6 @@ class ImageOperationsTableViewController: BaseTableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func setupBarButton() {
-        
-        let rightBarButton = UIBarButtonItem(title: "Dismiss", style: UIBarButtonItemStyle.plain, target: self, action: #selector(ImageOperationsTableViewController.dismissController))
-        self.navigationItem.rightBarButtonItem = rightBarButton
-    }
-    
-    func dismissController() {
-        self.dismiss(animated: true, completion: nil)
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -121,7 +116,23 @@ class ImageOperationsTableViewController: BaseTableViewController {
         let date = selectDateTextField.text!
         
         self.dismiss(animated: true) {
-            self.delegate?.didAddCaptionWithDate(caption: caption, date: date, index: self.object!.index, isCopyToAll: self.isCaptionAll, coverImageIndex: self.coverImageIndex)
+            self.delegate?.didAddCaptionWithDate(caption: caption, date: date, index: self.object!.index, isCopyToAll: self.isCaptionAll, coverImageIndex: self.coverImageIndex!)
+        }
+    }
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+       self.dismiss(animated: true, completion: nil)
+        
+    }
+    @IBAction func editImageButtonTapped(_ sender: Any) {
+        
+        if let object = object {
+            
+            let image =  object.image
+            let cropController = CropViewController(croppingStyle: croppingStyle, image: image)
+            cropController.delegate = self
+            self.image = image
+            self.present(cropController, animated: true, completion: nil)
         }
     }
 }

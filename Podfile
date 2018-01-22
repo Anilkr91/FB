@@ -14,5 +14,6 @@ target 'FunBook' do
     pod 'OpalImagePicker', '~> 1.4.0'
     pod 'SwiftDate', '~> 4.3.0'
     pod 'IQKeyboardManager'
+    pod 'TOCropViewController'
     
 end

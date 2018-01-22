@@ -11,7 +11,7 @@ import Alamofire
 
 private let reuseIdentifier = "Cell"
 
-class SelectedImagesCollectionViewController: UICollectionViewController {
+class SelectedImagesCollectionViewController: BaseCollectionViewController {
     
     var album: AlbumModel?
     var object: PrepareAlbumModel?
@@ -46,6 +46,11 @@ class SelectedImagesCollectionViewController: UICollectionViewController {
         
     }
     
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "showAlbumTypeSegue", sender: self)
+        
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showImageSegue" {
@@ -53,20 +58,23 @@ class SelectedImagesCollectionViewController: UICollectionViewController {
             let nvc = segue.destination as? UINavigationController
             let dvc = nvc?.viewControllers[0] as? ImageOperationsTableViewController
             dvc?.delegate = self
+            dvc?.coverImageIndex = album?.coverImage
             dvc?.object = object
+        
+        } else if segue.identifier == "showAlbumTypeSegue" {
             
+           let dvc = segue.destination as! AlbumTypeTableViewController
+            dvc.album = album
         }
     }
     
     @IBAction func uploadAlbumButton(_ sender: Any) {
-        
         if let album = album {
             uploadAlbum(param: album)
         }
     }
     
     func uploadAlbum(param: AlbumModel) {
-        
         print(param)
         let user = LoginUtils.getCurrentMemberUserLogin()!
         //        let captions = ["Caption1", "Caption2", "Caption3", "Caption4"]

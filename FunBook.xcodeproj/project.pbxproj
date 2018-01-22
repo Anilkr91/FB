@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		7FF694E26A8C276316FA29DE /* Pods_FunBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */; };
+		840CA5332011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */; };
+		840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */; };
+		840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */; };
+		840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */; };
+		8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D11E2015BC1900036376 /* AddAddressService+POST.swift */; };
 		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
 		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
 		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
@@ -45,6 +50,12 @@
 		8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE2200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift */; };
 		8425C008200F8B59002CFEF6 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE3200F8B59002CFEF6 /* AlbumTableViewCell.swift */; };
 		8425C009200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE4200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift */; };
+		8425C00B201079E0002CFEF6 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C00A201079E0002CFEF6 /* CropViewController.swift */; };
+		8471E74F2011BFF100D6BA7F /* AlbumTypeService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E74E2011BFF100D6BA7F /* AlbumTypeService+GET.swift */; };
+		8471E7512011C04400D6BA7F /* AlbumTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7502011C04400D6BA7F /* AlbumTypeTableViewController.swift */; };
+		8471E7532011CDC300D6BA7F /* AlbumTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7522011CDC300D6BA7F /* AlbumTypeTableViewCell.swift */; };
+		8471E7552011CFEB00D6BA7F /* AlbumTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7542011CFEB00D6BA7F /* AlbumTypeModel.swift */; };
+		8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7562011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift */; };
 		84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBC1FF3758100D26134 /* AppDelegate.swift */; };
 		84D79EC21FF3758100D26134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC01FF3758100D26134 /* Main.storyboard */; };
 		84D79EC41FF3758100D26134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC31FF3758100D26134 /* Assets.xcassets */; };
@@ -56,10 +67,16 @@
 		84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DCF1FFE33A900D8D66B /* Extension+Helpers.swift */; };
 		84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DD11FFE33A900D8D66B /* LoginUtils.swift */; };
 		84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DD31FFE33A900D8D66B /* UIImageView+Helper.swift */; };
+		84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.debug.xcconfig"; sourceTree = "<group>"; };
+		840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumTypeDetailService+GET.swift"; sourceTree = "<group>"; };
+		840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailModel.swift; sourceTree = "<group>"; };
+		840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailResponseModel.swift; sourceTree = "<group>"; };
+		840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailTableViewController.swift; sourceTree = "<group>"; };
+		8420D11E2015BC1900036376 /* AddAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAddressService+POST.swift"; sourceTree = "<group>"; };
 		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
@@ -97,6 +114,12 @@
 		8425BFE2200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
 		8425BFE3200F8B59002CFEF6 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		8425BFE4200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		8425C00A201079E0002CFEF6 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
+		8471E74E2011BFF100D6BA7F /* AlbumTypeService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumTypeService+GET.swift"; sourceTree = "<group>"; };
+		8471E7502011C04400D6BA7F /* AlbumTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeTableViewController.swift; sourceTree = "<group>"; };
+		8471E7522011CDC300D6BA7F /* AlbumTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeTableViewCell.swift; sourceTree = "<group>"; };
+		8471E7542011CFEB00D6BA7F /* AlbumTypeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeModel.swift; sourceTree = "<group>"; };
+		8471E7562011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeResponseArrayModel.swift; sourceTree = "<group>"; };
 		84D79EB91FF3758100D26134 /* FunBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D79EBC1FF3758100D26134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D79EC11FF3758100D26134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +133,7 @@
 		84E09DCF1FFE33A900D8D66B /* Extension+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Helpers.swift"; sourceTree = "<group>"; };
 		84E09DD11FFE33A900D8D66B /* LoginUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
 		84E09DD31FFE33A900D8D66B /* UIImageView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
+		84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,6 +170,9 @@
 				8425BFC3200F8B59002CFEF6 /* OTPVerifyService+POST.swift */,
 				8425BFC4200F8B59002CFEF6 /* RegisterService+POST.swift */,
 				8425BFC5200F8B59002CFEF6 /* ResetPasswordService+POST.swift */,
+				8471E74E2011BFF100D6BA7F /* AlbumTypeService+GET.swift */,
+				840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */,
+				8420D11E2015BC1900036376 /* AddAddressService+POST.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -166,6 +193,10 @@
 				8425BFD1200F8B59002CFEF6 /* RegisterRequestModel.swift */,
 				8425BFD2200F8B59002CFEF6 /* SuccessResponseModel.swift */,
 				8425BFD3200F8B59002CFEF6 /* UserModel.swift */,
+				8471E7542011CFEB00D6BA7F /* AlbumTypeModel.swift */,
+				8471E7562011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift */,
+				840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */,
+				840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +216,9 @@
 				8425BFDE200F8B59002CFEF6 /* RegisterTableViewController.swift */,
 				8425BFDF200F8B59002CFEF6 /* ResetPasswordTableViewController.swift */,
 				8425BFE0200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift */,
+				8471E7502011C04400D6BA7F /* AlbumTypeTableViewController.swift */,
+				840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */,
+				84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -195,6 +229,7 @@
 				8425BFE2200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift */,
 				8425BFE3200F8B59002CFEF6 /* AlbumTableViewCell.swift */,
 				8425BFE4200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift */,
+				8471E7522011CDC300D6BA7F /* AlbumTypeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,6 +266,7 @@
 				84D79EC31FF3758100D26134 /* Assets.xcassets */,
 				84D79EC51FF3758100D26134 /* LaunchScreen.storyboard */,
 				84D79EC81FF3758100D26134 /* Info.plist */,
+				8425C00A201079E0002CFEF6 /* CropViewController.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -363,6 +399,7 @@
 				"${BUILT_PRODUCTS_DIR}/OpalImagePicker/OpalImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
+				"${BUILT_PRODUCTS_DIR}/TOCropViewController/TOCropViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -374,6 +411,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpalImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TOCropViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -407,7 +445,10 @@
 				8425BFEE200F8B59002CFEF6 /* AlbumDetailModel.swift in Sources */,
 				8425C008200F8B59002CFEF6 /* AlbumTableViewCell.swift in Sources */,
 				8425BFFD200F8B59002CFEF6 /* BaseViewController.swift in Sources */,
+				840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */,
 				8425BFFC200F8B59002CFEF6 /* AlbumInformationTableViewController.swift in Sources */,
+				8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */,
+				8471E74F2011BFF100D6BA7F /* AlbumTypeService+GET.swift in Sources */,
 				8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */,
 				84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */,
 				8425BFEB200F8B59002CFEF6 /* OTPVerifyService+POST.swift in Sources */,
@@ -416,21 +457,27 @@
 				8425C009200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift in Sources */,
 				8425BFEA200F8B59002CFEF6 /* LoginService+POST.swift in Sources */,
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
+				8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */,
 				8425BFE8200F8B59002CFEF6 /* ForgotPasswordService+POST.swift in Sources */,
 				8425BFF1200F8B59002CFEF6 /* AlbumModel.swift in Sources */,
 				84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */,
 				8425BFF3200F8B59002CFEF6 /* AlbumResponseModel.swift in Sources */,
+				8471E7512011C04400D6BA7F /* AlbumTypeTableViewController.swift in Sources */,
 				8425C004200F8B59002CFEF6 /* RegisterTableViewController.swift in Sources */,
 				8425BFED200F8B59002CFEF6 /* ResetPasswordService+POST.swift in Sources */,
+				8471E7532011CDC300D6BA7F /* AlbumTypeTableViewCell.swift in Sources */,
 				8425BFF8200F8B59002CFEF6 /* RegisterRequestModel.swift in Sources */,
 				8425BFF0200F8B59002CFEF6 /* AlbumImagesModel.swift in Sources */,
 				8425BFE9200F8B59002CFEF6 /* ImageUploadService+POST.swift in Sources */,
 				84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */,
 				8425BFF7200F8B59002CFEF6 /* PrepareAlbumModel.swift in Sources */,
 				8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */,
+				840CA5332011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift in Sources */,
+				8425C00B201079E0002CFEF6 /* CropViewController.swift in Sources */,
 				8425C003200F8B59002CFEF6 /* OTPVerifyTableViewController.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
+				8471E7552011CFEB00D6BA7F /* AlbumTypeModel.swift in Sources */,
 				84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */,
 				8425C005200F8B59002CFEF6 /* ResetPasswordTableViewController.swift in Sources */,
 				8425BFEC200F8B59002CFEF6 /* RegisterService+POST.swift in Sources */,
@@ -439,7 +486,9 @@
 				8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */,
 				8425BFF6200F8B59002CFEF6 /* OTPVerifyModel.swift in Sources */,
 				8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */,
+				84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */,
 				8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */,
+				840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */,
 				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
 				8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */,
 				8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */,
@@ -447,6 +496,7 @@
 				8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */,
 				8425BFFF200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift in Sources */,
 				8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */,
+				840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

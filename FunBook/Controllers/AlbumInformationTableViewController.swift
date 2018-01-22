@@ -17,14 +17,26 @@ class AlbumInformationTableViewController: BaseTableViewController {
     @IBOutlet weak var selectDateTextField: UITextField!
     var album = AlbumModel(coverImage: 0, name: "", description: "", date: "", images: [])
     
+    lazy var datePicker = UIDatePicker()
+    let dateFormatter = "yyyy-MM-dd"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        datePicker.datePickerMode = .date
+        selectDateTextField.inputView = datePicker
+        datePicker.addTarget(self, action: #selector(ImageOperationsTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
         
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getDate(sender: Any) {
+        let selectedDate =  datePicker.date
+        let dateString =  selectedDate.string(custom: dateFormatter)
+        selectDateTextField.text = dateString
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {

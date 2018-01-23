@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         checkLoginState()
         setupKeyBoardManager()
+        setupPaypal()
         return true
     }
     
@@ -55,7 +56,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setHomeUser() {
-        
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
         window?.rootViewController = vc
@@ -72,4 +72,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared().isEnabled = true
     }
     
+    func setupPaypal() {
+        PayPalMobile .initializeWithClientIds(forEnvironments: [
+            PayPalEnvironmentProduction: "AUOQwdYBs29gO9FCiaT5uERf0JzlvOQuy_ci5mlz6IBRUxCG2QZ09djFDB1wrD580qC-4wcpl-58xdIn",
+            PayPalEnvironmentSandbox: "AfEeaVPCIKWJNUVNI_l7vSiqw19WjpRFztMwWG5zuXwS2gx2I3KBb6ZvdG-MeDTVqyy7REIpytbeozWH"
+            ])
+    }
 }

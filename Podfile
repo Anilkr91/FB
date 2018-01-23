@@ -15,5 +15,6 @@ target 'FunBook' do
     pod 'SwiftDate', '~> 4.3.0'
     pod 'IQKeyboardManager'
     pod 'TOCropViewController'
+    pod 'PayPal-iOS-SDK'
     
 end

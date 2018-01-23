@@ -21,6 +21,8 @@
 		8420D12B2015EAAE00036376 /* AddressListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D12A2015EAAE00036376 /* AddressListingTableViewController.swift */; };
 		8420D12D2015ED9100036376 /* EditAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D12C2015ED9100036376 /* EditAddressTableViewController.swift */; };
 		8420D12F2015F41100036376 /* AddressListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */; };
+		8420D1322015FF2900036376 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1312015FF2800036376 /* LoginTableViewController.swift */; };
+		8420D1342017445700036376 /* PaypalConfig+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1332017445700036376 /* PaypalConfig+Helpers.swift */; };
 		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
 		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
 		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
@@ -80,6 +82,7 @@
 
 /* Begin PBXFileReference section */
 		0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.debug.xcconfig"; sourceTree = "<group>"; };
+		8409CB13201756CE007BB614 /* FunBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunBook-Bridging-Header.h"; sourceTree = "<group>"; };
 		840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumTypeDetailService+GET.swift"; sourceTree = "<group>"; };
 		840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailModel.swift; sourceTree = "<group>"; };
 		840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailResponseModel.swift; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 		8420D12A2015EAAE00036376 /* AddressListingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListingTableViewController.swift; sourceTree = "<group>"; };
 		8420D12C2015ED9100036376 /* EditAddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddressTableViewController.swift; sourceTree = "<group>"; };
 		8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListingTableViewCell.swift; sourceTree = "<group>"; };
+		8420D1312015FF2800036376 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
+		8420D1332017445700036376 /* PaypalConfig+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaypalConfig+Helpers.swift"; sourceTree = "<group>"; };
 		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
@@ -174,6 +179,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8420D1302015FF2800036376 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8420D1312015FF2800036376 /* LoginTableViewController.swift */,
+			);
+			name = Login;
+			path = FunBook/Login;
+			sourceTree = SOURCE_ROOT;
+		};
 		8425BFBC200F8B59002CFEF6 /* API Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +238,7 @@
 		8425BFD4200F8B59002CFEF6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8420D1302015FF2800036376 /* Login */,
 				8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */,
 				8425BFD6200F8B59002CFEF6 /* AlbumInformationTableViewController.swift */,
 				8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */,
@@ -291,6 +306,8 @@
 				84D79EC51FF3758100D26134 /* LaunchScreen.storyboard */,
 				84D79EC81FF3758100D26134 /* Info.plist */,
 				8425C00A201079E0002CFEF6 /* CropViewController.swift */,
+				8420D1332017445700036376 /* PaypalConfig+Helpers.swift */,
+				8409CB13201756CE007BB614 /* FunBook-Bridging-Header.h */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -353,7 +370,7 @@
 					84D79EB81FF3758100D26134 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = Z8HU92LYAQ;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -486,6 +503,7 @@
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
 				8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */,
 				8425BFE8200F8B59002CFEF6 /* ForgotPasswordService+POST.swift in Sources */,
+				8420D1342017445700036376 /* PaypalConfig+Helpers.swift in Sources */,
 				8420D1232015CAAE00036376 /* AddressDetailService+GET.swift in Sources */,
 				8420D12B2015EAAE00036376 /* AddressListingTableViewController.swift in Sources */,
 				8425BFF1200F8B59002CFEF6 /* AlbumModel.swift in Sources */,
@@ -523,6 +541,7 @@
 				8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */,
 				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
 				8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */,
+				8420D1322015FF2900036376 /* LoginTableViewController.swift in Sources */,
 				8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */,
 				8425C000200F8B59002CFEF6 /* GalleryViewController.swift in Sources */,
 				8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */,
@@ -654,11 +673,14 @@
 			baseConfigurationReference = 0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Z8HU92LYAQ;
 				INFOPLIST_FILE = FunBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.techximum.FunBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FunBook/FunBook-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -668,11 +690,13 @@
 			baseConfigurationReference = DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Z8HU92LYAQ;
 				INFOPLIST_FILE = FunBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.techximum.FunBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FunBook/FunBook-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

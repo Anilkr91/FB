@@ -1446,7 +1446,7 @@
         <!--Album Type Detail Table View Controller-->
         <scene sceneID="QCh-N9-TfO">
             <objects>
-                <tableViewController id="Qhh-Fn-mNH" customClass="AlbumTypeDetailTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="Qhh-Fn-mNH" customClass="AlbumTypeDetailTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="f9z-Al-WdM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1713,7 +1713,7 @@
         <!--Album Information Table View Controller-->
         <scene sceneID="lWe-tN-UPE">
             <objects>
-                <tableViewController id="F0I-rs-RWX" customClass="AlbumInformationTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="F0I-rs-RWX" customClass="AlbumInformationTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ysK-ik-eaA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1847,7 +1847,7 @@
         <!--Selected Images-->
         <scene sceneID="AR7-4U-xCA">
             <objects>
-                <collectionViewController id="S4e-rV-hPf" customClass="SelectedImagesCollectionViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController hidesBottomBarWhenPushed="YES" id="S4e-rV-hPf" customClass="SelectedImagesCollectionViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ccI-cA-S6B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2564,10 +2564,10 @@
             </objects>
             <point key="canvasLocation" x="4446" y="3342"/>
         </scene>
-        <!--Table View Controller-->
+        <!--User Album Detail Table View Controller-->
         <scene sceneID="ZJj-RC-PUb">
             <objects>
-                <tableViewController id="e5Y-TR-rcT" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="e5Y-TR-rcT" customClass="UserAlbumDetailTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3gm-ZB-1m0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2833,7 +2833,7 @@
         <!--Edit Address-->
         <scene sceneID="uq5-HQ-lGf">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="lea-Ao-MJ4" customClass="AddAddressTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="lea-Ao-MJ4" customClass="EditAddressTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="p6G-GD-pL6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3153,9 +3153,17 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit Address" id="x7C-gD-H8a"/>
                     <connections>
+                        <outlet property="addressFirstTextField" destination="Lvl-ne-BUe" id="CU2-cx-d81"/>
+                        <outlet property="addressSecondTextField" destination="al5-ZC-DMD" id="jno-go-SNe"/>
+                        <outlet property="cityTextField" destination="Snq-Qy-ZT6" id="dGA-Eg-EvO"/>
                         <outlet property="emailTextField" destination="F1I-FV-Cne" id="8Po-N4-ifv"/>
+                        <outlet property="firstNameTextField" destination="F1I-FV-Cne" id="NRO-YR-ytJ"/>
                         <outlet property="fullNameTextField" destination="qnC-Qx-oOo" id="922-mV-lWz"/>
+                        <outlet property="lastNameTextField" destination="EmD-Fv-ZJD" id="5JI-mR-1Bz"/>
                         <outlet property="passwordTextField" destination="EmD-Fv-ZJD" id="HAt-cL-Ngq"/>
+                        <outlet property="selectCountryTextField" destination="qnC-Qx-oOo" id="0OE-mB-vOS"/>
+                        <outlet property="stateTextField" destination="usn-Kj-oaj" id="Zlx-J0-DOX"/>
+                        <outlet property="zipCodeTextField" destination="p9T-Cj-cHX" id="bo5-dk-yB7"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jy-p3-LN4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3233,7 +3241,7 @@
         <!--Add Address-->
         <scene sceneID="Uk5-rF-pmT">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="CtO-fm-oqm" customClass="EditAddressTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="CtO-fm-oqm" customClass="AddAddressTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="A7I-0w-T92">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3260,9 +3268,6 @@
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
-                                                    <connections>
-                                                        <action selector="selectCountryTextField:" destination="hgL-RF-tK3" eventType="editingDidEnd" id="RBA-3M-EjW"/>
-                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -3533,7 +3538,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="loginButtonTapped:" destination="CtO-fm-oqm" eventType="touchUpInside" id="wUM-RY-gKD"/>
+                                                        <action selector="submitButtonTapped:" destination="CtO-fm-oqm" eventType="touchUpInside" id="jc5-Eu-TJy"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -3556,14 +3561,18 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Address" id="AZp-4a-Lxv"/>
                     <connections>
-                        <outlet property="emailTextField" destination="FCL-vF-kzz" id="rbj-BR-xme"/>
-                        <outlet property="fullNameTextField" destination="8ei-Hd-rh8" id="2T8-NI-5LL"/>
-                        <outlet property="passwordTextField" destination="eTV-MA-Thh" id="FQ7-h8-EX8"/>
+                        <outlet property="addressFirstTextField" destination="rhZ-PE-Oyp" id="NCv-lt-pjv"/>
+                        <outlet property="addressSecondTextField" destination="vFW-4X-goS" id="WRw-zl-s4W"/>
+                        <outlet property="cityTextField" destination="0oa-q8-MGt" id="CRn-fP-vy6"/>
+                        <outlet property="firstNameTextField" destination="FCL-vF-kzz" id="l2y-4B-SdJ"/>
+                        <outlet property="lastNameTextField" destination="eTV-MA-Thh" id="lv1-Cg-i78"/>
+                        <outlet property="selectCountryTextField" destination="8ei-Hd-rh8" id="dEo-Vl-LJs"/>
+                        <outlet property="stateTextField" destination="1CS-C4-KSQ" id="RSL-hn-zee"/>
+                        <outlet property="zipCodeTextField" destination="AoX-uI-uHl" id="qXJ-8Y-Mj9"/>
                         <segue destination="lea-Ao-MJ4" kind="show" id="6sG-fT-eWS"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K3O-is-d9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="hgL-RF-tK3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5660" y="1859"/>
         </scene>

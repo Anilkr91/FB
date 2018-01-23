@@ -36,8 +36,18 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func setupBarButton() {
+        let rightBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AlbumTypeDetailTableViewController.dismissModally))
+        self.navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    func dismissModally() {
+        performSegue(withIdentifier: "", sender: self)
+    }
+    
     func setUpView(info: AlbumTypeDetailModel) {
-
+        
         let imageUrl:String = info.coverImage.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let url = URL(string: imageUrl)
         let placeholderImage = UIImage(named: "loader")
@@ -49,9 +59,9 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
         albumPriceLabel.text = info.amount
         paperTypeLabel.text = info.paperName
         paperSizeLabel.text = info.paperSize
-
+        
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 2
     }

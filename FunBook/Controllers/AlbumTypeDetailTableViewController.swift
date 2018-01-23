@@ -12,6 +12,7 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
     
     var album: AlbumModel?
     var albumTypeIndex: String?
+    var object: AlbumTypeDetailModel?
     
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var albumTitleLabel: UILabel!
@@ -26,9 +27,11 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
         
         if let id = albumTypeIndex {
             AlbumTypeDetailGetService.executeRequest(id, vc: self) { (response) in
+                self.object = response
                 self.setUpView(info: response)
             }
         }
+        setupBarButton()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +46,7 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
     }
     
     func dismissModally() {
-        performSegue(withIdentifier: "", sender: self)
+        performSegue(withIdentifier: "showUserAlbumDetailSegue", sender: self)
     }
     
     func setUpView(info: AlbumTypeDetailModel) {
@@ -60,6 +63,17 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
         paperTypeLabel.text = info.paperName
         paperSizeLabel.text = info.paperSize
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showUserAlbumDetailSegue" {
+            
+            let dvc = segue.destination as! UserAlbumDetailTableViewController
+            dvc.album = album
+            dvc.object = object
+            
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7FF694E26A8C276316FA29DE /* Pods_FunBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */; };
+		8409CB18201794DD007BB614 /* ShippingChargesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB17201794DD007BB614 /* ShippingChargesTableViewController.swift */; };
+		8409CB1A20179513007BB614 /* CheckOutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB1920179513007BB614 /* CheckOutTableViewController.swift */; };
+		8409CB1C20179589007BB614 /* ShippingPriceService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB1B20179589007BB614 /* ShippingPriceService+GET.swift */; };
 		840CA5332011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */; };
 		840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */; };
 		840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */; };
@@ -83,6 +86,9 @@
 /* Begin PBXFileReference section */
 		0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.debug.xcconfig"; sourceTree = "<group>"; };
 		8409CB13201756CE007BB614 /* FunBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunBook-Bridging-Header.h"; sourceTree = "<group>"; };
+		8409CB17201794DD007BB614 /* ShippingChargesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingChargesTableViewController.swift; sourceTree = "<group>"; };
+		8409CB1920179513007BB614 /* CheckOutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutTableViewController.swift; sourceTree = "<group>"; };
+		8409CB1B20179589007BB614 /* ShippingPriceService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShippingPriceService+GET.swift"; sourceTree = "<group>"; };
 		840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumTypeDetailService+GET.swift"; sourceTree = "<group>"; };
 		840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailModel.swift; sourceTree = "<group>"; };
 		840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailResponseModel.swift; sourceTree = "<group>"; };
@@ -207,6 +213,7 @@
 				8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */,
 				8420D1242015CB4600036376 /* EditAddressService+POST.swift */,
 				8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */,
+				8409CB1B20179589007BB614 /* ShippingPriceService+GET.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -257,6 +264,8 @@
 				8420D1282015E5BD00036376 /* AddAddressTableViewController.swift */,
 				8420D12A2015EAAE00036376 /* AddressListingTableViewController.swift */,
 				8420D12C2015ED9100036376 /* EditAddressTableViewController.swift */,
+				8409CB17201794DD007BB614 /* ShippingChargesTableViewController.swift */,
+				8409CB1920179513007BB614 /* CheckOutTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -490,6 +499,7 @@
 				8420D1292015E5BD00036376 /* AddAddressTableViewController.swift in Sources */,
 				8425BFFC200F8B59002CFEF6 /* AlbumInformationTableViewController.swift in Sources */,
 				8420D1272015CF5500036376 /* DeleteAddressService+POST.swift in Sources */,
+				8409CB1A20179513007BB614 /* CheckOutTableViewController.swift in Sources */,
 				8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */,
 				8471E74F2011BFF100D6BA7F /* AlbumTypeService+GET.swift in Sources */,
 				8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */,
@@ -534,6 +544,7 @@
 				8420D12F2015F41100036376 /* AddressListingTableViewCell.swift in Sources */,
 				8425BFF6200F8B59002CFEF6 /* OTPVerifyModel.swift in Sources */,
 				8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */,
+				8409CB1C20179589007BB614 /* ShippingPriceService+GET.swift in Sources */,
 				84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */,
 				8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */,
 				840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */,
@@ -542,6 +553,7 @@
 				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
 				8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */,
 				8420D1322015FF2900036376 /* LoginTableViewController.swift in Sources */,
+				8409CB18201794DD007BB614 /* ShippingChargesTableViewController.swift in Sources */,
 				8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */,
 				8425C000200F8B59002CFEF6 /* GalleryViewController.swift in Sources */,
 				8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */,

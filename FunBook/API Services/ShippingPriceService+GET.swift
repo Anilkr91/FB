@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class ShippingPriceGetService {
-    static func executeRequest ( vc: UIViewController, completionHandler: @escaping (AlbumTypeDetailModel) -> Void) {
+    static func executeRequest ( vc: UIViewController, completionHandler: @escaping ([ShippingModel]) -> Void) {
         
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
@@ -31,7 +31,7 @@ class ShippingPriceGetService {
                 
                 print(value)
                 
-                if let json = AlbumTypeDetailResponseModel(json: value as! JSON) {
+                if let json = ShippingArrayModel(json: value as! JSON) {
                     completionHandler(json.data)
                     
                 }

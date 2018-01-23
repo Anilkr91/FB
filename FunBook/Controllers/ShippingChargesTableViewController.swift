@@ -10,15 +10,30 @@ import UIKit
 
 class ShippingChargesTableViewController: BaseTableViewController {
     
-    
+    var album: AlbumModel?
     var object: AlbumTypeDetailModel?
+    var array: [ShippingModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(object)
+        getShippingPrices()
+        setupBarButton()
+    }
+    
+    func getShippingPrices() {
         ShippingPriceGetService.executeRequest(vc: self) { (response) in
-            print(response)
+            self.array = response
+            self.tableView.reloadData()
         }
+    }
+    
+    func setupBarButton() {
+        let rightBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AlbumTypeDetailTableViewController.dismissModally))
+        self.navigationItem.rightBarButtonItem = rightBarButton
+    }
+    
+    func dismissModally() {
+        performSegue(withIdentifier: "showCheckoutSegue", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,21 +45,42 @@ class ShippingChargesTableViewController: BaseTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return array.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
     
-    /*
-     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-     
-     // Configure the cell...
-     
-     return cell
-     }
-     */
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ShippingChargesTableViewCell
+        cell.info = array[indexPath.section]
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCheckoutSegue" {
+            
+//            let dvc = segue.destination as! CheckOutTableViewController
+//            dvc.object = object
+        }
+    }
 }

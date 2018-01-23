@@ -53,13 +53,14 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     func dismissModally() {
         performSegue(withIdentifier: "showShippingSegue", sender: self)
     }
-    
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "showShippingSegue" {
         
             let dvc = segue.destination as! ShippingChargesTableViewController
             dvc.object = object
+            dvc.album = album
         }
     }
     

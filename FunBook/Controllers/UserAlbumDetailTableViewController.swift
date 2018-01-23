@@ -25,6 +25,8 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupBarButton()
+        
         if let album = album {
             for img in album.images.enumerated() {
                 if img.offset == album.coverImage {
@@ -49,7 +51,7 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     }
     
     func dismissModally() {
-        performSegue(withIdentifier: "showUserAlbumDetailSegue", sender: self)
+        performSegue(withIdentifier: "showShippingSegue", sender: self)
     }
     
     

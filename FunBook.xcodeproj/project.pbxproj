@@ -69,6 +69,8 @@
 		8471E7532011CDC300D6BA7F /* AlbumTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7522011CDC300D6BA7F /* AlbumTypeTableViewCell.swift */; };
 		8471E7552011CFEB00D6BA7F /* AlbumTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7542011CFEB00D6BA7F /* AlbumTypeModel.swift */; };
 		8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7562011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift */; };
+		8474BD63201799400013EEFD /* ShippingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474BD62201799400013EEFD /* ShippingModel.swift */; };
+		8474BD6520179A060013EEFD /*  ShippingArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474BD6420179A060013EEFD /*  ShippingArrayModel.swift */; };
 		84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBC1FF3758100D26134 /* AppDelegate.swift */; };
 		84D79EC21FF3758100D26134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC01FF3758100D26134 /* Main.storyboard */; };
 		84D79EC41FF3758100D26134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC31FF3758100D26134 /* Assets.xcassets */; };
@@ -147,6 +149,8 @@
 		8471E7522011CDC300D6BA7F /* AlbumTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeTableViewCell.swift; sourceTree = "<group>"; };
 		8471E7542011CFEB00D6BA7F /* AlbumTypeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeModel.swift; sourceTree = "<group>"; };
 		8471E7562011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeResponseArrayModel.swift; sourceTree = "<group>"; };
+		8474BD62201799400013EEFD /* ShippingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingModel.swift; sourceTree = "<group>"; };
+		8474BD6420179A060013EEFD /*  ShippingArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " ShippingArrayModel.swift"; sourceTree = "<group>"; };
 		84D79EB91FF3758100D26134 /* FunBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D79EBC1FF3758100D26134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D79EC11FF3758100D26134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				8471E7562011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift */,
 				840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */,
 				840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */,
+				8474BD62201799400013EEFD /* ShippingModel.swift */,
+				8474BD6420179A060013EEFD /*  ShippingArrayModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -544,6 +550,7 @@
 				8420D12F2015F41100036376 /* AddressListingTableViewCell.swift in Sources */,
 				8425BFF6200F8B59002CFEF6 /* OTPVerifyModel.swift in Sources */,
 				8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */,
+				8474BD6520179A060013EEFD /*  ShippingArrayModel.swift in Sources */,
 				8409CB1C20179589007BB614 /* ShippingPriceService+GET.swift in Sources */,
 				84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */,
 				8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */,
@@ -552,6 +559,7 @@
 				8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */,
 				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
 				8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */,
+				8474BD63201799400013EEFD /* ShippingModel.swift in Sources */,
 				8420D1322015FF2900036376 /* LoginTableViewController.swift in Sources */,
 				8409CB18201794DD007BB614 /* ShippingChargesTableViewController.swift in Sources */,
 				8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */,

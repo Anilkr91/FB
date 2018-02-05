@@ -47,8 +47,8 @@ extension AlbumTypeTableViewCell {
         let placeholderImage = UIImage(named: "loader")
         coverImageView.kf.setImage(with: url, placeholder: placeholderImage)
         titleLabel.text = info.title
-        pagesCountLabel.text = info.pages
-        priceLabel.text = info.amount
+        pagesCountLabel.text = "Pages: \(info.pages)"
+        priceLabel.text = "Price: \(info.amount)"
         descriptionLabel.text = info.description
     }
 }

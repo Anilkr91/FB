@@ -15,6 +15,7 @@ class SelectedImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var coverLabel: UILabel!
     
     var info: PrepareAlbumModel? {
         didSet {

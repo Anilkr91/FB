@@ -14,18 +14,11 @@ struct  ShippingModel: JSONDecodable {
     let shippingAmount: String
     let shippingTitle: String
     
-    
-    //    id = 1;
-    //    shippingAmnt = 0;
-    //    shippingTitle = Standard;
-    
-    
     init?(json: JSON) {
         
         guard let id: String = "id" <~~ json,
             let shippingAmount: String = "shippingAmnt" <~~ json,
             let shippingTitle: String = "shippingTitle" <~~ json else { return nil }
-        
         
         self.id = id
         self.shippingAmount = shippingAmount
@@ -43,4 +36,3 @@ struct  ShippingModel: JSONDecodable {
             ])
     }
 }
-

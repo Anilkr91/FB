@@ -84,6 +84,7 @@
 		84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DD11FFE33A900D8D66B /* LoginUtils.swift */; };
 		84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DD31FFE33A900D8D66B /* UIImageView+Helper.swift */; };
 		84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */; };
+		84F89A32201892530029ADA7 /* PaypalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F89A31201892530029ADA7 /* PaypalResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +168,7 @@
 		84E09DD11FFE33A900D8D66B /* LoginUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
 		84E09DD31FFE33A900D8D66B /* UIImageView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
 		84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumDetailTableViewController.swift; sourceTree = "<group>"; };
+		84F89A31201892530029ADA7 /* PaypalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalResponse.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -246,6 +248,7 @@
 				840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */,
 				8474BD62201799400013EEFD /* ShippingModel.swift */,
 				8474BD6420179A060013EEFD /*  ShippingArrayModel.swift */,
+				84F89A31201892530029ADA7 /* PaypalResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				8425BFFF200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift in Sources */,
 				8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */,
 				840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */,
+				84F89A32201892530029ADA7 /* PaypalResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

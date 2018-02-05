@@ -20,7 +20,7 @@ struct ShippingArrayModel: JSONDecodable {
         guard let status: Bool = "status" <~~ json,
             let statusCode: Int = "statusCode" <~~ json,
             let success: String = "success" <~~ json,
-            let data: [ShippingModel] = "data.data" <~~ json else { return nil }
+            let data: [ShippingModel] = "data.shipping" <~~ json else { return nil }
         
         self.status = status
         self.statusCode = statusCode
@@ -34,7 +34,7 @@ struct ShippingArrayModel: JSONDecodable {
             "status" ~~> self.status,
             "statusCode" ~~> self.statusCode,
             "success" ~~> self.success,
-            "data.data" ~~> self.data
+            "data.shipping" ~~> self.data
             ])
     }
 }

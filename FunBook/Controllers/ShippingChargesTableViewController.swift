@@ -13,7 +13,9 @@ class ShippingChargesTableViewController: BaseTableViewController {
     var album: AlbumModel?
     var object: AlbumTypeDetailModel?
     var array: [ShippingModel] = []
-    
+    var shippingObject: ShippingModel?
+     var albumQuantity: Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         getShippingPrices()
@@ -60,6 +62,12 @@ class ShippingChargesTableViewController: BaseTableViewController {
         return cell
     }
     
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        shippingObject = array[indexPath.section]
+        performSegue(withIdentifier: "showCheckoutSegue", sender: self)
+    }
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 2
     }
@@ -79,8 +87,11 @@ class ShippingChargesTableViewController: BaseTableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showCheckoutSegue" {
             
-//            let dvc = segue.destination as! CheckOutTableViewController
-//            dvc.object = object
+            let dvc = segue.destination as! CheckOutTableViewController
+            dvc.object = object
+            dvc.album = album
+            dvc.shippingObject = shippingObject
+            dvc.albumQuantity = albumQuantity
         }
     }
 }

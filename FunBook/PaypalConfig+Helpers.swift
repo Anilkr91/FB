@@ -35,7 +35,7 @@ class PaypalConfig {
         let items = [item1]
         let subtotal = PayPalItem.totalPrice(forItems: items)
         
-        let payment = PayPalPayment(amount: subtotal, currencyCode: "USD", shortDescription: "Album1", intent: .authorize)
+        let payment = PayPalPayment(amount: subtotal, currencyCode: "USD", shortDescription: "\(itemName)", intent: .authorize)
         payment.items = items
         return (payment.processable, payment)
     }

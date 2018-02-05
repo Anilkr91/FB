@@ -17,10 +17,11 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var albumTitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var pagesCountLabel: UILabel!
-    @IBOutlet weak var albumPriceLabel: UILabel!
-    @IBOutlet weak var paperTypeLabel: UILabel!
-    @IBOutlet weak var paperSizeLabel: UILabel!
+    @IBOutlet weak var imagesCountLabel: UILabel!
+    @IBOutlet weak var blankPagesCountLabel: UILabel!
+    
+    @IBOutlet weak var quantityLabel: UILabel!
+    var albumQuantity: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +38,10 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
             descriptionLabel.text = album.description
         }
         
-        if let object = object {
-            pagesCountLabel.text = object.pages
-            albumPriceLabel.text = object.amount
-            paperTypeLabel.text = object.paperName
-            paperSizeLabel.text = object.paperSize
-        }
+        imagesCountLabel.text = "3"
+        blankPagesCountLabel.text = "57"
+        
+        
     }
     
     func setupBarButton() {
@@ -53,14 +52,29 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     func dismissModally() {
         performSegue(withIdentifier: "showShippingSegue", sender: self)
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showShippingSegue" {
-        
+            
             let dvc = segue.destination as! ShippingChargesTableViewController
             dvc.object = object
             dvc.album = album
+            dvc.albumQuantity = albumQuantity
+        }
+    }
+    
+    @IBAction func addAlbumButton(_ sender: Any) {
+        albumQuantity += 1
+        quantityLabel.text = "\(albumQuantity)"
+    }
+    
+    @IBAction func subtractAlbumButton(_ sender: Any) {
+        albumQuantity -= 1
+        quantityLabel.text = "\(albumQuantity)"
+        
+        if albumQuantity == 1 {
+            print("quantity should be at least one")
         }
     }
     
@@ -72,11 +86,20 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 2
+        
+        if section == 2 {
+            return 25
+        } else {
+            return 2
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 2
+        if section == 2 {
+            return 25
+        } else {
+            return 2
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

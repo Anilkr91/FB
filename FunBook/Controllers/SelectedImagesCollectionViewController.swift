@@ -36,6 +36,16 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SelectedImageCollectionViewCell
         cell.info = album?.images[indexPath.item]
+        
+        if let album = album {
+            if album.coverImage == album.images[indexPath.item].index {
+                cell.coverLabel.text = "Cover"
+                
+            } else {
+                 cell.coverLabel.text = ""
+            }
+        }
+        
         return cell
     }
     

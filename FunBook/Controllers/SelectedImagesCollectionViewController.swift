@@ -14,10 +14,11 @@ private let reuseIdentifier = "Cell"
 class SelectedImagesCollectionViewController: BaseCollectionViewController {
     
     var album: AlbumModel?
-    var object: PrepareAlbumModel?
+    var albumProperties: PrepareAlbumModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     // MARK: UICollectionViewDataSource
@@ -35,6 +36,7 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SelectedImageCollectionViewCell
+       
         cell.info = album?.images[indexPath.item]
         
         if let album = album {
@@ -51,7 +53,7 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        object = album!.images[indexPath.item]
+        albumProperties = album!.images[indexPath.item]
         performSegue(withIdentifier: "showImageSegue", sender: self)
         
     }
@@ -69,7 +71,7 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
             let dvc = nvc?.viewControllers[0] as? ImageOperationsTableViewController
             dvc?.delegate = self
             dvc?.coverImageIndex = album?.coverImage
-            dvc?.object = object
+            dvc?.albumProperties = albumProperties
         
         } else if segue.identifier == "showAlbumTypeSegue" {
             
@@ -87,7 +89,6 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
     func uploadAlbum(param: AlbumModel) {
         print(param)
         let user = LoginUtils.getCurrentMemberUserLogin()!
-        //        let captions = ["Caption1", "Caption2", "Caption3", "Caption4"]
         let URL = Constants.BASE_URL
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -96,12 +97,9 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
         
         let r =  Alamofire.upload(multipartFormData: { multipartFormData in
             
-            
-            //            gallery[],caption[],albumName,albumDescription,albumDate(YYYY-MM-DD),addressID,imageDate[],coverImage(default 0)
-            
             for img in param.images.enumerated() {
                 
-                if let imageData = img.element.image.jpeg(.highest)  {
+                if let imageData = img.element.image {
                     multipartFormData.append(imageData, withName: "gallery[]", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg")
                     multipartFormData.append(img.element.caption.data(using: String.Encoding.utf8)!, withName: "caption[]")
                     multipartFormData.append(img.element.date.data(using: String.Encoding.utf8)!, withName: "imageDate[]")
@@ -186,29 +184,61 @@ extension SelectedImagesCollectionViewController: passAlbumDataDelegte {
         if isCopyToAll == true {
             
             for arr in album!.images.enumerated() {
+               
                 if arr.offset == index {
-                    //                    album!.images.remove(at: arr.offset)
-                    album!.images.remove(at: arr.offset)
-                    album!.images.insert(PrepareAlbumModel(image: arr.element.image, caption: caption, date: date, index: arr.offset), at: arr.offset)
+                    
+                    if let album = album {
+        
+                        album.images.remove(at: arr.offset)
+                        albumProperties!.image = arr.element.image
+                        albumProperties!.caption = caption
+                        albumProperties!.date = date
+                        albumProperties!.index = arr.offset
+                        album.images.insert(albumProperties!, at: arr.offset)
+                    }
                     
                 } else {
-                    album!.images.remove(at: arr.offset)
-                    album!.images.insert(PrepareAlbumModel(image: arr.element.image, caption: caption, date: "", index: arr.offset), at: arr.offset)
+                    
+                    if let album = album {
+                        
+                        album.images.remove(at: arr.offset)
+                        albumProperties!.image = arr.element.image
+                        albumProperties!.caption = caption
+                        albumProperties!.date = ""
+                        albumProperties!.index = arr.offset
+                        album.images.insert(albumProperties!, at: arr.offset)
+                    }
+
                 }
             }
-            print(album)
             collectionView?.reloadData()
             
         } else {
             
             for arr in album!.images.enumerated() {
                 if arr.offset == index {
-                    album!.images.remove(at: arr.offset)
-                    album!.images.insert(PrepareAlbumModel(image: arr.element.image, caption: caption, date: date, index: arr.offset), at: arr.offset)
+                   
+                    if let album = album {
+                        
+                        album.images.remove(at: arr.offset)
+                        albumProperties!.image = arr.element.image
+                        albumProperties!.caption = caption
+                        albumProperties!.date = date
+                        albumProperties!.index = arr.offset
+                        album.images.insert(albumProperties!, at: arr.offset)
+                    }
+                    
+                    
+                    
+                    
+//                     album.images.remove(at: arr.offset)
+                    
+//                    album!.images.remove(at: arr.offset)
+//                    album!.images.insert(PrepareAlbumModel(image: arr.element.image, caption: caption, date: date, index: arr.offset), at: arr.offset)
                     
                 }
             }
-            print(album)
+//            print(album)
             collectionView?.reloadData()
         }
     }

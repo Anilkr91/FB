@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AlbumTypeTableViewController: BaseTableViewController {
     
@@ -17,7 +18,15 @@ class AlbumTypeTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getAlbumType()
+        saveAlbumtoRealmDB()
+    }
+    
+    func saveAlbumtoRealmDB() {
         
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(album!)
+        }
     }
     
     func getAlbumType() {

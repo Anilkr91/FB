@@ -16,7 +16,7 @@ protocol passAlbumDataDelegte {
 class ImageOperationsTableViewController: BaseTableViewController, CropViewControllerDelegate {
     
     var delegate: passAlbumDataDelegte?
-    var object: PrepareAlbumModel?
+    var albumProperties: PrepareAlbumModel?
     var isCaptionAll: Bool = false
     var coverImageIndex: Int?
     
@@ -47,8 +47,11 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
         
         // Do any additional setup after loading the view.
         
-        if let object = object {
-            albumImageView.image = object.image
+        if let object = albumProperties {
+            
+            let image = UIImage(data: object.image!)
+            
+            albumImageView.image = image
             captionTextField.text = object.caption 
             selectDateTextField.text = object.date
             
@@ -71,8 +74,8 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
     
     func setCoverImage(sender: UISwitch) {
         if sender.isOn {
-            if let object = object {
-                coverImageIndex = object.index
+            if let albumProperties = albumProperties {
+                coverImageIndex = albumProperties.index
             }
         } else {
             coverImageIndex = 0
@@ -116,7 +119,8 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
         let date = selectDateTextField.text!
         
         self.dismiss(animated: true) {
-            self.delegate?.didAddCaptionWithDate(caption: caption, date: date, index: self.object!.index, isCopyToAll: self.isCaptionAll, coverImageIndex: self.coverImageIndex!)
+            
+            self.delegate?.didAddCaptionWithDate(caption: caption, date: date, index: self.albumProperties!.index, isCopyToAll: self.isCaptionAll, coverImageIndex: self.coverImageIndex!)
         }
     }
     
@@ -126,12 +130,12 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
     }
     @IBAction func editImageButtonTapped(_ sender: Any) {
         
-        if let object = object {
+        if let albumProperties = albumProperties {
             
-            let image =  object.image
-            let cropController = CropViewController(croppingStyle: croppingStyle, image: image)
+            let image =  albumProperties.image
+            let cropController = CropViewController(croppingStyle: croppingStyle, image: UIImage(data: image!)!)
             cropController.delegate = self
-            self.image = image
+            self.image = UIImage(data: image!)
             self.present(cropController, animated: true, completion: nil)
         }
     }

@@ -157,7 +157,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
         let r =  Alamofire.upload(multipartFormData: { multipartFormData in
             for img in param.images.enumerated() {
                 
-                if let imageData = img.element.image.jpeg(.highest)  {
+                if let imageData = img.element.image {
                     multipartFormData.append(imageData, withName: "gallery[]", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg")
                     multipartFormData.append(img.element.caption.data(using: String.Encoding.utf8)!, withName: "caption[]")
                     multipartFormData.append(img.element.date.data(using: String.Encoding.utf8)!, withName: "imageDate[]")

@@ -7,18 +7,12 @@
 //
 
 import UIKit
-struct PrepareAlbumModel {
-   
-    let image: UIImage
-    let caption: String
-    let date: String
-    let index: Int
+import RealmSwift
 
-    init(image: UIImage, caption: String, date: String, index: Int) {
-        
-        self.image = image
-        self.caption = caption
-        self.date = date
-        self.index = index
-    }
+class PrepareAlbumModel: Object {
+   
+    dynamic var image: Data? = nil
+    dynamic var caption: String = ""
+    dynamic var date: String = ""
+    dynamic var index: Int = 0
 }

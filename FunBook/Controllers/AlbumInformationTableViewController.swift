@@ -9,19 +9,21 @@
 import UIKit
 import OpalImagePicker
 import Photos
+import RealmSwift
 
 class AlbumInformationTableViewController: BaseTableViewController {
     
     @IBOutlet weak var albumNameTextField: UITextField!
     @IBOutlet weak var albumDescriptionTextField: UITextField!
     @IBOutlet weak var selectDateTextField: UITextField!
-    var album = AlbumModel(coverImage: 0, name: "", description: "", date: "", images: [])
+    var album = AlbumModel()
     
     lazy var datePicker = UIDatePicker()
     let dateFormatter = "yyyy-MM-dd"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         datePicker.datePickerMode = .date
         selectDateTextField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(ImageOperationsTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
@@ -49,12 +51,14 @@ class AlbumInformationTableViewController: BaseTableViewController {
             showAlert("Error", message: "Album Namecannot be empty")
             
         }  else  {
-         album = AlbumModel(coverImage: 0,name: albumName, description: description, date: date, images: [])
-            openOpalImagePicker()
             
+            album.name = albumName
+            album.definition = description
+            album.date = date
+            openOpalImagePicker()
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 2
     }
@@ -73,15 +77,13 @@ class AlbumInformationTableViewController: BaseTableViewController {
     
     func openOpalImagePicker() {
         let imagePicker = OpalImagePickerController()
-        imagePicker.maximumSelectionsAllowed = 3
+        imagePicker.maximumSelectionsAllowed = 50
         
         let configuration = OpalImagePickerConfiguration()
         configuration.maximumSelectionsAllowedMessage = NSLocalizedString("You cannot select that many images!", comment: "")
         imagePicker.configuration = configuration
-        
         imagePicker.imagePickerDelegate = self
         self.present(imagePicker, animated: true, completion: nil)
-        
     }
 }
 
@@ -89,22 +91,31 @@ extension AlbumInformationTableViewController: OpalImagePickerControllerDelegate
     
     func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage]) {
         
+        album.images.removeAll()
+        
         for image in images.enumerated() {
-                album.images.append(PrepareAlbumModel(image: image.element, caption: "", date: "", index: image.offset))
-           
+            
+            let imageData = UIImagePNGRepresentation(image.element)
+
+            let albumProperties = PrepareAlbumModel()
+            albumProperties.caption = ""
+            albumProperties.date = ""
+            albumProperties.image = imageData
+            albumProperties.index = image.offset
+            
+            album.images.append(albumProperties)
+//            album.images.insert(albumProperties, at: image.offset)
         }
-        
-        print(album)
-        
+       
         picker.dismiss(animated: true, completion: nil)
         performSegue(withIdentifier: "showSelectedImagesSegue", sender: self)
-    
     }
+    
     func imagePicker(_ picker: OpalImagePickerController, didFinishPickingAssets assets: [PHAsset]) {
-        
         print(assets)
         
     }
+    
     func imagePickerDidCancel(_ picker: OpalImagePickerController) {
         
     }
@@ -112,10 +123,10 @@ extension AlbumInformationTableViewController: OpalImagePickerControllerDelegate
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showSelectedImagesSegue" {
-            
             let dvc = segue.destination as! SelectedImagesCollectionViewController
+            
             dvc.album = album
-           dvc.navigationItem.title = album.name
+            dvc.navigationItem.title = album.name
             
         }
     }

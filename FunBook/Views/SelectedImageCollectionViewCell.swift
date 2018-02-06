@@ -42,7 +42,7 @@ class SelectedImageCollectionViewCell: UICollectionViewCell {
     func didSetCategory(_ info: PrepareAlbumModel) {
         
 //        print(image)
-        imageView.image = info.image
+        imageView.image = UIImage(data: info.image!)
         captionLabel.text = info.caption
         dateLabel.text = info.date
         

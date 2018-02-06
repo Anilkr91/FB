@@ -16,5 +16,6 @@ target 'FunBook' do
     pod 'IQKeyboardManager'
     pod 'TOCropViewController'
     pod 'PayPal-iOS-SDK'
+    pod 'RealmSwift'
     
 end

@@ -31,7 +31,8 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
         if let album = album {
             for img in album.images.enumerated() {
                 if img.offset == album.coverImage {
-                    coverImageView.image = img.element.image
+                    let image = UIImage(data: img.element.image!)
+                    coverImageView.image = image
                 }
             }
             albumTitleLabel.text = album.name

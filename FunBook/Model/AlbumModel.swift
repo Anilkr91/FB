@@ -7,22 +7,32 @@
 //
 
 import UIKit
+import RealmSwift
 
-struct AlbumModel {
+class AlbumModel: Object {
     
-    var coverImage: Int
-    let isCaptionSetToAll: Bool = false
-    let name: String
-    let description: String
-    let date: String
-    var images: [PrepareAlbumModel]
+    // Album Properties
+    dynamic var name: String = ""
+    dynamic var definition: String = ""
+    dynamic var date: String = ""
     
-    init(coverImage: Int, name: String, description: String, date: String, images:  [PrepareAlbumModel]) {
-        
-        self.coverImage = coverImage
-        self.name = name
-        self.description = description
-        self.date = date
-        self.images = images
-    }
+    // Album coverImage
+    dynamic var coverImage: Int = 0
+    
+    // Album captionBool for setting the same caption to all images
+    dynamic var isCaptionSetToAll: Bool = false
+    
+    // Album Images
+    let images = List<PrepareAlbumModel>()
+    
+//    dynamic var images: [PrepareAlbumModel]
+    
+//    init(coverImage: Int, name: String, description: String, date: String, images:  [PrepareAlbumModel]) {
+//
+//        self.coverImage = coverImage
+//        self.name = name
+//        self.description = description
+//        self.date = date
+//        self.images = images
+//    }
 }

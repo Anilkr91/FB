@@ -51,6 +51,8 @@ class MyAccountTableViewController: BaseTableViewController {
         if indexPath.section == 1 {
         performSegue(withIdentifier: "EditAcountSegue", sender: self)
             
+        } else if indexPath.section == 3 {
+           performSegue(withIdentifier: "AddressBookSegue", sender: self)
         }
     }
     

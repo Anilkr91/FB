@@ -34,7 +34,6 @@ class AddressDetailGetService {
                 if let json = AlbumDetailResponseModel(json: value as! JSON) {
                     completionHandler(json.data.images)
                     
-                    
                 }
                 
             case .failure(let error):
@@ -44,4 +43,3 @@ class AddressDetailGetService {
         debugPrint(request)
     }
 }
-

@@ -75,6 +75,8 @@
 		84AA6E5F2029C31600706F05 /* OrderHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA6E5E2029C31600706F05 /* OrderHistoryTableViewController.swift */; };
 		84AA6E612029D1D600706F05 /* RealmAlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA6E602029D1D600706F05 /* RealmAlbumTableViewCell.swift */; };
 		84AA6E63202C229500706F05 /* ShippingRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA6E62202C229500706F05 /* ShippingRealmModel.swift */; };
+		84AB5A2C202D913C00521EB8 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5A2B202D913C00521EB8 /* StateModel.swift */; };
+		84AB5A2E202D91C200521EB8 /* StateArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5A2D202D91C200521EB8 /* StateArrayModel.swift */; };
 		84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBC1FF3758100D26134 /* AppDelegate.swift */; };
 		84D79EC21FF3758100D26134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC01FF3758100D26134 /* Main.storyboard */; };
 		84D79EC41FF3758100D26134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC31FF3758100D26134 /* Assets.xcassets */; };
@@ -160,6 +162,8 @@
 		84AA6E5E2029C31600706F05 /* OrderHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryTableViewController.swift; sourceTree = "<group>"; };
 		84AA6E602029D1D600706F05 /* RealmAlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAlbumTableViewCell.swift; sourceTree = "<group>"; };
 		84AA6E62202C229500706F05 /* ShippingRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingRealmModel.swift; sourceTree = "<group>"; };
+		84AB5A2B202D913C00521EB8 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
+		84AB5A2D202D91C200521EB8 /* StateArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateArrayModel.swift; sourceTree = "<group>"; };
 		84D79EB91FF3758100D26134 /* FunBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D79EBC1FF3758100D26134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D79EC11FF3758100D26134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -256,6 +260,8 @@
 				8474BD6420179A060013EEFD /*  ShippingArrayModel.swift */,
 				84F89A31201892530029ADA7 /* PaypalResponse.swift */,
 				84AA6E62202C229500706F05 /* ShippingRealmModel.swift */,
+				84AB5A2B202D913C00521EB8 /* StateModel.swift */,
+				84AB5A2D202D91C200521EB8 /* StateArrayModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -534,6 +540,7 @@
 				8425BFEF200F8B59002CFEF6 /* AlbumDetailResponseModel.swift in Sources */,
 				8425C009200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift in Sources */,
 				8425BFEA200F8B59002CFEF6 /* LoginService+POST.swift in Sources */,
+				84AB5A2C202D913C00521EB8 /* StateModel.swift in Sources */,
 				8420D12D2015ED9100036376 /* EditAddressTableViewController.swift in Sources */,
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
 				8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */,
@@ -548,6 +555,7 @@
 				8425C004200F8B59002CFEF6 /* RegisterTableViewController.swift in Sources */,
 				8425BFED200F8B59002CFEF6 /* ResetPasswordService+POST.swift in Sources */,
 				8471E7532011CDC300D6BA7F /* AlbumTypeTableViewCell.swift in Sources */,
+				84AB5A2E202D91C200521EB8 /* StateArrayModel.swift in Sources */,
 				8425BFF8200F8B59002CFEF6 /* RegisterRequestModel.swift in Sources */,
 				8425BFF0200F8B59002CFEF6 /* AlbumImagesModel.swift in Sources */,
 				8425BFE9200F8B59002CFEF6 /* ImageUploadService+POST.swift in Sources */,

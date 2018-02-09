@@ -33,8 +33,7 @@ class AddAddressTableViewController: BaseTableViewController {
     }
 
     @IBAction func submitButtonTapped(_ sender: Any) {
-        
-        let country = selectCountryTextField.text!
+    
          let firstName = firstNameTextField.text!
          let lastName = lastNameTextField.text!
          let addressFirst = addressFirstTextField.text!
@@ -43,11 +42,7 @@ class AddAddressTableViewController: BaseTableViewController {
          let state = stateTextField.text!
          let zipCode = zipCodeTextField.text!
         
-        
-        if country.removeAllSpaces().isEmpty {
-          showAlert("Error", message: "country cannot be empty")
-            
-        } else if firstName.removeAllSpaces().isEmpty {
+        if firstName.removeAllSpaces().isEmpty {
            showAlert("Error", message: "firstName cannot be empty")
             
         } else if lastName.removeAllSpaces().isEmpty {
@@ -69,9 +64,24 @@ class AddAddressTableViewController: BaseTableViewController {
             showAlert("Error", message: "zipCode cannot be empty")
             
         } else  {
-            
             print("hit api")
             
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }

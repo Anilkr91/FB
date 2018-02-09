@@ -9,7 +9,7 @@
 import UIKit
 
 class OrderHistoryTableViewController: UITableViewController {
-
+    
     var albumModel: [AlbumResponseModel] = []
     var album: AlbumResponseModel?
     
@@ -22,26 +22,26 @@ class OrderHistoryTableViewController: UITableViewController {
         //fetch all albums
         getAllAlbums()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return albumModel.count
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AlbumTableViewCell
         cell.info = albumModel[indexPath.section]
         return cell
@@ -62,7 +62,7 @@ class OrderHistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         album = albumModel[indexPath.section]
         self.performSegue(withIdentifier: "showAlbumDetail", sender: self)
@@ -77,6 +77,15 @@ extension OrderHistoryTableViewController {
             print(response)
             self.albumModel = response
             self.tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAlbumDetail" {
+            
+            let dvc = segue.destination as! AlbumDetailTableViewController
+            dvc.navigationItem.title = album?.albumName
+            dvc.albumId = album!.albumID
         }
     }
 }

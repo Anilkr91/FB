@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class UserAlbumDetailTableViewController: BaseTableViewController {
     
@@ -36,13 +37,22 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
                 }
             }
             albumTitleLabel.text = album.name
-            descriptionLabel.text = album.description
+            descriptionLabel.text = album.definition
         }
         
         imagesCountLabel.text = "3"
         blankPagesCountLabel.text = "57"
         
+        saveAlbumtoRealmDB()
+    }
+    
+    func saveAlbumtoRealmDB() {
         
+        let realm = try! Realm()
+        try! realm.write {
+            album!.albumQuantity = albumQuantity
+            realm.add(album!)
+        }
     }
     
     func setupBarButton() {
@@ -68,6 +78,7 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     @IBAction func addAlbumButton(_ sender: Any) {
         albumQuantity += 1
         quantityLabel.text = "\(albumQuantity)"
+        saveAlbumtoRealmDB()
     }
     
     @IBAction func subtractAlbumButton(_ sender: Any) {
@@ -77,6 +88,7 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
         if albumQuantity == 1 {
             print("quantity should be at least one")
         }
+        saveAlbumtoRealmDB()
     }
     
     override func didReceiveMemoryWarning() {

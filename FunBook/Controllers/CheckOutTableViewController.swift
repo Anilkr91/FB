@@ -9,6 +9,7 @@
 import UIKit
 import Gloss
 import Alamofire
+import RealmSwift
 
 class CheckOutTableViewController: BaseTableViewController {
     
@@ -42,7 +43,6 @@ class CheckOutTableViewController: BaseTableViewController {
             
             if let albumPrice = Double(object.amount) {
                 albumAmount = albumPrice
-                
             }
         }
         
@@ -57,8 +57,12 @@ class CheckOutTableViewController: BaseTableViewController {
         if let albumQuantity =  albumQuantity {
             quantityLabel.text = "\(albumQuantity)"
         }
-        priceTotal = Double(albumQuantity!) * albumAmount + shippingPrice
+        priceTotal = Double(albumQuantity!) * (albumAmount + shippingPrice)
+        
+        print(priceTotal)
         totalPrice.text = "\(priceTotal)"
+        
+        saveAlbumtoRealmDB()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -77,7 +81,6 @@ class CheckOutTableViewController: BaseTableViewController {
             showAlert("Error", message: "Accept Terms and Conditions")
             
         } else {
-            
             let config =  PaypalConfig.setPayPalMerchant()
             let paymentProcessing =   PaypalConfig.setPayPalBuying(itemName: album!.name , itemPrice: "\(priceTotal)")
             
@@ -183,10 +186,9 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                                     case .success(let upload, _, _):
                                         debugPrint(upload)
                                         upload.responseJSON { response in
-                                            
                                             print(response)
-                                            
-                                            self.navigationController?.popToRootViewController(animated: true)
+                                             self.deleteAlbumFromLocalDB()
+                            
                                         }
                                     case .failure(let error):
                                         print(error)
@@ -200,7 +202,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
         
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
-           
+            
             if let album = self.album {
                 self.uploadAlbum(param: album)
             }
@@ -208,6 +210,32 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
         
         alertView.addAction(OKAction)
         self.present(alertView, animated: true, completion: nil)
+    }
+    
+    func deleteAlbumFromLocalDB() {
+        
+        if let album = self.album {
+            
+            let realm = try! Realm()
+            try! realm.write {
+                realm.delete(album)
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        }
+    }
+    
+    func saveAlbumtoRealmDB() {
+        
+        let realm = try! Realm()
+        try! realm.write {
+            
+            if let object = object {
+                album!.albumPrice = object.amount
+            }
+            album!.albumTotalPrice = "\(priceTotal)"
+            album!.addressId = "1"
+            realm.add(album!)
+        }
     }
     
 }

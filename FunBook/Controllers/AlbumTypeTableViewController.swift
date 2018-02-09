@@ -22,7 +22,6 @@ class AlbumTypeTableViewController: BaseTableViewController {
     }
     
     func saveAlbumtoRealmDB() {
-        
         let realm = try! Realm()
         try! realm.write {
             realm.add(album!)
@@ -53,7 +52,6 @@ class AlbumTypeTableViewController: BaseTableViewController {
         cell.info = array[indexPath.section]
         return cell
     }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         albumTypeIndex = array[indexPath.section].id

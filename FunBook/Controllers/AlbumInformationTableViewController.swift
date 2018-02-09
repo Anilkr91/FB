@@ -126,7 +126,8 @@ extension AlbumInformationTableViewController: OpalImagePickerControllerDelegate
             let dvc = segue.destination as! SelectedImagesCollectionViewController
             
             dvc.album = album
-            dvc.navigationItem.title = album.name
+            dvc.galleryVC = nil
+//            dvc.navigationItem.title = album.name
             
         }
     }

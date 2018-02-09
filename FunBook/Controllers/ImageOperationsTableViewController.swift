@@ -119,7 +119,7 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
         let date = selectDateTextField.text!
         
         self.dismiss(animated: true) {
-            
+           
             self.delegate?.didAddCaptionWithDate(caption: caption, date: date, index: self.albumProperties!.index, isCopyToAll: self.isCaptionAll, coverImageIndex: self.coverImageIndex!)
         }
     }
@@ -128,6 +128,7 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
        self.dismiss(animated: true, completion: nil)
         
     }
+    
     @IBAction func editImageButtonTapped(_ sender: Any) {
         
         if let albumProperties = albumProperties {

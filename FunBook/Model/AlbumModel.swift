@@ -25,14 +25,13 @@ class AlbumModel: Object {
     // Album Images
     let images = List<PrepareAlbumModel>()
     
-//    dynamic var images: [PrepareAlbumModel]
+    // Shipping details
+    dynamic var shipping: ShippingRealmModel?
+//    dynamic var address = 
     
-//    init(coverImage: Int, name: String, description: String, date: String, images:  [PrepareAlbumModel]) {
-//
-//        self.coverImage = coverImage
-//        self.name = name
-//        self.description = description
-//        self.date = date
-//        self.images = images
-//    }
+    dynamic var albumTypeId: String = ""
+    dynamic var albumQuantity: Int = 1
+    dynamic var addressId: String = ""
+    dynamic var albumPrice: String = ""
+    dynamic var albumTotalPrice: String = ""
 }

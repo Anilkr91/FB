@@ -12,29 +12,27 @@ import Photos
 import Alamofire
 import RealmSwift
 
-
 class GalleryViewController: BaseViewController {
-
-    var albumName: String = ""
-    var album: AlbumResponseModel?
-    var albumModel: [AlbumResponseModel] = []
+    
     @IBOutlet weak var tableview: UITableView!
     
-     let realm = try! Realm()
+    var albumName: String = ""
+    var album: AlbumModel?
+    var albums: [AlbumModel] = []
+    
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableview.delegate = self
         tableview.dataSource = self
-         getAlbumFromRealmDB()    
+        getAlbumFromRealmDB()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //fetch all albums
-//        getAllAlbums()
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,14 +42,14 @@ class GalleryViewController: BaseViewController {
     
     @IBAction func openGallery(_ sender: UIButton) {
         performSegue(withIdentifier: "showAlbumSegue", sender: self)
-
+        
     }
 }
 
 extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return albumModel.count
+        return albums.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,9 +58,9 @@ extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AlbumTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RealmAlbumTableViewCell
         
-        cell.info = albumModel[indexPath.section]
+        cell.info = albums[indexPath.section]
         return cell
     }
     
@@ -83,36 +81,27 @@ extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        album = albumModel[indexPath.section]
-        self.performSegue(withIdentifier: "showAlbumDetail", sender: self)
+        album = albums[indexPath.section]
+        self.performSegue(withIdentifier: "showSelectedImagesSegue", sender: self)
     }
 }
 
 extension GalleryViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         if segue.identifier == "showAlbumDetail" {
-            
-            let dvc = segue.destination as! AlbumDetailTableViewController
-            dvc.navigationItem.title = album?.albumName
-            dvc.albumId = album!.albumID
+        if segue.identifier == "showSelectedImagesSegue" {
+            let dvc = segue.destination as! SelectedImagesCollectionViewController
+            dvc.album = album
+            dvc.galleryVC = self
         }
     }
-    
-//    func getAllAlbums() {
-//
-//        AlbumListingGetService.executeRequest(vc: self) { (response) in
-//            print(response)
-//            self.albumModel = response
-//            self.tableview.reloadData()
-//        }
-//    }
     
     func getAlbumFromRealmDB() {
         
         do {
-            let albums = realm.objects(AlbumModel.self)
-            print(albums)
+            albums = realm.objects(AlbumModel.self).toArray(ofType: AlbumModel.self)
+            self.tableview.reloadData()
+//            print(albums)
         }
     }
     
@@ -122,5 +111,18 @@ extension GalleryViewController {
         try! self.realm.write({
             realm.delete(albums[0])
         })
+    }
+}
+
+extension Results {
+    
+    func toArray<T>(ofType: T.Type) -> [T] {
+        var array = [T]()
+        for result in self {
+            if let result = result as? T {
+                array.append(result)
+            }
+        }
+        return array
     }
 }

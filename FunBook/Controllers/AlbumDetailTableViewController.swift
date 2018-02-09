@@ -15,7 +15,8 @@ class AlbumDetailTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAlbumDetail(albumId: albumId)
+//        getAlbumDetail(albumId: albumId)
+        print(" ALbum Detail")
         
     }
     

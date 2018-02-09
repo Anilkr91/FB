@@ -8,17 +8,24 @@
 
 import UIKit
 import Alamofire
+import RealmSwift
+import OpalImagePicker
 
 private let reuseIdentifier = "Cell"
 
 class SelectedImagesCollectionViewController: BaseCollectionViewController {
     
+    var galleryVC: GalleryViewController?
     var album: AlbumModel?
     var albumProperties: PrepareAlbumModel?
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let album = album {
+            self.navigationItem.title = album.name
+        }
     }
     
     // MARK: UICollectionViewDataSource
@@ -34,9 +41,9 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SelectedImageCollectionViewCell
-       
+        
         cell.info = album?.images[indexPath.item]
         
         if let album = album {
@@ -44,25 +51,52 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
                 cell.coverLabel.text = "Cover"
                 
             } else {
-                 cell.coverLabel.text = ""
+                cell.coverLabel.text = ""
             }
         }
-        
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         albumProperties = album!.images[indexPath.item]
         performSegue(withIdentifier: "showImageSegue", sender: self)
         
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        performSegue(withIdentifier: "showAlbumTypeSegue", sender: self)
         
+        let actionSheet = UIAlertController(title: "Select", message: nil, preferredStyle: .actionSheet)
+        let addPictures = UIAlertAction(title: "Add images", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            self.openOpalImagePicker()
+        })
+        
+        let next = UIAlertAction(title: "Next", style: .default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            
+            self.performSegue(withIdentifier: "showAlbumTypeSegue", sender: self)
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        actionSheet.addAction(addPictures)
+        actionSheet.addAction(next)
+        actionSheet.addAction(cancel)
+        
+        actionSheet.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+        self.present(actionSheet, animated: true, completion: nil)
     }
-
+    
+    func openOpalImagePicker() {
+        let imagePicker = OpalImagePickerController()
+        imagePicker.maximumSelectionsAllowed = 50
+        
+        let configuration = OpalImagePickerConfiguration()
+        configuration.maximumSelectionsAllowedMessage = NSLocalizedString("You cannot select that many images!", comment: "")
+        imagePicker.configuration = configuration
+        imagePicker.imagePickerDelegate = self
+        self.present(imagePicker, animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showImageSegue" {
@@ -72,10 +106,10 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
             dvc?.delegate = self
             dvc?.coverImageIndex = album?.coverImage
             dvc?.albumProperties = albumProperties
-        
+            
         } else if segue.identifier == "showAlbumTypeSegue" {
             
-           let dvc = segue.destination as! AlbumTypeTableViewController
+            let dvc = segue.destination as! AlbumTypeTableViewController
             dvc.album = album
         }
     }
@@ -179,36 +213,83 @@ extension SelectedImagesCollectionViewController: UICollectionViewDelegateFlowLa
 extension SelectedImagesCollectionViewController: passAlbumDataDelegte {
     
     func didAddCaptionWithDate(caption: String, date: String, index: Int, isCopyToAll: Bool, coverImageIndex: Int) {
-        album!.coverImage = coverImageIndex
+        
+        if galleryVC == nil {
+            print("album information")
+            
+            newAlbumWithInformation(caption: caption, date: date, index: index, isCopyToAll: isCopyToAll, coverImageIndex: coverImageIndex)
+            
+        } else {
+            print("gallery vc local db")
+            
+            localAlbumWithInformation(caption: caption, date: date, index: index, isCopyToAll: isCopyToAll, coverImageIndex: coverImageIndex)
+        }
+    }
+}
+
+extension SelectedImagesCollectionViewController: OpalImagePickerControllerDelegate {
     
+    func imagePicker(_ picker: OpalImagePickerController, didFinishPickingImages images: [UIImage]) {
+        
+        for image in images.enumerated() {
+            
+            let imageData = UIImagePNGRepresentation(image.element)
+            
+            if let album = album {
+                realm.beginWrite()
+                
+                let albumProperties = PrepareAlbumModel()
+                albumProperties.caption = ""
+                albumProperties.date = ""
+                albumProperties.image = imageData
+                albumProperties.index  = album.images.count + image.offset
+                album.images.append(albumProperties)
+                
+                try! realm.commitWrite()
+            }
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        collectionView?.reloadData()
+    }
+    
+    func newAlbumWithInformation(caption: String, date: String, index: Int, isCopyToAll: Bool, coverImageIndex: Int) {
+        
         if isCopyToAll == true {
             
             for arr in album!.images.enumerated() {
-               
+                
                 if arr.offset == index {
                     
                     if let album = album {
-        
+                        
+                        album.coverImage = coverImageIndex
                         album.images.remove(at: arr.offset)
-                        albumProperties!.image = arr.element.image
-                        albumProperties!.caption = caption
-                        albumProperties!.date = date
-                        albumProperties!.index = arr.offset
-                        album.images.insert(albumProperties!, at: arr.offset)
+                        let albumProperties = PrepareAlbumModel()
+                        albumProperties.image = arr.element.image
+                        albumProperties.caption = caption
+                        albumProperties.date = date
+                        albumProperties.index = arr.offset
+                        album.images.insert(albumProperties, at: arr.offset)
+                        
                     }
                     
                 } else {
                     
                     if let album = album {
                         
+                        album.coverImage = coverImageIndex
                         album.images.remove(at: arr.offset)
-                        albumProperties!.image = arr.element.image
-                        albumProperties!.caption = caption
-                        albumProperties!.date = ""
-                        albumProperties!.index = arr.offset
-                        album.images.insert(albumProperties!, at: arr.offset)
+                        let albumProperties = PrepareAlbumModel()
+                        albumProperties.image = arr.element.image
+                        albumProperties.caption = caption
+                        albumProperties.date = date
+                        albumProperties.index = arr.offset
+                        album.images.insert(albumProperties, at: arr.offset)
+                        
+                        
+                        
                     }
-
                 }
             }
             collectionView?.reloadData()
@@ -217,28 +298,96 @@ extension SelectedImagesCollectionViewController: passAlbumDataDelegte {
             
             for arr in album!.images.enumerated() {
                 if arr.offset == index {
-                   
+                    
                     if let album = album {
                         
+                        album.coverImage = coverImageIndex
                         album.images.remove(at: arr.offset)
-                        albumProperties!.image = arr.element.image
-                        albumProperties!.caption = caption
-                        albumProperties!.date = date
-                        albumProperties!.index = arr.offset
-                        album.images.insert(albumProperties!, at: arr.offset)
+                        let albumProperties = PrepareAlbumModel()
+                        albumProperties.image = arr.element.image
+                        albumProperties.caption = caption
+                        albumProperties.date = date
+                        albumProperties.index = arr.offset
+                        album.images.insert(albumProperties, at: arr.offset)
+                        
                     }
-                    
-                    
-                    
-                    
-//                     album.images.remove(at: arr.offset)
-                    
-//                    album!.images.remove(at: arr.offset)
-//                    album!.images.insert(PrepareAlbumModel(image: arr.element.image, caption: caption, date: date, index: arr.offset), at: arr.offset)
-                    
                 }
             }
-//            print(album)
+            collectionView?.reloadData()
+        }
+    }
+    
+    func localAlbumWithInformation(caption: String, date: String, index: Int, isCopyToAll: Bool, coverImageIndex: Int) {
+        
+        if isCopyToAll == true {
+            
+            for arr in album!.images.enumerated() {
+                
+                if arr.offset == index {
+                    
+                    if let album = album {
+                        
+                        try! realm.write {
+                            album.coverImage = coverImageIndex
+                            album.images.remove(at: arr.offset)
+                            let albumProperties = PrepareAlbumModel()
+                            albumProperties.image = arr.element.image
+                            albumProperties.caption = caption
+                            albumProperties.date = date
+                            albumProperties.index = arr.offset
+                            album.images.insert(albumProperties, at: arr.offset)
+                            realm.add(album)
+                            
+                        }
+                    }
+                    
+                } else {
+                    
+                    if let album = album {
+                        
+                        try! realm.write {
+                            
+                            album.coverImage = coverImageIndex
+                            album.images.remove(at: arr.offset)
+                            let albumProperties = PrepareAlbumModel()
+                            albumProperties.image = arr.element.image
+                            albumProperties.caption = caption
+                            albumProperties.date = date
+                            albumProperties.index = arr.offset
+                            album.images.insert(albumProperties, at: arr.offset)
+                            
+                            realm.add(album)
+                            
+                        }
+                    }
+                }
+            }
+            collectionView?.reloadData()
+            
+        } else {
+            
+            for arr in album!.images.enumerated() {
+                if arr.offset == index {
+                    
+                    if let album = album {
+                        
+                        try! realm.write {
+                            
+                            album.coverImage = coverImageIndex
+                            album.images.remove(at: arr.offset)
+                            let albumProperties = PrepareAlbumModel()
+                            albumProperties.image = arr.element.image
+                            albumProperties.caption = caption
+                            albumProperties.date = date
+                            albumProperties.index = arr.offset
+                            album.images.insert(albumProperties, at: arr.offset)
+                            
+                            realm.add(album)
+                            
+                        }
+                    }
+                }
+            }
             collectionView?.reloadData()
         }
     }

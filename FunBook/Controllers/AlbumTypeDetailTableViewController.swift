@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AlbumTypeDetailTableViewController: BaseTableViewController {
     
@@ -32,6 +33,7 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
             }
         }
         setupBarButton()
+        saveAlbumtoRealmDB()
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,6 +41,14 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func saveAlbumtoRealmDB() {
+        
+        let realm = try! Realm()
+        try! realm.write {
+            album!.albumTypeId = albumTypeIndex!
+            realm.add(album!)
+        }
+    }
     
     func setupBarButton() {
         let rightBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AlbumTypeDetailTableViewController.dismissModally))

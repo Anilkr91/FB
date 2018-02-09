@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ShippingChargesTableViewController: BaseTableViewController {
     
@@ -20,6 +21,23 @@ class ShippingChargesTableViewController: BaseTableViewController {
         super.viewDidLoad()
         getShippingPrices()
         setupBarButton()
+    }
+    
+    func saveAlbumtoRealmDB(shippingObject: ShippingModel) {
+        
+        let realm = try! Realm()
+        try! realm.write {
+            
+            let shipping = ShippingRealmModel()
+            shipping.id =  shippingObject.id
+            shipping.shippingTitle = shippingObject.shippingTitle
+            shipping.shippingAmount = shippingObject.shippingAmount
+            album!.shipping = shipping
+            // TODo: Mark
+            
+            album!.addressId = "1"
+            realm.add(album!)
+        }
     }
     
     func getShippingPrices() {
@@ -62,9 +80,9 @@ class ShippingChargesTableViewController: BaseTableViewController {
         return cell
     }
     
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         shippingObject = array[indexPath.section]
+        self.saveAlbumtoRealmDB(shippingObject: shippingObject!)
         performSegue(withIdentifier: "showCheckoutSegue", sender: self)
     }
     

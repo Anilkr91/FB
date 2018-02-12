@@ -56,7 +56,7 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
     }
     
     func dismissModally() {
-        performSegue(withIdentifier: "showUserAlbumDetailSegue", sender: self)
+        performSegue(withIdentifier: "showAddressSegue", sender: self)
     }
     
     func setUpView(info: AlbumTypeDetailModel) {
@@ -76,10 +76,10 @@ class AlbumTypeDetailTableViewController: BaseTableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "showUserAlbumDetailSegue" {
+                
+        if segue.identifier == "showAddressSegue" {
             
-            let dvc = segue.destination as! UserAlbumDetailTableViewController
+            let dvc = segue.destination as! AlbumAddressListingTableViewController
             dvc.album = album
             dvc.object = object
             

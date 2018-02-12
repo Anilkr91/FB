@@ -8,7 +8,7 @@
 
 import Gloss
 
-struct  StateModel: JSONDecodable {
+struct StateModel: JSONDecodable {
     
     let id: String
     let name: String

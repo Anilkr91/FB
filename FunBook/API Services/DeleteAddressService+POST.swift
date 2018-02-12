@@ -23,10 +23,12 @@ class DeleteAddressPostService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "profile/delete_address/\(addressId)", method: .post, parameters: nil, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "delete_address/\(addressId)", method: .post, parameters: nil, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
             case .success(let value) :
+                
+                print(value)
                 
                 if let json = LoginResponseModel(json: value as! JSON) {
                     completionHandler(json)

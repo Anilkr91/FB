@@ -20,7 +20,7 @@ class ShippingChargesTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getShippingPrices()
-        setupBarButton()
+//        setupBarButton()
     }
     
     func saveAlbumtoRealmDB(shippingObject: ShippingModel) {
@@ -33,10 +33,8 @@ class ShippingChargesTableViewController: BaseTableViewController {
             shipping.shippingTitle = shippingObject.shippingTitle
             shipping.shippingAmount = shippingObject.shippingAmount
             album!.shipping = shipping
-            // TODo: Mark
-            
-            album!.addressId = "1"
             realm.add(album!)
+            performSegue(withIdentifier: "showCheckoutSegue", sender: self)
         }
     }
     
@@ -47,14 +45,14 @@ class ShippingChargesTableViewController: BaseTableViewController {
         }
     }
     
-    func setupBarButton() {
-        let rightBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AlbumTypeDetailTableViewController.dismissModally))
-        self.navigationItem.rightBarButtonItem = rightBarButton
-    }
-    
-    func dismissModally() {
-        performSegue(withIdentifier: "showCheckoutSegue", sender: self)
-    }
+//    func setupBarButton() {
+//        let rightBarButton = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.plain, target: self, action: #selector(AlbumTypeDetailTableViewController.dismissModally))
+//        self.navigationItem.rightBarButtonItem = rightBarButton
+//    }
+//    
+//    func dismissModally() {
+//        performSegue(withIdentifier: "showCheckoutSegue", sender: self)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -83,7 +81,7 @@ class ShippingChargesTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         shippingObject = array[indexPath.section]
         self.saveAlbumtoRealmDB(shippingObject: shippingObject!)
-        performSegue(withIdentifier: "showCheckoutSegue", sender: self)
+       
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

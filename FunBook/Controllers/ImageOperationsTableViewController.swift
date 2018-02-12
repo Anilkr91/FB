@@ -34,7 +34,7 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
     @IBOutlet weak var coverImageSwitch: UISwitch!
     
     lazy var datePicker = UIDatePicker()
-    let dateFormatter = "yyyy-MM-dd"
+    let dateFormatter = "dd-MM-yyyy"
     
     override func viewDidLoad() {
         super.viewDidLoad()

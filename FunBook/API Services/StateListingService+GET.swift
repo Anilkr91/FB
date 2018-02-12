@@ -1,16 +1,16 @@
 //
-//  AllAddressService+GET.swift
+//  StateListingService+GET.swift
 //  FunBook
 //
-//  Created by admin on 22/01/18.
+//  Created by admin on 09/02/18.
 //  Copyright © 2018 Techximum. All rights reserved.
 //
 
 import Alamofire
 import Gloss
 
-class AllAddressGetService {
-    static func executeRequest ( vc: UIViewController, completionHandler: @escaping ([AddressResponseModel]) -> Void) {
+class StateListingGetService {
+    static func executeRequest ( vc: UIViewController, completionHandler: @escaping ([StateModel]) -> Void) {
         
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
@@ -23,17 +23,15 @@ class AllAddressGetService {
         let manager = Alamofire.SessionManager.default
         manager.session.configuration.timeoutIntervalForRequest = 60
         
-        let request = manager.request( URL + "all_address", method: .get, parameters: nil, encoding: URLEncoding.default, headers: header).responseJSON { response in
+        let request = manager.request( URL + "state", method: .get, parameters: nil, encoding: URLEncoding.default, headers: header).responseJSON { response in
             
             switch response.result {
-                
             case .success(let value) :
                 
                 print(value)
                 
-                if let json = AddressResponseArrayModel(json: value as! JSON) {
+                if let json = StateArrayModel(json: value as! JSON) {
                     completionHandler(json.data)
-                    
                 }
                 
             case .failure(let error):
@@ -43,5 +41,4 @@ class AllAddressGetService {
         debugPrint(request)
     }
 }
-
 

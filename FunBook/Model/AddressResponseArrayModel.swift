@@ -1,5 +1,5 @@
 //
-//  StateArrayModel.swift
+//  AddressResponseArrayModel.swift
 //  FunBook
 //
 //  Created by admin on 09/02/18.
@@ -7,20 +7,19 @@
 //
 
 import Gloss
-
-struct StateArrayModel: JSONDecodable {
+struct AddressResponseArrayModel: JSONDecodable {
     
     let status: Bool
     let statusCode: Int
     let success: String
-    let data: [StateModel]
+    let data: [AddressResponseModel]
     
     init?(json: JSON) {
         
         guard let status: Bool = "status" <~~ json,
             let statusCode: Int = "statusCode" <~~ json,
             let success: String = "success" <~~ json,
-            let data: [StateModel] = "data.state" <~~ json else { return nil }
+            let data: [AddressResponseModel] = "data.data" <~~ json else { return nil }
         
         self.status = status
         self.statusCode = statusCode
@@ -34,7 +33,8 @@ struct StateArrayModel: JSONDecodable {
             "status" ~~> self.status,
             "statusCode" ~~> self.statusCode,
             "success" ~~> self.success,
-            "data.state" ~~> self.data
+            "data.data" ~~> self.data
+            
             ])
     }
 }

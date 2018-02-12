@@ -14,12 +14,14 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     var album: AlbumModel?
     var albumTypeIndex: String?
     var object: AlbumTypeDetailModel?
+    var address: AddressResponseModel?
     
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var albumTitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imagesCountLabel: UILabel!
     @IBOutlet weak var blankPagesCountLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     @IBOutlet weak var quantityLabel: UILabel!
     var albumQuantity: Int = 1
@@ -38,10 +40,17 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
             }
             albumTitleLabel.text = album.name
             descriptionLabel.text = album.definition
+            
+//            descriptionLabel.text = album.description
         }
         
         imagesCountLabel.text = "3"
         blankPagesCountLabel.text = "57"
+        
+        if let address = address {
+            
+            addressLabel.text = "\(address.Address1) \(address.Address2) \(address.subUrb) \(address.stateName) \(address.postalCode)"
+        }
         
         saveAlbumtoRealmDB()
     }

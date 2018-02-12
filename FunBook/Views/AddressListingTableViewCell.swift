@@ -5,28 +5,6 @@
 //  Created by admin on 22/01/18.
 //  Copyright © 2018 Techximum. All rights reserved.
 //
-//
-//import UIKit
-//
-//class AddressListingTableViewCell: UITableViewCell {
-//
-//    @IBOutlet weak var defaultAddressLabel: UILabel!
-//    @IBOutlet weak var addressTitleLabel: UILabel!
-//    @IBOutlet weak var addressLabel: UILabel!
-//
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
-//
-//}
-
 
 import UIKit
 
@@ -49,7 +27,7 @@ class AddressListingTableViewCell: UITableViewCell {
         //        accessoryType = selected ? .checkmark : .none
     }
     
-    var info: AlbumTypeModel? {
+    var info: AddressResponseModel? {
         didSet {
             if let member = info {
                 didSetCategory(member)
@@ -59,16 +37,19 @@ class AddressListingTableViewCell: UITableViewCell {
 }
 
 extension AddressListingTableViewCell {
-    func didSetCategory(_ info: AlbumTypeModel) {
+    func didSetCategory(_ info: AddressResponseModel) {
+
+        if info.is_default == "1" {
+          defaultAddressLabel.text = "Default"
+            backgroundColor = UIColor(hex: "33AEF5")
+       
+        } else if info.is_default == "0" {
+           defaultAddressLabel.text = ""
+            backgroundColor = UIColor(hex: "0BA425")
         
-//        let imageUrl:String = info.coverImage.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-//        let url = URL(string: imageUrl)
-//        
-//        let placeholderImage = UIImage(named: "loader")
-//        coverImageView.kf.setImage(with: url, placeholder: placeholderImage)
-        defaultAddressLabel.text = info.title
-        addressTitleLabel.text = info.pages
-        addressLabel.text = info.amount
-//        descriptionLabel.text = info.description
+        }
+
+        addressTitleLabel.text = "\(info.firstName) \(info.lastName)"
+        addressLabel.text = "\(info.Address1) \(info.Address2) \(info.subUrb) \(info.stateName) \(info.postalCode)"
     }
 }

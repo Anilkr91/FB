@@ -19,6 +19,7 @@ class AlbumInformationTableViewController: BaseTableViewController {
     var album = AlbumModel()
     
     lazy var datePicker = UIDatePicker()
+//    slet dateFormatter = "dd-MM-yyyy"
     let dateFormatter = "yyyy-MM-dd"
     
     override func viewDidLoad() {

@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class AddAddressPostService {
-    static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (LoginResponseModel) -> Void) {
+    static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (SuccessResponseModel) -> Void) {
         
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
@@ -30,7 +30,7 @@ class AddAddressPostService {
                 
                 print(value)
                 
-                if let json = LoginResponseModel(json: value as! JSON) {
+                if let json = SuccessResponseModel(json: value as! JSON) {
                     completionHandler(json)
                 }
                 

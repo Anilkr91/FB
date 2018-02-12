@@ -13,6 +13,7 @@ class AlbumTableViewCell : UITableViewCell{
     
     @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var albumNameLabel: UILabel!
+    @IBOutlet weak var albumDescription: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     
     override func awakeFromNib() {
@@ -46,6 +47,7 @@ extension AlbumTableViewCell {
         let placeholderImage = UIImage(named: "loader")
         albumImageView.kf.setImage(with: url, placeholder: placeholderImage)
         albumNameLabel.text = info.albumName
-        dateLabel.text = info.albumDescription
+        albumDescription.text = info.albumDescription
+        dateLabel.text = info.albumDate
     }
 }

@@ -147,8 +147,10 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
         }
     }
     
+//    gallery[],caption[],albumName,albumDescription,albumDate(YYYY-MM-DD),addressID(int),imageDate[],coverImage(default 0 int)
     
-    func uploadAlbum(param: AlbumModel) {
+    
+    func uploadAlbum(param: AlbumTransformerModel) {
         print(param)
         let user = LoginUtils.getCurrentMemberUserLogin()!
         let URL = Constants.BASE_URL
@@ -157,10 +159,12 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                                    "userToken": user.userToken,
                                    "userID": user.userID ]
         
+        
         let r =  Alamofire.upload(multipartFormData: { multipartFormData in
             for img in param.images.enumerated() {
                 
-                if let imageData = img.element.image {
+
+                if let imageData = img.element.image.jpeg(.highest) {
                     multipartFormData.append(imageData, withName: "gallery[]", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg")
                     multipartFormData.append(img.element.caption.data(using: String.Encoding.utf8)!, withName: "caption[]")
                     multipartFormData.append(img.element.date.data(using: String.Encoding.utf8)!, withName: "imageDate[]")
@@ -170,11 +174,13 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             multipartFormData.append(param.name.data(using: String.Encoding.utf8)!, withName: "albumName")
             multipartFormData.append(param.description.data(using: String.Encoding.utf8)!, withName: "albumDescription")
             multipartFormData.append(param.date.data(using: String.Encoding.utf8)!, withName: "albumDate")
+            
+            // TODO: Mark (Remove static address id
+            
             multipartFormData.append("4".data(using: .utf8)!, withName: "addressID")
             multipartFormData.append("\(param.coverImage)".data(using: String.Encoding.utf8)!, withName: "coverImage")
             
         },
-                                  
                                   usingThreshold:UInt64.init(),
                                   to: URL + "profile/create_album",
                                   method:.post,
@@ -204,7 +210,16 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
             
             if let album = self.album {
-                self.uploadAlbum(param: album)
+                
+                var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, images: [])
+                
+                for image in album.images.enumerated() {
+                    let img = UIImage(data: image.element.image!)
+                    
+                    let obj = PrepareAlbumTransformerModel(image: img!, caption: image.element.caption, date: image.element.date, index: image.element.index)
+                    param.images.append(obj)
+                }
+                self.uploadAlbum(param: param)
             }
         }
         
@@ -233,9 +248,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                 album!.albumPrice = object.amount
             }
             album!.albumTotalPrice = "\(priceTotal)"
-            album!.addressId = "1"
             realm.add(album!)
         }
     }
-    
 }

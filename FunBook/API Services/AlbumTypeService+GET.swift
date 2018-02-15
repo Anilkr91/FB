@@ -12,6 +12,7 @@ import Gloss
 class AlbumTypeGetService {
     static func executeRequest (vc: UIViewController, completionHandler: @escaping ([AlbumTypeModel]) -> Void) {
         
+         ProgressBarView.showHUD(textString: "Fetching Album Types..")
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -33,11 +34,13 @@ class AlbumTypeGetService {
                 
                 if let json = AlbumTypeResponseArrayModel(json: value as! JSON) {
                     completionHandler(json.data)
+                    ProgressBarView.hideHUD()
                     
                     
                 }
                 
             case .failure(let error):
+                ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

@@ -12,6 +12,8 @@ import Gloss
 class EditProfilePostService {
     static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (LoginResponseModel) -> Void) {
         
+         ProgressBarView.showHUD(textString: "Please Wait.")
+        
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -32,9 +34,11 @@ class EditProfilePostService {
                 
                 if let json = LoginResponseModel(json: value as! JSON) {
                     completionHandler(json)
+                    ProgressBarView.hideHUD()
                 }
                 
             case .failure(let error):
+                ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

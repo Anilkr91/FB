@@ -14,6 +14,7 @@ class AlbumTypeTableViewController: BaseTableViewController {
     var album: AlbumModel?
     var array: [AlbumTypeModel] = []
     var albumTypeIndex: String?
+    var albumTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,7 @@ class AlbumTypeTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         albumTypeIndex = array[indexPath.section].id
+        albumTitle = array[indexPath.section].title
         performSegue(withIdentifier: "showAlbumDetailTypeSegue", sender: self)
     }
     
@@ -79,6 +81,7 @@ class AlbumTypeTableViewController: BaseTableViewController {
         if segue.identifier == "showAlbumDetailTypeSegue" {
             
             let dvc = segue.destination as! AlbumTypeDetailTableViewController
+            dvc.navigationItem.title = "\(albumTitle) Details"
             dvc.album = album
             dvc.albumTypeIndex = albumTypeIndex
         }

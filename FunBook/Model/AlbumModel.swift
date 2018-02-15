@@ -15,6 +15,7 @@ class AlbumModel: Object {
     dynamic var name: String = ""
     dynamic var definition: String = ""
     dynamic var date: String = ""
+    dynamic var status: String = AlbumStatus.Pending.rawValue
     
     // Album coverImage
     dynamic var coverImage: Int = 0

@@ -12,7 +12,10 @@ import Gloss
 class AllAddressGetService {
     static func executeRequest ( vc: UIViewController, completionHandler: @escaping ([AddressResponseModel]) -> Void) {
         
+         ProgressBarView.showHUD(textString: "Fetching All Addresses..")
+        
         let user = LoginUtils.getCurrentMemberUserLogin()!
+        
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
                                    "userToken": user.userToken,
@@ -33,11 +36,13 @@ class AllAddressGetService {
                 
                 if let json = AddressResponseArrayModel(json: value as! JSON) {
                     completionHandler(json.data)
+                     ProgressBarView.hideHUD()
                     
                 }
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                 ProgressBarView.hideHUD()
             }
         }
         debugPrint(request)

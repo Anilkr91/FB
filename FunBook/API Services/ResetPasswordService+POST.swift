@@ -13,6 +13,8 @@ class ResetPasswordPostService {
     
     static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (SuccessResponseModel) -> Void) {
         
+        ProgressBarView.showHUD(textString: "Please Wait..")
+        
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY]
         
         let URL = Constants.BASE_URL
@@ -28,10 +30,12 @@ class ResetPasswordPostService {
                
                 if let json = SuccessResponseModel(json: value as! JSON) {
                     completionHandler(json)
+                    ProgressBarView.hideHUD()
                 }
                 
             case .failure(let error):
                 print(error.localizedDescription)
+                ProgressBarView.hideHUD()
             }
         }
         debugPrint(request)

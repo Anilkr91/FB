@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MyAccountTableViewController: BaseTableViewController {
     
@@ -14,15 +15,28 @@ class MyAccountTableViewController: BaseTableViewController {
     @IBOutlet weak var nameLabelTextField: UILabel!
     @IBOutlet weak var emailTextField: UILabel!
     
+    let user = LoginUtils.getCurrentMemberUserLogin()!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        setupViewWithUserData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setupViewWithUserData() {
+        nameLabelTextField.text = user.name
+        emailTextField.text = user.email
+        
+        let imageUrl:String = user.picture.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let url = URL(string: imageUrl)
+        let placeholderImage = UIImage(named: "loader")
+        userImageView.kf.setImage(with: url, placeholder: placeholderImage)
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

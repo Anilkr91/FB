@@ -12,6 +12,8 @@ import Gloss
 class AlbumDetailGetService {
     static func executeRequest (_ albumId:String, vc: UIViewController, completionHandler: @escaping ([AlbumImagesModel]) -> Void) {
         
+        ProgressBarView.showHUD(textString: "Fetching Album Detail")
+        
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -34,10 +36,13 @@ class AlbumDetailGetService {
                 if let json = AlbumDetailResponseModel(json: value as! JSON) {
                     completionHandler(json.data.images)
                     
+                      ProgressBarView.hideHUD()
+                    
                     
                 }
                 
             case .failure(let error):
+                  ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

@@ -13,6 +13,9 @@ class OTPVerifyPostService {
     
     static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (OTPVerifyModel?, ErrorResponseModel?) -> Void) {
         
+        
+         ProgressBarView.showHUD(textString: "Please Wait..")
+        
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY]
         
         let URL = Constants.BASE_URL
@@ -32,6 +35,7 @@ class OTPVerifyPostService {
                     if json.status == true {
                         completionHandler(json, nil)
                         
+                         ProgressBarView.hideHUD()
                     }
                 }
                 
@@ -39,12 +43,14 @@ class OTPVerifyPostService {
                     
                     if error.status == false {
                         completionHandler(nil, error)
+                         ProgressBarView.hideHUD()
                         
                     }
                 }
       
             case .failure(let error):
                 print(error.localizedDescription)
+                 ProgressBarView.hideHUD()
             }
         }
         debugPrint(request)

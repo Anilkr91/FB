@@ -12,6 +12,7 @@ import Gloss
 class DeleteAddressPostService {
     static func executeRequest (addressId:String, vc: UIViewController, completionHandler: @escaping (LoginResponseModel) -> Void) {
         
+        ProgressBarView.showHUD(textString: "Deleting Address..")
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -32,9 +33,11 @@ class DeleteAddressPostService {
                 
                 if let json = LoginResponseModel(json: value as! JSON) {
                     completionHandler(json)
+                    ProgressBarView.hideHUD()
                 }
                 
             case .failure(let error):
+                ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

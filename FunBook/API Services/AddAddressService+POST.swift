@@ -12,6 +12,8 @@ import Gloss
 class AddAddressPostService {
     static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (SuccessResponseModel) -> Void) {
         
+         ProgressBarView.showHUD(textString: "Add Address in progress ..")
+        
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -32,9 +34,11 @@ class AddAddressPostService {
                 
                 if let json = SuccessResponseModel(json: value as! JSON) {
                     completionHandler(json)
+                     ProgressBarView.hideHUD()
                 }
                 
             case .failure(let error):
+                 ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

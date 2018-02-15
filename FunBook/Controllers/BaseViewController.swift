@@ -18,12 +18,12 @@ class BaseViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
-    func showHUD() {
+    func showHUD(text: String) {
        
         if let window = UIApplication.shared.delegate?.window {
             hud = MBProgressHUD.showAdded(to: window!, animated: true)
             hud.bezelView.color = UIColor.red
-            hud.label.text = "Please wait..."
+            hud.label.text = text
             hud.label.font = UIFont(name: "Open Sans", size: 12)
         
             hud.bezelView.backgroundColor = UIColor.clear

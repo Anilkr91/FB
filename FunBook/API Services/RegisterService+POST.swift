@@ -12,6 +12,8 @@ import Gloss
 class RegisterPostService {
     static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (SuccessResponseModel) -> Void) {
         
+         ProgressBarView.showHUD(textString: "Please Wait..")
+        
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY]
         let URL = Constants.BASE_URL
         
@@ -25,9 +27,11 @@ class RegisterPostService {
                 
                 if let json = SuccessResponseModel(json: value as! JSON) {
                     completionHandler(json)
+                     ProgressBarView.hideHUD()
                 }
                 
             case .failure(let error):
+                 ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

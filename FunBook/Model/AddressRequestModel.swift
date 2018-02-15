@@ -16,15 +16,17 @@ struct AddressRequestModel {
     let address2: String
     let subUrb: String
     let state: String
+    let country: String
     let postalCode: String
     
-    init(firstName: String, lastName: String, address1: String, address2: String, subUrb: String, state: String, postalCode: String) {
+    init(firstName: String, lastName: String, address1: String, address2: String, subUrb: String, state: String, country: String, postalCode: String) {
         self.firstName = firstName
         self.lastName = lastName
         self.address1 = address1
         self.address2 = address2
         self.subUrb = subUrb
         self.state = state
+        self.country = country
         self.postalCode = postalCode
         
     }
@@ -38,7 +40,10 @@ struct AddressRequestModel {
             "streetAdd2" ~~> self.address2,
             "suburb" ~~> self.subUrb,
             "state" ~~> self.state,
+            "country" ~~> self.country,
             "postalCode" ~~> self.postalCode
             ])
     }
 }
+
+

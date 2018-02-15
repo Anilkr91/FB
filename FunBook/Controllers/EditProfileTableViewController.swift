@@ -46,6 +46,11 @@ class EditProfileTableViewController: BaseTableViewController {
     func setupViewWithUserData() {
         nameTextField.text = user.name
         emailTextField.text = user.email
+        
+        let imageUrl:String = user.picture.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let url = URL(string: imageUrl)
+        let placeholderImage = UIImage(named: "loader")
+        userImageView.kf.setImage(with: url, placeholder: placeholderImage)
     }
    
     @IBAction func updateButtonTapped(_ sender: Any) {
@@ -117,6 +122,7 @@ extension EditProfileTableViewController: UIImagePickerControllerDelegate, UINav
         imagePickerMenu.addAction(galleryAction)
         imagePickerMenu.addAction(cancelAction)
         
+        imagePickerMenu.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
         self.present(imagePickerMenu, animated: true, completion: nil)
     }
     

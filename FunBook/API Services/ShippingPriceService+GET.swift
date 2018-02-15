@@ -12,6 +12,8 @@ import Gloss
 class ShippingPriceGetService {
     static func executeRequest ( vc: UIViewController, completionHandler: @escaping ([ShippingModel]) -> Void) {
         
+        ProgressBarView.showHUD(textString: "Fetching Please Wait..")
+        
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -33,10 +35,12 @@ class ShippingPriceGetService {
                 
                 if let json = ShippingArrayModel(json: value as! JSON) {
                     completionHandler(json.data)
+                    ProgressBarView.hideHUD()
                     
                 }
                 
             case .failure(let error):
+                ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

@@ -29,6 +29,10 @@
 		84225FC42030B7CE0077A0C4 /* AlbumTransformerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FC32030B7CE0077A0C4 /* AlbumTransformerModel.swift */; };
 		84225FC62030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FC52030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift */; };
 		84225FC8203162160077A0C4 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FC7203162160077A0C4 /* CircleImageView.swift */; };
+		84225FCA203404B60077A0C4 /* FunBookEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FC9203404B60077A0C4 /* FunBookEnums.swift */; };
+		84225FCC20343A520077A0C4 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FCB20343A520077A0C4 /* WalkthroughViewController.swift */; };
+		84225FCE20343A740077A0C4 /* WalkthroughModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FCD20343A740077A0C4 /* WalkthroughModel.swift */; };
+		84225FD020343AA60077A0C4 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FCF20343AA60077A0C4 /* PageItemController.swift */; };
 		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
 		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
 		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
@@ -96,6 +100,9 @@
 		84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DCF1FFE33A900D8D66B /* Extension+Helpers.swift */; };
 		84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DD11FFE33A900D8D66B /* LoginUtils.swift */; };
 		84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E09DD31FFE33A900D8D66B /* UIImageView+Helper.swift */; };
+		84ED894620356199000673A0 /* RealmPaymentCompleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED894520356199000673A0 /* RealmPaymentCompleteTableViewCell.swift */; };
+		84ED8948203572B3000673A0 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8947203572B3000673A0 /* ProgressBarView.swift */; };
+		84ED894A203577B7000673A0 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8949203577B7000673A0 /* CountryModel.swift */; };
 		84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */; };
 		84F89A32201892530029ADA7 /* PaypalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F89A31201892530029ADA7 /* PaypalResponse.swift */; };
 /* End PBXBuildFile section */
@@ -124,6 +131,10 @@
 		84225FC32030B7CE0077A0C4 /* AlbumTransformerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTransformerModel.swift; sourceTree = "<group>"; };
 		84225FC52030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareAlbumTransformerModel.swift; sourceTree = "<group>"; };
 		84225FC7203162160077A0C4 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
+		84225FC9203404B60077A0C4 /* FunBookEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunBookEnums.swift; sourceTree = "<group>"; };
+		84225FCB20343A520077A0C4 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		84225FCD20343A740077A0C4 /* WalkthroughModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughModel.swift; sourceTree = "<group>"; };
+		84225FCF20343AA60077A0C4 /* PageItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
@@ -193,6 +204,9 @@
 		84E09DCF1FFE33A900D8D66B /* Extension+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+Helpers.swift"; sourceTree = "<group>"; };
 		84E09DD11FFE33A900D8D66B /* LoginUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
 		84E09DD31FFE33A900D8D66B /* UIImageView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
+		84ED894520356199000673A0 /* RealmPaymentCompleteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmPaymentCompleteTableViewCell.swift; sourceTree = "<group>"; };
+		84ED8947203572B3000673A0 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		84ED8949203577B7000673A0 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 		84F89A31201892530029ADA7 /* PaypalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalResponse.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +298,8 @@
 				84AB5A35202DBA3700521EB8 /* AddressResponseArrayModel.swift */,
 				84225FC32030B7CE0077A0C4 /* AlbumTransformerModel.swift */,
 				84225FC52030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift */,
+				84225FCD20343A740077A0C4 /* WalkthroughModel.swift */,
+				84ED8949203577B7000673A0 /* CountryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,6 +330,8 @@
 				8409CB1920179513007BB614 /* CheckOutTableViewController.swift */,
 				84AA6E5E2029C31600706F05 /* OrderHistoryTableViewController.swift */,
 				84AB5A37202DD0F800521EB8 /* AlbumAddressListingTableViewController.swift */,
+				84225FCB20343A520077A0C4 /* WalkthroughViewController.swift */,
+				84225FCF20343AA60077A0C4 /* PageItemController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -328,6 +346,7 @@
 				8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */,
 				8474BD6620179D870013EEFD /* ShippingChargesTableViewCell.swift */,
 				84AA6E602029D1D600706F05 /* RealmAlbumTableViewCell.swift */,
+				84ED894520356199000673A0 /* RealmPaymentCompleteTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +386,7 @@
 				8425C00A201079E0002CFEF6 /* CropViewController.swift */,
 				8420D1332017445700036376 /* PaypalConfig+Helpers.swift */,
 				8409CB13201756CE007BB614 /* FunBook-Bridging-Header.h */,
+				84225FC9203404B60077A0C4 /* FunBookEnums.swift */,
 			);
 			path = FunBook;
 			sourceTree = "<group>";
@@ -374,6 +394,7 @@
 		84E09DCA1FFE33A900D8D66B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84ED8947203572B3000673A0 /* ProgressBarView.swift */,
 				84E09DCC1FFE33A900D8D66B /* DefaultKeys.swift */,
 				84E09DCD1FFE33A900D8D66B /* DeviceType+Helper.swift */,
 				84E09DCE1FFE33A900D8D66B /* ErrorUtils.swift */,
@@ -553,8 +574,10 @@
 				840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */,
 				8420D1292015E5BD00036376 /* AddAddressTableViewController.swift in Sources */,
 				8425BFFC200F8B59002CFEF6 /* AlbumInformationTableViewController.swift in Sources */,
+				84ED894A203577B7000673A0 /* CountryModel.swift in Sources */,
 				8420D1272015CF5500036376 /* DeleteAddressService+POST.swift in Sources */,
 				8409CB1A20179513007BB614 /* CheckOutTableViewController.swift in Sources */,
+				84ED8948203572B3000673A0 /* ProgressBarView.swift in Sources */,
 				8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */,
 				8471E74F2011BFF100D6BA7F /* AlbumTypeService+GET.swift in Sources */,
 				8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */,
@@ -562,6 +585,8 @@
 				8425BFEB200F8B59002CFEF6 /* OTPVerifyService+POST.swift in Sources */,
 				84AB5A30202DA24600521EB8 /* StateListingService+GET.swift in Sources */,
 				8425BFFB200F8B59002CFEF6 /* AlbumDetailTableViewController.swift in Sources */,
+				84ED894620356199000673A0 /* RealmPaymentCompleteTableViewCell.swift in Sources */,
+				84225FCA203404B60077A0C4 /* FunBookEnums.swift in Sources */,
 				8425BFEF200F8B59002CFEF6 /* AlbumDetailResponseModel.swift in Sources */,
 				8425C009200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift in Sources */,
 				84225FC62030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift in Sources */,
@@ -595,6 +620,7 @@
 				8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */,
 				840CA5332011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift in Sources */,
 				8425C00B201079E0002CFEF6 /* CropViewController.swift in Sources */,
+				84225FCC20343A520077A0C4 /* WalkthroughViewController.swift in Sources */,
 				8425C003200F8B59002CFEF6 /* OTPVerifyTableViewController.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
@@ -609,6 +635,7 @@
 				8420D12F2015F41100036376 /* AddressListingTableViewCell.swift in Sources */,
 				8425BFF6200F8B59002CFEF6 /* OTPVerifyModel.swift in Sources */,
 				8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */,
+				84225FCE20343A740077A0C4 /* WalkthroughModel.swift in Sources */,
 				8474BD6520179A060013EEFD /*  ShippingArrayModel.swift in Sources */,
 				8409CB1C20179589007BB614 /* ShippingPriceService+GET.swift in Sources */,
 				84AA6E612029D1D600706F05 /* RealmAlbumTableViewCell.swift in Sources */,
@@ -627,6 +654,7 @@
 				8409CB18201794DD007BB614 /* ShippingChargesTableViewController.swift in Sources */,
 				8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */,
 				8425C000200F8B59002CFEF6 /* GalleryViewController.swift in Sources */,
+				84225FD020343AA60077A0C4 /* PageItemController.swift in Sources */,
 				8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */,
 				8425BFFF200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift in Sources */,
 				8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */,

@@ -62,7 +62,7 @@ class CheckOutTableViewController: BaseTableViewController {
         print(priceTotal)
         totalPrice.text = "\(priceTotal)"
         
-        saveAlbumtoRealmDB()
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -207,7 +207,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
     func showSucessAlert(_ title: String, message: String) {
         
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
+        let OKAction = UIAlertAction(title: "Upload Now", style: .default) { (action:UIAlertAction!) in
             
             if let album = self.album {
                 
@@ -223,7 +223,14 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             }
         }
         
+        let laterAction = UIAlertAction(title: "Upload Later", style: .default) { (action:UIAlertAction!) in
+            self.saveAlbumtoRealmDB()
+             self.navigationController?.popToRootViewController(animated: true)
+
+        }
+        
         alertView.addAction(OKAction)
+        alertView.addAction(laterAction)
         self.present(alertView, animated: true, completion: nil)
     }
     
@@ -248,6 +255,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                 album!.albumPrice = object.amount
             }
             album!.albumTotalPrice = "\(priceTotal)"
+            album!.status = AlbumStatus.PaymentComplete.rawValue
             realm.add(album!)
         }
     }

@@ -14,6 +14,7 @@ class RealmAlbumTableViewCell : UITableViewCell{
     @IBOutlet weak var albumNameLabel: UILabel!
     @IBOutlet weak var albumDescriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,5 +50,7 @@ extension RealmAlbumTableViewCell {
         albumNameLabel.text = info.name
         albumDescriptionLabel.text = info.definition
         dateLabel.text = info.date
+        statusLabel.text = info.status
+        
     }
 }

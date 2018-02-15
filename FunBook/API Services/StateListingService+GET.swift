@@ -10,7 +10,9 @@ import Alamofire
 import Gloss
 
 class StateListingGetService {
-    static func executeRequest ( vc: UIViewController, completionHandler: @escaping ([StateModel]) -> Void) {
+    static func executeRequest ( vc: UIViewController, completionHandler: @escaping ([CountryModel]) -> Void) {
+        
+        ProgressBarView.showHUD(textString: "Fetching Please Wait..")
         
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
@@ -32,13 +34,14 @@ class StateListingGetService {
                 
                 if let json = StateArrayModel(json: value as! JSON) {
                     completionHandler(json.data)
+                     ProgressBarView.hideHUD()
                 }
                 
             case .failure(let error):
+                 ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }
         debugPrint(request)
     }
 }
-

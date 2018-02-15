@@ -10,9 +10,6 @@ import UIKit
 
 class AddAddressTableViewController: BaseTableViewController {
     
-    //    @IBOutlet weak var nameTextField: UITextField!
-    //    @IBOutlet weak var emailTextField: UITextField!
-    
     var vc: AlbumAddressListingTableViewController?
     
     @IBOutlet weak var selectCountryTextField: UITextField!
@@ -24,17 +21,28 @@ class AddAddressTableViewController: BaseTableViewController {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
     
-    var array: [StateModel] = []
+    var array: [CountryModel] = []
     var stateId: String = ""
+    var countryId: String = ""
+    var index: Int = 0
     
     lazy var picker = UIPickerView()
+    lazy var countryPicker = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        stateTextField.isUserInteractionEnabled = false
         stateTextField.inputView = picker
-        picker.delegate = self
+        selectCountryTextField.inputView = countryPicker
         
+        picker.tag = 0
+        countryPicker.tag = 1
+        
+        picker.delegate = self
+        countryPicker.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         getStates()
     }
     
@@ -45,6 +53,7 @@ class AddAddressTableViewController: BaseTableViewController {
     
     @IBAction func submitButtonTapped(_ sender: Any) {
         
+        let country = selectCountryTextField.text!
         let firstName = firstNameTextField.text!
         let lastName = lastNameTextField.text!
         let addressFirst = addressFirstTextField.text!
@@ -52,8 +61,11 @@ class AddAddressTableViewController: BaseTableViewController {
         let city = cityTextField.text!
         let state = stateTextField.text!
         let zipCode = zipCodeTextField.text!
-        
-        if firstName.removeAllSpaces().isEmpty {
+       
+        if country.removeAllSpaces().isEmpty {
+            showAlert("Error", message: "Country cannot be empty")
+            
+        } else if firstName.removeAllSpaces().isEmpty {
             showAlert("Error", message: "firstName cannot be empty")
             
         } else if lastName.removeAllSpaces().isEmpty {
@@ -77,17 +89,15 @@ class AddAddressTableViewController: BaseTableViewController {
         } else  {
             print("hit api")
             
-            let param = AddressRequestModel(firstName: firstName, lastName: lastName, address1: addressFirst, address2: addressSecond, subUrb: city, state: stateId, postalCode: zipCode).toJSON()
+            let param = AddressRequestModel(firstName: firstName, lastName: lastName, address1: addressFirst, address2: addressSecond, subUrb: city, state: stateId, country: countryId, postalCode: zipCode).toJSON()
             
             AddAddressPostService.executeRequest(param!, vc: self, completionHandler: { (response) in
-                
                 print(response)
                 
                 if self.vc == nil {
                   self.showSucessAlert("Success", message: response.success)
                
                 } else {
-                    
                   self.dismiss(animated: true, completion: nil)
                 }
             })
@@ -113,7 +123,7 @@ class AddAddressTableViewController: BaseTableViewController {
     func getStates() {
         StateListingGetService.executeRequest(vc: self) { (response) in
             self.array = response
-            self.picker.reloadAllComponents()
+            print(response)
         }
     }
     
@@ -132,7 +142,15 @@ class AddAddressTableViewController: BaseTableViewController {
 extension AddAddressTableViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return array.count
+        
+        if pickerView.tag == 0 {
+            return array[index].states.count
+            
+        } else if pickerView.tag == 1 {
+            return array.count
+            
+        }
+        return 1
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -140,11 +158,27 @@ extension AddAddressTableViewController: UIPickerViewDataSource, UIPickerViewDel
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return array[row].name
+        
+        if pickerView.tag == 0 {
+            return array[index].states[row].name
+            
+        } else if pickerView.tag == 1 {
+            return array[row].countryName
+            
+        }
+        return ""
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        stateId = array[row].id
-        return stateTextField.text = array[row].name
+    
+        if pickerView.tag == 0 {
+            stateId = array[index].states[row].id
+            return stateTextField.text = array[index].states[row].name
+        } else if pickerView.tag == 1 {
+            index = row
+            countryId = array[row].countryId
+            stateTextField.isUserInteractionEnabled = true
+            return selectCountryTextField.text = array[row].countryName
+        }
     }
 }

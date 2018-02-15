@@ -12,6 +12,7 @@ import Gloss
 class AddressDetailGetService {
     static func executeRequest (_ addressId:String, vc: UIViewController, completionHandler: @escaping ([AlbumImagesModel]) -> Void) {
         
+         ProgressBarView.showHUD(textString: "Adding Address..")
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -33,10 +34,12 @@ class AddressDetailGetService {
                 
                 if let json = AlbumDetailResponseModel(json: value as! JSON) {
                     completionHandler(json.data.images)
+                    ProgressBarView.hideHUD()
                     
                 }
                 
             case .failure(let error):
+                ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

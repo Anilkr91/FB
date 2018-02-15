@@ -10,21 +10,23 @@ import UIKit
 import SwiftDate
 
 protocol passAlbumDataDelegte {
-    func didAddCaptionWithDate(caption: String, date: String, index: Int, isCopyToAll: Bool, coverImageIndex: Int)
+    func didAddCaptionWithDate(image: Data?, caption: String, date: String, index: Int, isCopyToAll: Bool, coverImageIndex: Int)
 }
 
-class ImageOperationsTableViewController: BaseTableViewController, CropViewControllerDelegate {
+class ImageOperationsTableViewController: BaseTableViewController {
     
     var delegate: passAlbumDataDelegte?
     var albumProperties: PrepareAlbumModel?
     var isCaptionAll: Bool = false
     var coverImageIndex: Int?
+    var imageData: Data?
     
     // Crop Properties
     private var image: UIImage?
+    let imageView = UIImageView()
     private var croppingStyle = CropViewCroppingStyle.default
-    private var croppedRect = CGRect.zero
-    private var croppedAngle = 0
+    var croppedRect = CGRect.zero
+    var croppedAngle = 0
     
     // IBOutlets
     @IBOutlet weak var albumImageView: UIImageView!
@@ -38,7 +40,7 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         datePicker.datePickerMode = .date
         selectDateTextField.inputView = datePicker
         datePicker.addTarget(self, action: #selector(ImageOperationsTableViewController.getDate(sender:)), for: UIControlEvents.valueChanged)
@@ -119,13 +121,13 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
         let date = selectDateTextField.text!
         
         self.dismiss(animated: true) {
-           
-            self.delegate?.didAddCaptionWithDate(caption: caption, date: date, index: self.albumProperties!.index, isCopyToAll: self.isCaptionAll, coverImageIndex: self.coverImageIndex!)
+            
+            self.delegate?.didAddCaptionWithDate(image: self.imageData, caption: caption, date: date, index: self.albumProperties!.index, isCopyToAll: self.isCaptionAll, coverImageIndex: self.coverImageIndex!)
         }
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
-       self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
     
@@ -137,7 +139,70 @@ class ImageOperationsTableViewController: BaseTableViewController, CropViewContr
             let cropController = CropViewController(croppingStyle: croppingStyle, image: UIImage(data: image!)!)
             cropController.delegate = self
             self.image = UIImage(data: image!)
+            print(self.image)
             self.present(cropController, animated: true, completion: nil)
+        }
+    }
+}
+
+extension ImageOperationsTableViewController: CropViewControllerDelegate {
+    
+    public func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        
+        print(image)
+        print(angle)
+        imageData = UIImagePNGRepresentation(image)
+        albumImageView.image = image
+        cropViewController.dismiss(animated: true, completion: nil)
+//        self.croppedRect = cropRect
+//        self.croppedAngle = angle
+//        updateImageViewWithImage(image, fromCropViewController: cropViewController)
+    }
+    
+    public func updateImageViewWithImage(_ image: UIImage, fromCropViewController cropViewController: CropViewController) {
+        imageView.image = image
+        layoutImageView()
+        
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+        
+        if cropViewController.croppingStyle != .circular {
+            imageView.isHidden = true
+            
+            cropViewController.dismissAnimatedFrom(self, withCroppedImage: image,
+                                                   toView: imageView,
+                                                   toFrame: CGRect.zero,
+                                                   setup: { self.layoutImageView() },
+                                                   completion: { self.imageView.isHidden = false })
+        }
+        else {
+            self.imageView.isHidden = false
+            cropViewController.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    public func layoutImageView() {
+        guard imageView.image != nil else { return }
+        
+        let padding: CGFloat = 20.0
+        
+        var viewFrame = self.view.bounds
+        viewFrame.size.width -= (padding * 2.0)
+        viewFrame.size.height -= ((padding * 2.0))
+        
+        var imageFrame = CGRect.zero
+        imageFrame.size = imageView.image!.size;
+        
+        if imageView.image!.size.width > viewFrame.size.width || imageView.image!.size.height > viewFrame.size.height {
+            let scale = min(viewFrame.size.width / imageFrame.size.width, viewFrame.size.height / imageFrame.size.height)
+            imageFrame.size.width *= scale
+            imageFrame.size.height *= scale
+            imageFrame.origin.x = (self.view.bounds.size.width - imageFrame.size.width) * 0.5
+            imageFrame.origin.y = (self.view.bounds.size.height - imageFrame.size.height) * 0.5
+            imageView.frame = imageFrame
+        }
+        else {
+            self.imageView.frame = imageFrame;
+            self.imageView.center = CGPoint(x: self.view.bounds.midX, y: self.view.bounds.midY)
         }
     }
 }

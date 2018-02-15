@@ -12,6 +12,7 @@ import Gloss
 class UploadImagePostService {
     static func executeRequest (_ data: Data, image: String, completionHandler: @escaping (DataResponse<Any>) -> Void) {
         
+          ProgressBarView.showHUD(textString: "Upload in progress..")
         let user = LoginUtils.getCurrentMemberUserLogin()!
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY,
@@ -41,6 +42,7 @@ class UploadImagePostService {
                                             upload.responseJSON { response in
 //                                                ProgressBarView.hideHUD()
                                                 print(response)
+                                                 ProgressBarView.hideHUD()
                                                 
                                             }
                                             

@@ -13,14 +13,14 @@ struct StateArrayModel: JSONDecodable {
     let status: Bool
     let statusCode: Int
     let success: String
-    let data: [StateModel]
+    let data: [CountryModel]
     
     init?(json: JSON) {
         
         guard let status: Bool = "status" <~~ json,
             let statusCode: Int = "statusCode" <~~ json,
             let success: String = "success" <~~ json,
-            let data: [StateModel] = "data.state" <~~ json else { return nil }
+            let data: [CountryModel] = "data.state" <~~ json else { return nil }
         
         self.status = status
         self.statusCode = statusCode

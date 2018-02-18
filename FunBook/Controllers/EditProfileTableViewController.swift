@@ -23,22 +23,36 @@ class EditProfileTableViewController: BaseTableViewController {
         super.viewDidLoad()
         
         
+        print(user)
+        
         userImageView.isUserInteractionEnabled  = true
         tapGesture.addTarget(self, action: #selector(EditProfileTableViewController.uploadImage))
         userImageView.addGestureRecognizer(tapGesture)
-        
-        
-        setupViewWithUserData()
 
+        setupViewWithUserData()
         // Do any additional setup after loading the view.
     }
-    
     
     func uploadImage() {
         handleImageTapGestureRecognizer()
     }
-
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.selectionStyle = .none
     }
@@ -49,7 +63,7 @@ class EditProfileTableViewController: BaseTableViewController {
         
         let imageUrl:String = user.picture.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let url = URL(string: imageUrl)
-        let placeholderImage = UIImage(named: "loader")
+        let placeholderImage = UIImage(named: "placeholder-profile")
         userImageView.kf.setImage(with: url, placeholder: placeholderImage)
     }
    
@@ -57,12 +71,10 @@ class EditProfileTableViewController: BaseTableViewController {
         
         let name = nameTextField.text!
         
-        
         if name.removeAllSpaces().isEmpty {
             showAlert("Error", message: "User id cannot be empty")
             
         } else {
-            
             print("validation passed hit api")
             let param = ["name": name]
             
@@ -75,15 +87,11 @@ class EditProfileTableViewController: BaseTableViewController {
         EditProfilePostService.executeRequest(param, vc: self) { (response) in
             
             if response.status == true && response.statusCode == 200 {
-        
                  LoginUtils.setCurrentMemberUserLogin(response.user)
-                
                 self.showSucessAlert("Success", message: response.success)
-                
             }
         }
     }
-    
     
     func showSucessAlert(_ title: String, message: String) {
         
@@ -96,7 +104,6 @@ class EditProfileTableViewController: BaseTableViewController {
         self.present(alertView, animated: true, completion: nil)
     }
 }
-
 
 extension EditProfileTableViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -138,21 +145,22 @@ extension EditProfileTableViewController: UIImagePickerControllerDelegate, UINav
         
         if let imageData = image?.jpeg(.low)  {
             
-//            print(imageData.count)
-            
-//            print("size of image in KB: %f ", Double(imageData.count) / 1024.0 )
-            
-            
-            let countBytes = ByteCountFormatter()
-            countBytes.allowedUnits = [.useMB]
-            countBytes.countStyle = .file
-            let fileSize = countBytes.string(fromByteCount: Int64(imageData.count))
-            
-            print("File size: \(fileSize)")
-            
-            
-            
+////            print(imageData.count)
+//
+////            print("size of image in KB: %f ", Double(imageData.count) / 1024.0 )
+//
+//
+//            let countBytes = ByteCountFormatter()
+//            countBytes.allowedUnits = [.useMB]
+//            countBytes.countStyle = .file
+//            let fileSize = countBytes.string(fromByteCount: Int64(imageData.count))
+//
+//            print("File size: \(fileSize)")
+//
+    
             UploadImagePostService.executeRequest(imageData, image: "", completionHandler: { (response) in
+                
+                 LoginUtils.setCurrentMemberUserLogin(response.user)
                 self.userImageView.image = image
             })
         }

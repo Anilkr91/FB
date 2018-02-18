@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OrderHistoryTableViewController: UITableViewController {
+class OrderHistoryTableViewController: BaseTableViewController {
     
     var albumModel: [AlbumResponseModel] = []
     var album: AlbumResponseModel?

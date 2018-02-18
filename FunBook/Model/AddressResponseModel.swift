@@ -21,6 +21,8 @@ struct AddressResponseModel: JSONDecodable {
     let postalCode: String
     let is_default: String
     let stateName: String
+    let countryName: String
+    let country: String
     
     init?(json: JSON) {
         
@@ -34,6 +36,8 @@ struct AddressResponseModel: JSONDecodable {
             let state: String = "state" <~~ json,
             let postalCode: String = "postalCode" <~~ json,
             let is_default: String = "is_default" <~~ json,
+            let countryName: String = "CountryName" <~~ json,
+            let country: String = "country" <~~ json,
             let stateName: String = "stateName" <~~ json else { return nil }
         
         self.id = id
@@ -47,6 +51,8 @@ struct AddressResponseModel: JSONDecodable {
         self.postalCode = postalCode
         self.is_default = is_default
         self.stateName = stateName
+        self.country = country
+        self.countryName = countryName
     }
     
     func toJSON() -> JSON? {
@@ -62,8 +68,9 @@ struct AddressResponseModel: JSONDecodable {
             "state" ~~> self.state,
             "postalCode" ~~> self.postalCode,
             "is_default" ~~> self.is_default,
-            "stateName" ~~> self.stateName
-            
+            "stateName" ~~> self.stateName,
+            "CountryName" ~~> self.countryName,
+            "country" ~~> self.country
             ])
     }
 }

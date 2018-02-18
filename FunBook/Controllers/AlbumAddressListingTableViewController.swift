@@ -18,11 +18,7 @@ class AlbumAddressListingTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        AllAddressGetService.executeRequest(vc: self) { (response) in
-//            self.array = response
-//            self.tableView.reloadData()
-//        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,11 +32,6 @@ class AlbumAddressListingTableViewController: BaseTableViewController {
     @IBAction func addAddressButton(_ sender: Any) {
         performSegue(withIdentifier: "addAddressSegue", sender: self)
     }
-    
-    //    @IBAction func nextButton(_ sender: Any) {
-    //        performSegue(withIdentifier: "showUserAlbumDetailSegue", sender: self)
-    //    }
-    //
     
     func saveAlbumtoRealmDB(address: AddressResponseModel) {
         

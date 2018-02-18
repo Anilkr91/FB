@@ -21,7 +21,15 @@ class MyAccountTableViewController: BaseTableViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        setupViewWithUserData()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print(user)
+        
+         setupViewWithUserData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,6 +44,7 @@ class MyAccountTableViewController: BaseTableViewController {
         let imageUrl:String = user.picture.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let url = URL(string: imageUrl)
         let placeholderImage = UIImage(named: "loader")
+        print(url)
         userImageView.kf.setImage(with: url, placeholder: placeholderImage)
     }
     

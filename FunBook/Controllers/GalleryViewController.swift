@@ -24,9 +24,9 @@ class GalleryViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableview.delegate = self
         tableview.dataSource = self
+        
         
     }
     

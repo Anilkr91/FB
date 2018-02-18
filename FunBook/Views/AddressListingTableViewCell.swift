@@ -40,16 +40,16 @@ extension AddressListingTableViewCell {
     func didSetCategory(_ info: AddressResponseModel) {
 
         if info.is_default == "1" {
-          defaultAddressLabel.text = "Default"
-            backgroundColor = UIColor(hex: "33AEF5")
+          defaultAddressLabel.text = ""
+//            backgroundColor = UIColor(hex: "33AEF5")
        
         } else if info.is_default == "0" {
            defaultAddressLabel.text = ""
-            backgroundColor = UIColor(hex: "0BA425")
+//            backgroundColor = UIColor(hex: "0BA425")
         
         }
 
         addressTitleLabel.text = "\(info.firstName) \(info.lastName)"
-        addressLabel.text = "\(info.Address1) \(info.Address2) \(info.subUrb) \(info.stateName) \(info.postalCode)"
+        addressLabel.text = "\(info.Address1), \(info.Address2), \(info.subUrb), \(info.stateName), \(info.countryName) \n PinCode: \(info.postalCode)"
     }
 }

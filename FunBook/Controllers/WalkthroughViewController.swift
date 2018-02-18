@@ -24,12 +24,12 @@ class WalkthroughViewController: BaseViewController, UIPageViewControllerDataSou
                           WalkthroughModel(name: "placeholder-profile", heading: "Heading1", text: "It's easy to stay focused when you are with your friends or surrounded by people with same fitness level.")
         ]
         
+        navigationItem.titleView = UIImageView(image: UIImage(named: "Title-logo"))
         createPageViewController()
         setupPageControl()
-        
-//        showGetStartedSegue
+
     }
-    
+
     fileprivate func createPageViewController() {
         
         let pageController = self.storyboard!.instantiateViewController(withIdentifier: "PageViewController") as! UIPageViewController
@@ -45,12 +45,6 @@ class WalkthroughViewController: BaseViewController, UIPageViewControllerDataSou
         addChildViewController(pageViewController!)
         self.view.addSubview(pageViewController!.view)
         pageViewController!.didMove(toParentViewController: self)
-    }
-    
-    
-    func resetController() {
-        
-        
     }
     
     fileprivate func setupPageControl() {
@@ -92,7 +86,7 @@ class WalkthroughViewController: BaseViewController, UIPageViewControllerDataSou
             pageItemController.heading = contentImages[itemIndex].heading
             pageItemController.desc = contentImages[itemIndex].text
             return pageItemController
-        
+            
         }
         return nil
     }
@@ -126,7 +120,7 @@ class WalkthroughViewController: BaseViewController, UIPageViewControllerDataSou
         }
         return nil
     }
-    
+
     @IBAction func skipButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "showGetStartedSegue", sender: self)
     }

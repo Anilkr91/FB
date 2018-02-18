@@ -14,7 +14,6 @@ class AddressListingTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getAddresses()
-        
     }
     
     func getAddresses() {

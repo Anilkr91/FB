@@ -13,7 +13,6 @@ class ShippingChargesTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -44,9 +43,6 @@ extension ShippingChargesTableViewCell {
         } else {
            priceLabel.text = info.shippingAmount
         }
-        
         titleLabel.text = info.shippingTitle
     }
 }
-
-

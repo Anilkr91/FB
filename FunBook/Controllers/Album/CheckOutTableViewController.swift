@@ -40,7 +40,7 @@ class CheckOutTableViewController: BaseTableViewController {
         self.selectButton.setImage(checked, for: .normal)
         
         if let object = object {
-            priceLabel.text = object.amount
+            priceLabel.text = "$\(object.amount)"
             
             if let albumPrice = Double(object.amount) {
                 albumAmount = albumPrice
@@ -61,7 +61,7 @@ class CheckOutTableViewController: BaseTableViewController {
         priceTotal = Double(albumQuantity!) * (albumAmount + shippingPrice)
         
         print(priceTotal)
-        totalPrice.text = "\(priceTotal)"
+        totalPrice.text = "$\(priceTotal)"
         
         
     }

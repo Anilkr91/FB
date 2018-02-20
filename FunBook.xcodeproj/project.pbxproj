@@ -12,11 +12,6 @@
 		840CA5332011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */; };
 		840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */; };
 		840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */; };
-		8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D11E2015BC1900036376 /* AddAddressService+POST.swift */; };
-		8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1202015C64100036376 /* AllAddressService+GET.swift */; };
-		8420D1232015CAAE00036376 /* AddressDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */; };
-		8420D1252015CB4600036376 /* EditAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1242015CB4600036376 /* EditAddressService+POST.swift */; };
-		8420D1272015CF5500036376 /* DeleteAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */; };
 		8420D12F2015F41100036376 /* AddressListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */; };
 		8420D1322015FF2900036376 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1312015FF2800036376 /* LoginTableViewController.swift */; };
 		8420D1342017445700036376 /* PaypalConfig+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1332017445700036376 /* PaypalConfig+Helpers.swift */; };
@@ -28,12 +23,9 @@
 		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
 		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
 		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
-		8425BFE8200F8B59002CFEF6 /* ForgotPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC0200F8B59002CFEF6 /* ForgotPasswordService+POST.swift */; };
 		8425BFE9200F8B59002CFEF6 /* ImageUploadService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC1200F8B59002CFEF6 /* ImageUploadService+POST.swift */; };
 		8425BFEA200F8B59002CFEF6 /* LoginService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC2200F8B59002CFEF6 /* LoginService+POST.swift */; };
-		8425BFEB200F8B59002CFEF6 /* OTPVerifyService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC3200F8B59002CFEF6 /* OTPVerifyService+POST.swift */; };
 		8425BFEC200F8B59002CFEF6 /* RegisterService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC4200F8B59002CFEF6 /* RegisterService+POST.swift */; };
-		8425BFED200F8B59002CFEF6 /* ResetPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC5200F8B59002CFEF6 /* ResetPasswordService+POST.swift */; };
 		8425BFEE200F8B59002CFEF6 /* AlbumDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC7200F8B59002CFEF6 /* AlbumDetailModel.swift */; };
 		8425BFEF200F8B59002CFEF6 /* AlbumDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC8200F8B59002CFEF6 /* AlbumDetailResponseModel.swift */; };
 		8425BFF0200F8B59002CFEF6 /* AlbumImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFC9200F8B59002CFEF6 /* AlbumImagesModel.swift */; };
@@ -106,6 +98,14 @@
 		84ED8974203C0378000673A0 /* AlbumAddressListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED896E203C0377000673A0 /* AlbumAddressListingTableViewController.swift */; };
 		84ED8975203C0378000673A0 /* ShippingChargesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED896F203C0378000673A0 /* ShippingChargesTableViewController.swift */; };
 		84ED8976203C0378000673A0 /* UserAlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8970203C0378000673A0 /* UserAlbumDetailTableViewController.swift */; };
+		84ED897D203C085A000673A0 /* AddAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8978203C085A000673A0 /* AddAddressService+POST.swift */; };
+		84ED897E203C085A000673A0 /* AddressDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8979203C085A000673A0 /* AddressDetailService+GET.swift */; };
+		84ED897F203C085A000673A0 /* AllAddressService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED897A203C085A000673A0 /* AllAddressService+GET.swift */; };
+		84ED8980203C085A000673A0 /* DeleteAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED897B203C085A000673A0 /* DeleteAddressService+POST.swift */; };
+		84ED8981203C085A000673A0 /* EditAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED897C203C085A000673A0 /* EditAddressService+POST.swift */; };
+		84ED8986203C09F2000673A0 /* ForgotPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8983203C09F2000673A0 /* ForgotPasswordService+POST.swift */; };
+		84ED8987203C09F2000673A0 /* OTPVerifyService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8984203C09F2000673A0 /* OTPVerifyService+POST.swift */; };
+		84ED8988203C09F2000673A0 /* ResetPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8985203C09F2000673A0 /* ResetPasswordService+POST.swift */; };
 		84F89A32201892530029ADA7 /* PaypalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F89A31201892530029ADA7 /* PaypalResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,11 +116,6 @@
 		840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumTypeDetailService+GET.swift"; sourceTree = "<group>"; };
 		840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailModel.swift; sourceTree = "<group>"; };
 		840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailResponseModel.swift; sourceTree = "<group>"; };
-		8420D11E2015BC1900036376 /* AddAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAddressService+POST.swift"; sourceTree = "<group>"; };
-		8420D1202015C64100036376 /* AllAddressService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllAddressService+GET.swift"; sourceTree = "<group>"; };
-		8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressDetailService+GET.swift"; sourceTree = "<group>"; };
-		8420D1242015CB4600036376 /* EditAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditAddressService+POST.swift"; sourceTree = "<group>"; };
-		8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeleteAddressService+POST.swift"; sourceTree = "<group>"; };
 		8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListingTableViewCell.swift; sourceTree = "<group>"; };
 		8420D1312015FF2800036376 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		8420D1332017445700036376 /* PaypalConfig+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaypalConfig+Helpers.swift"; sourceTree = "<group>"; };
@@ -132,12 +127,9 @@
 		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
-		8425BFC0200F8B59002CFEF6 /* ForgotPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordService+POST.swift"; sourceTree = "<group>"; };
 		8425BFC1200F8B59002CFEF6 /* ImageUploadService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageUploadService+POST.swift"; sourceTree = "<group>"; };
 		8425BFC2200F8B59002CFEF6 /* LoginService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginService+POST.swift"; sourceTree = "<group>"; };
-		8425BFC3200F8B59002CFEF6 /* OTPVerifyService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTPVerifyService+POST.swift"; sourceTree = "<group>"; };
 		8425BFC4200F8B59002CFEF6 /* RegisterService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterService+POST.swift"; sourceTree = "<group>"; };
-		8425BFC5200F8B59002CFEF6 /* ResetPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResetPasswordService+POST.swift"; sourceTree = "<group>"; };
 		8425BFC7200F8B59002CFEF6 /* AlbumDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailModel.swift; sourceTree = "<group>"; };
 		8425BFC8200F8B59002CFEF6 /* AlbumDetailResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailResponseModel.swift; sourceTree = "<group>"; };
 		8425BFC9200F8B59002CFEF6 /* AlbumImagesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumImagesModel.swift; sourceTree = "<group>"; };
@@ -212,6 +204,14 @@
 		84ED896E203C0377000673A0 /* AlbumAddressListingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumAddressListingTableViewController.swift; sourceTree = "<group>"; };
 		84ED896F203C0378000673A0 /* ShippingChargesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingChargesTableViewController.swift; sourceTree = "<group>"; };
 		84ED8970203C0378000673A0 /* UserAlbumDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAlbumDetailTableViewController.swift; sourceTree = "<group>"; };
+		84ED8978203C085A000673A0 /* AddAddressService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddAddressService+POST.swift"; sourceTree = "<group>"; };
+		84ED8979203C085A000673A0 /* AddressDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddressDetailService+GET.swift"; sourceTree = "<group>"; };
+		84ED897A203C085A000673A0 /* AllAddressService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AllAddressService+GET.swift"; sourceTree = "<group>"; };
+		84ED897B203C085A000673A0 /* DeleteAddressService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DeleteAddressService+POST.swift"; sourceTree = "<group>"; };
+		84ED897C203C085A000673A0 /* EditAddressService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditAddressService+POST.swift"; sourceTree = "<group>"; };
+		84ED8983203C09F2000673A0 /* ForgotPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ForgotPasswordService+POST.swift"; sourceTree = "<group>"; };
+		84ED8984203C09F2000673A0 /* OTPVerifyService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OTPVerifyService+POST.swift"; sourceTree = "<group>"; };
+		84ED8985203C09F2000673A0 /* ResetPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResetPasswordService+POST.swift"; sourceTree = "<group>"; };
 		84F89A31201892530029ADA7 /* PaypalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalResponse.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -249,24 +249,17 @@
 		8425BFBC200F8B59002CFEF6 /* API Services */ = {
 			isa = PBXGroup;
 			children = (
+				84ED8982203C09F2000673A0 /* ForgotPassword */,
+				84ED8977203C085A000673A0 /* Address */,
 				8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */,
 				8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */,
 				8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */,
-				8425BFC0200F8B59002CFEF6 /* ForgotPasswordService+POST.swift */,
 				8425BFC1200F8B59002CFEF6 /* ImageUploadService+POST.swift */,
 				8425BFC2200F8B59002CFEF6 /* LoginService+POST.swift */,
-				8425BFC3200F8B59002CFEF6 /* OTPVerifyService+POST.swift */,
 				8425BFC4200F8B59002CFEF6 /* RegisterService+POST.swift */,
-				8425BFC5200F8B59002CFEF6 /* ResetPasswordService+POST.swift */,
 				8471E74E2011BFF100D6BA7F /* AlbumTypeService+GET.swift */,
 				840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */,
-				8420D11E2015BC1900036376 /* AddAddressService+POST.swift */,
-				8420D1202015C64100036376 /* AllAddressService+GET.swift */,
-				8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */,
-				8420D1242015CB4600036376 /* EditAddressService+POST.swift */,
-				8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */,
 				8409CB1B20179589007BB614 /* ShippingPriceService+GET.swift */,
-				84AB5A2F202DA24600521EB8 /* StateListingService+GET.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -444,6 +437,29 @@
 			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
+		84ED8977203C085A000673A0 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				84AB5A2F202DA24600521EB8 /* StateListingService+GET.swift */,
+				84ED8978203C085A000673A0 /* AddAddressService+POST.swift */,
+				84ED8979203C085A000673A0 /* AddressDetailService+GET.swift */,
+				84ED897A203C085A000673A0 /* AllAddressService+GET.swift */,
+				84ED897B203C085A000673A0 /* DeleteAddressService+POST.swift */,
+				84ED897C203C085A000673A0 /* EditAddressService+POST.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		84ED8982203C09F2000673A0 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				84ED8983203C09F2000673A0 /* ForgotPasswordService+POST.swift */,
+				84ED8984203C09F2000673A0 /* OTPVerifyService+POST.swift */,
+				84ED8985203C09F2000673A0 /* ResetPasswordService+POST.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
 		B581DFC684078799E8C0A129 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -604,22 +620,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84ED8987203C09F2000673A0 /* OTPVerifyService+POST.swift in Sources */,
 				8425BFF5200F8B59002CFEF6 /* LoginResponseModel.swift in Sources */,
 				8425BFEE200F8B59002CFEF6 /* AlbumDetailModel.swift in Sources */,
 				8425C008200F8B59002CFEF6 /* AlbumTableViewCell.swift in Sources */,
 				8425BFFD200F8B59002CFEF6 /* BaseViewController.swift in Sources */,
 				840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */,
 				84ED894A203577B7000673A0 /* CountryModel.swift in Sources */,
-				8420D1272015CF5500036376 /* DeleteAddressService+POST.swift in Sources */,
 				84ED8969203C02EB000673A0 /* OTPVerifyTableViewController.swift in Sources */,
 				84ED8948203572B3000673A0 /* ProgressBarView.swift in Sources */,
-				8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */,
 				8471E74F2011BFF100D6BA7F /* AlbumTypeService+GET.swift in Sources */,
 				84ED894C2038A0E1000673A0 /* MaxLengthTextField.swift in Sources */,
 				84ED8953203BFFAD000673A0 /* AddAddressTableViewController.swift in Sources */,
 				8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */,
 				84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */,
-				8425BFEB200F8B59002CFEF6 /* OTPVerifyService+POST.swift in Sources */,
+				84ED8988203C09F2000673A0 /* ResetPasswordService+POST.swift in Sources */,
+				84ED897E203C085A000673A0 /* AddressDetailService+GET.swift in Sources */,
 				84AB5A30202DA24600521EB8 /* StateListingService+GET.swift in Sources */,
 				84ED8973203C0378000673A0 /* CheckOutTableViewController.swift in Sources */,
 				84ED8976203C0378000673A0 /* UserAlbumDetailTableViewController.swift in Sources */,
@@ -635,21 +651,19 @@
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
 				8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */,
 				84ED8968203C02EB000673A0 /* ForgotPasswordTableViewController.swift in Sources */,
-				8425BFE8200F8B59002CFEF6 /* ForgotPasswordService+POST.swift in Sources */,
 				8420D1342017445700036376 /* PaypalConfig+Helpers.swift in Sources */,
-				8420D1232015CAAE00036376 /* AddressDetailService+GET.swift in Sources */,
 				8425BFF1200F8B59002CFEF6 /* AlbumModel.swift in Sources */,
 				84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */,
 				8425BFF3200F8B59002CFEF6 /* AlbumResponseModel.swift in Sources */,
 				84ED8962203C0025000673A0 /* PageItemController.swift in Sources */,
 				84ED895E203BFFE4000673A0 /* SelectedImagesCollectionViewController.swift in Sources */,
 				8425C004200F8B59002CFEF6 /* RegisterTableViewController.swift in Sources */,
-				8425BFED200F8B59002CFEF6 /* ResetPasswordService+POST.swift in Sources */,
 				8471E7532011CDC300D6BA7F /* AlbumTypeTableViewCell.swift in Sources */,
 				84AB5A2E202D91C200521EB8 /* StateArrayModel.swift in Sources */,
 				8425BFF8200F8B59002CFEF6 /* RegisterRequestModel.swift in Sources */,
 				8425BFF0200F8B59002CFEF6 /* AlbumImagesModel.swift in Sources */,
 				8425BFE9200F8B59002CFEF6 /* ImageUploadService+POST.swift in Sources */,
+				84ED897F203C085A000673A0 /* AllAddressService+GET.swift in Sources */,
 				84E09DDC1FFE33A900D8D66B /* UIImageView+Helper.swift in Sources */,
 				84AA6E63202C229500706F05 /* ShippingRealmModel.swift in Sources */,
 				8425BFF7200F8B59002CFEF6 /* PrepareAlbumModel.swift in Sources */,
@@ -663,8 +677,11 @@
 				84ED894E203A9003000673A0 /* GettingStartedViewController.swift in Sources */,
 				84ED8963203C0025000673A0 /* WalkthroughViewController.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
+				84ED8980203C085A000673A0 /* DeleteAddressService+POST.swift in Sources */,
 				84ED895C203BFFE4000673A0 /* GalleryViewController.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
+				84ED8981203C085A000673A0 /* EditAddressService+POST.swift in Sources */,
+				84ED8986203C09F2000673A0 /* ForgotPasswordService+POST.swift in Sources */,
 				8471E7552011CFEB00D6BA7F /* AlbumTypeModel.swift in Sources */,
 				84ED896A203C02EB000673A0 /* ResetPasswordTableViewController.swift in Sources */,
 				84225FC42030B7CE0077A0C4 /* AlbumTransformerModel.swift in Sources */,
@@ -685,12 +702,11 @@
 				84AB5A34202DB53F00521EB8 /* AddressResponseModel.swift in Sources */,
 				8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */,
 				84AA6E5F2029C31600706F05 /* OrderHistoryTableViewController.swift in Sources */,
-				8420D1252015CB4600036376 /* EditAddressService+POST.swift in Sources */,
 				84225FC8203162160077A0C4 /* CircleImageView.swift in Sources */,
 				84ED895B203BFFE4000673A0 /* AlbumInformationTableViewController.swift in Sources */,
-				8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */,
 				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
 				84ED8955203BFFAD000673A0 /* EditAddressTableViewController.swift in Sources */,
+				84ED897D203C085A000673A0 /* AddAddressService+POST.swift in Sources */,
 				84ED8954203BFFAD000673A0 /* AddressListingTableViewController.swift in Sources */,
 				84ED8974203C0378000673A0 /* AlbumAddressListingTableViewController.swift in Sources */,
 				8474BD63201799400013EEFD /* ShippingModel.swift in Sources */,

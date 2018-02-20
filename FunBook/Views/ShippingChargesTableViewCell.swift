@@ -39,8 +39,13 @@ class ShippingChargesTableViewCell: UITableViewCell {
 extension ShippingChargesTableViewCell {
     func didSetCategory(_ info: ShippingModel) {
         
+        if info.shippingAmount == "0" {
+            priceLabel.text = "Free"
+        } else {
+           priceLabel.text = info.shippingAmount
+        }
+        
         titleLabel.text = info.shippingTitle
-        priceLabel.text = info.shippingAmount
     }
 }
 

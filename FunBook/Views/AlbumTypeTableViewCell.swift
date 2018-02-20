@@ -48,7 +48,7 @@ extension AlbumTypeTableViewCell {
         coverImageView.kf.setImage(with: url, placeholder: placeholderImage)
         titleLabel.text = info.title
         pagesCountLabel.text = "Pages: \(info.pages)"
-        priceLabel.text = "Price: \(info.amount)"
+        priceLabel.text = "Price: $\(info.amount)"
         descriptionLabel.text = info.description
     }
 }

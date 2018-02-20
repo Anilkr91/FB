@@ -41,7 +41,7 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
             albumTitleLabel.text = album.name
             descriptionLabel.text = album.definition
             
-//            descriptionLabel.text = album.description
+            //            descriptionLabel.text = album.description
         }
         
         imagesCountLabel.text = "3"
@@ -91,11 +91,12 @@ class UserAlbumDetailTableViewController: BaseTableViewController {
     }
     
     @IBAction func subtractAlbumButton(_ sender: Any) {
-        albumQuantity -= 1
-        quantityLabel.text = "\(albumQuantity)"
         
         if albumQuantity == 1 {
-            print("quantity should be at least one")
+            showAlert("", message: "quantity should be at least one")
+        } else {
+            albumQuantity -= 1
+            quantityLabel.text = "\(albumQuantity)"
         }
         saveAlbumtoRealmDB()
     }

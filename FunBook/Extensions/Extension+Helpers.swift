@@ -48,6 +48,21 @@ extension UIColor {
 }
 
 
+extension UINavigationItem {
+    //Make the title 2 lines with a title and a subtitle
+    func addTitleAndSubtitleToNavigationBar (title: String, subtitle: String) {
+        let label = UILabel(frame: CGRect(x: 8, y: 0, width: 40, height: 40))
+        
+        label.font = UIFont.boldSystemFont(ofSize: 14.0)
+        label.numberOfLines = 2
+        label.text = "\(title)\n\(subtitle)"
+        label.textColor = UIColor.white
+        label.sizeToFit()
+        label.textAlignment = NSTextAlignment.center
+        self.titleView = label
+    }
+}
+
 //import UIKit
 //
 //extension String {
@@ -72,4 +87,3 @@ extension UIColor {
 //        }
 //    }
 //}
-

@@ -44,7 +44,13 @@ class RegisterTableViewController: BaseTableViewController {
         cell.selectionStyle = .none
     }
     
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
         
         let name = fullNameTextField.text!
         let email = emailTextField.text!

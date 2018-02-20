@@ -28,10 +28,11 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6BU-3b-KgF">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="KcC-6j-aKy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -542,6 +543,9 @@
                                                         <constraint firstAttribute="width" constant="100" id="XRl-LU-hED"/>
                                                     </constraints>
                                                     <state key="normal" title="Login"/>
+                                                    <connections>
+                                                        <action selector="loginButtonTapped:" destination="wXw-3u-VDG" eventType="touchUpInside" id="flD-nb-Xkc"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -573,7 +577,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="loginButtonTapped:" destination="wXw-3u-VDG" eventType="touchUpInside" id="IJh-ZV-Rnk"/>
+                                                        <action selector="signUpButtonTapped:" destination="wXw-3u-VDG" eventType="touchUpInside" id="nEm-SD-mt0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -2041,7 +2045,7 @@
             </objects>
             <point key="canvasLocation" x="4582" y="3618"/>
         </scene>
-        <!--Image Operations Table View Controller-->
+        <!--Edit Album-->
         <scene sceneID="4SQ-gq-g2p">
             <objects>
                 <tableViewController id="JiL-kE-0x1" customClass="ImageOperationsTableViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -2280,7 +2284,7 @@
                             <outlet property="delegate" destination="JiL-kE-0x1" id="Mm7-MG-LP7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bJe-Vu-H3u">
+                    <navigationItem key="navigationItem" title="Edit Album" id="bJe-Vu-H3u">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="L61-0Y-fkX">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="84t-fT-YBl">
                                 <rect key="frame" x="329" y="7" width="30" height="30"/>

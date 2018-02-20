@@ -20,6 +20,7 @@ class CheckOutTableViewController: BaseTableViewController {
     var priceTotal: Double = 0.0
     var albumAmount: Double = 0.0
     var shippingPrice: Double = 0.0
+    var paypalResponseId: String = ""
     
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
@@ -62,7 +63,7 @@ class CheckOutTableViewController: BaseTableViewController {
         print(priceTotal)
         totalPrice.text = "\(priceTotal)"
         
-       
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -136,6 +137,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             if let json = json {
                 
                 if json.state == "approved" {
+                    self.paypalResponseId = json.id
                     self.showSucessAlert("Paypal Status \(json.state)", message: "Response id: \(json.id)")
                     
                 } else if json.state == "failed" || json.state == "canceled" || json.state == "expired" {
@@ -146,8 +148,8 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             }
         }
     }
-    
-//    gallery[],caption[],albumName,albumDescription,albumDate(YYYY-MM-DD),addressID(int),imageDate[],coverImage(default 0 int)
+
+//    paymentId,albumName,addressID,albumType,quantity,shippingCharges,price,totalPrice,albumDate(dd-mm-yyyy),imageDate[](dd-mm-yyyy),gallery[],caption[],coverImage
     
     
     func uploadAlbum(param: AlbumTransformerModel) {
@@ -163,7 +165,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
         let r =  Alamofire.upload(multipartFormData: { multipartFormData in
             for img in param.images.enumerated() {
                 
-
+                
                 if let imageData = img.element.image.jpeg(.highest) {
                     multipartFormData.append(imageData, withName: "gallery[]", fileName: "\(Date().timeIntervalSince1970).jpeg", mimeType: "image/jpeg")
                     multipartFormData.append(img.element.caption.data(using: String.Encoding.utf8)!, withName: "caption[]")
@@ -174,10 +176,22 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             multipartFormData.append(param.name.data(using: String.Encoding.utf8)!, withName: "albumName")
             multipartFormData.append(param.description.data(using: String.Encoding.utf8)!, withName: "albumDescription")
             multipartFormData.append(param.date.data(using: String.Encoding.utf8)!, withName: "albumDate")
+            multipartFormData.append(param.addressId.data(using: .utf8)!, withName: "addressID")
             
             // TODO: Mark (Remove static address id
             
-            multipartFormData.append("4".data(using: .utf8)!, withName: "addressID")
+            if let quantity = self.albumQuantity {
+                multipartFormData.append("\(quantity)".data(using: .utf8)!, withName: "quantity")
+            }
+            
+            if let albumType = self.object  {
+                multipartFormData.append("\(albumType.amount)".data(using: .utf8)!, withName: "price")
+                multipartFormData.append("\(albumType.id)".data(using: .utf8)!, withName: "albumType")
+            }
+            
+            multipartFormData.append(self.paypalResponseId.data(using: .utf8)!, withName: "paymentId")
+            multipartFormData.append("\(1)".data(using: .utf8)!, withName: "shippingCharges")
+            multipartFormData.append("\(self.priceTotal)".data(using: .utf8)!, withName: "totalPrice")
             multipartFormData.append("\(param.coverImage)".data(using: String.Encoding.utf8)!, withName: "coverImage")
             
         },
@@ -193,8 +207,8 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                                         debugPrint(upload)
                                         upload.responseJSON { response in
                                             print(response)
-                                             self.deleteAlbumFromLocalDB()
-                            
+                                            self.deleteAlbumFromLocalDB()
+                                            
                                         }
                                     case .failure(let error):
                                         print(error)
@@ -211,7 +225,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             
             if let album = self.album {
                 
-                var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, images: [])
+                var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, addressId: album.addressId, images: [])
                 
                 for image in album.images.enumerated() {
                     let img = UIImage(data: image.element.image!)
@@ -219,14 +233,15 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                     let obj = PrepareAlbumTransformerModel(image: img!, caption: image.element.caption, date: image.element.date, index: image.element.index)
                     param.images.append(obj)
                 }
+//                self.saveAlbumtoRealmDB()
                 self.uploadAlbum(param: param)
             }
         }
         
         let laterAction = UIAlertAction(title: "Upload Later", style: .default) { (action:UIAlertAction!) in
             self.saveAlbumtoRealmDB()
-             self.navigationController?.popToRootViewController(animated: true)
-
+            self.navigationController?.popToRootViewController(animated: true)
+            
         }
         
         alertView.addAction(OKAction)

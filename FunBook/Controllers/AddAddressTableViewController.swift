@@ -51,6 +51,15 @@ class AddAddressTableViewController: BaseTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        if self.vc == nil {
+            return
+            
+        } else {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func submitButtonTapped(_ sender: Any) {
         
         let country = selectCountryTextField.text!

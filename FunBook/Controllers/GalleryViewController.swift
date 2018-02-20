@@ -157,7 +157,7 @@ extension GalleryViewController {
         
         let album = albums[sender.tag]
         
-        var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, images: [])
+        var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, addressId: album.addressId, images: [])
         
         for image in album.images.enumerated() {
             let img = UIImage(data: image.element.image!)

@@ -104,6 +104,7 @@
 		84ED8948203572B3000673A0 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8947203572B3000673A0 /* ProgressBarView.swift */; };
 		84ED894A203577B7000673A0 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8949203577B7000673A0 /* CountryModel.swift */; };
 		84ED894C2038A0E1000673A0 /* MaxLengthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED894B2038A0E1000673A0 /* MaxLengthTextField.swift */; };
+		84ED894E203A9003000673A0 /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED894D203A9003000673A0 /* GettingStartedViewController.swift */; };
 		84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */; };
 		84F89A32201892530029ADA7 /* PaypalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F89A31201892530029ADA7 /* PaypalResponse.swift */; };
 /* End PBXBuildFile section */
@@ -209,6 +210,7 @@
 		84ED8947203572B3000673A0 /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		84ED8949203577B7000673A0 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		84ED894B2038A0E1000673A0 /* MaxLengthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxLengthTextField.swift; sourceTree = "<group>"; };
+		84ED894D203A9003000673A0 /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
 		84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 		84F89A31201892530029ADA7 /* PaypalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalResponse.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				84AB5A37202DD0F800521EB8 /* AlbumAddressListingTableViewController.swift */,
 				84225FCB20343A520077A0C4 /* WalkthroughViewController.swift */,
 				84225FCF20343AA60077A0C4 /* PageItemController.swift */,
+				84ED894D203A9003000673A0 /* GettingStartedViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				8425C00B201079E0002CFEF6 /* CropViewController.swift in Sources */,
 				84225FCC20343A520077A0C4 /* WalkthroughViewController.swift in Sources */,
 				8425C003200F8B59002CFEF6 /* OTPVerifyTableViewController.swift in Sources */,
+				84ED894E203A9003000673A0 /* GettingStartedViewController.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
 				8471E7552011CFEB00D6BA7F /* AlbumTypeModel.swift in Sources */,

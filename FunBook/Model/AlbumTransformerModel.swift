@@ -46,15 +46,17 @@ struct AlbumTransformerModel {
     let name: String
     let description: String
     let date: String
+    let addressId: String
     var images: [PrepareAlbumTransformerModel]
     
     
-    init(coverImage: Int, name: String, description: String, date: String, images:  [PrepareAlbumTransformerModel]) {
+    init(coverImage: Int, name: String, description: String, date: String,addressId: String , images:  [PrepareAlbumTransformerModel]) {
         
         self.coverImage = coverImage
         self.name = name
         self.description = description
         self.date = date
+        self.addressId = addressId
         self.images = images
     }
 }

@@ -38,7 +38,6 @@ class SelectedImagesCollectionViewController: BaseCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        print(album?.images.count)
         return album!.images.count
     }
     
@@ -216,7 +215,6 @@ extension SelectedImagesCollectionViewController: OpalImagePickerControllerDeleg
                         album.images.remove(at: arr.offset)
                         let albumProperties = PrepareAlbumModel()
                         albumProperties.image = image ?? arr.element.image
-                        print(albumProperties.image)
                         albumProperties.caption = caption
                         albumProperties.date = date
                         albumProperties.index = arr.offset
@@ -282,7 +280,6 @@ extension SelectedImagesCollectionViewController: OpalImagePickerControllerDeleg
                             album.images.remove(at: arr.offset)
                             let albumProperties = PrepareAlbumModel()
                             albumProperties.image = image ?? arr.element.image
-                            print(albumProperties.image)
                             albumProperties.caption = caption
                             albumProperties.date = date
                             albumProperties.index = arr.offset
@@ -302,7 +299,6 @@ extension SelectedImagesCollectionViewController: OpalImagePickerControllerDeleg
                             album.images.remove(at: arr.offset)
                             let albumProperties = PrepareAlbumModel()
                             albumProperties.image = image ?? arr.element.image
-                            print(albumProperties.image)
                             albumProperties.caption = caption
                             albumProperties.date = date
                             albumProperties.index = arr.offset

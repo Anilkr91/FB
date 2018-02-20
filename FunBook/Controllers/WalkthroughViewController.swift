@@ -19,9 +19,9 @@ class WalkthroughViewController: BaseViewController, UIPageViewControllerDataSou
         super.viewDidLoad()
         
         contentImages = [ WalkthroughModel(name: "loader", heading: "Heading1", text: "The best place to invest is in FITNESS"),
-                          WalkthroughModel(name: "placeholder-profile", heading: "Heading1", text: "Stay focus & accomplish your desired goals"),
-                          WalkthroughModel(name: "loader", heading: "Heading1", text: "Challenging yourself everyday is one of the most exciting ways to live."),
-                          WalkthroughModel(name: "placeholder-profile", heading: "Heading1", text: "It's easy to stay focused when you are with your friends or surrounded by people with same fitness level.")
+                          WalkthroughModel(name: "placeholder-profile", heading: "Heading2", text: "Stay focus & accomplish your desired goals"),
+                          WalkthroughModel(name: "loader", heading: "Heading3", text: "Challenging yourself everyday is one of the most exciting ways to live."),
+                          WalkthroughModel(name: "placeholder-profile", heading: "Heading4", text: "It's easy to stay focused when you are with your friends or surrounded by people with same fitness level.")
         ]
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "Title-logo"))

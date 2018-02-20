@@ -12,6 +12,17 @@ extension String {
     func removeAllSpaces () -> String {
         return self.trimmingCharacters(in: CharacterSet.whitespaces)
     }
+    
+    //Validate Email
+    var isEmail: Bool {
+        do {
+            let regex = try NSRegularExpression(pattern:"^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$", options: .caseInsensitive)
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
+        } catch {
+            return false
+        }
+    }
+    
 }
 
 
@@ -35,3 +46,30 @@ extension UIColor {
         )
     }
 }
+
+
+//import UIKit
+//
+//extension String {
+//    
+//    //Validate Email
+//    var isEmail: Bool {
+//        do {
+//            let regex = try NSRegularExpression(pattern:"^([a-z0-9_\\.-]+)@([\\da-z\\.-]+)\\.([a-z\\.]{2,6})$", options: .CaseInsensitive)
+//            return regex.firstMatchInString(self, options: NSMatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
+//        } catch {
+//            return false
+//        }
+//    }
+//    
+//    //validate Password
+//    var isPassword: Bool {
+//        do {
+//            let regex = try NSRegularExpression(pattern:"^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!@#%&*]).{8,}$", options: .CaseInsensitive)
+//            return regex.firstMatchInString(self, options: NSMatchingOptions(rawValue: 0), range: NSMakeRange(0, self.characters.count)) != nil
+//        } catch {
+//            return false
+//        }
+//    }
+//}
+

@@ -6,7 +6,6 @@
 //  Copyright © 2018 Techximum. All rights reserved.
 //
 
-
 enum AlbumStatus: String {
     case Pending = "Pending"
     case PaymentComplete = "PaymentComplete"

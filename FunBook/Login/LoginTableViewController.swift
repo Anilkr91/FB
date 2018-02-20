@@ -31,16 +31,21 @@ class LoginTableViewController: BaseTableViewController {
         let password = passwordTextField.text!
         
         if email.removeAllSpaces().isEmpty {
-            showAlert("Error", message: "User id cannot be empty")
+            showAlert("Error", message: "Email cannot be empty..")
+            
+        } else if email.isEmail == false {
+           showAlert("Error", message: "Enter valid email..")
             
         } else if password.removeAllSpaces().isEmpty {
-            showAlert("Error", message: "Password cannot be empty")
+            showAlert("Error", message: "Password cannot be empty..")
+            
+        } else if password.count < 8 {
+            showAlert("Error", message: "Password should be 8 character long..")
             
         } else {
             
             print("validation passed hit login api")
             let param = ["email": email,"password": password,"deviceType": "2","deviceID" : "234567890"]
-            
             login(param)
         }
     }

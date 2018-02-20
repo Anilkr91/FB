@@ -506,7 +506,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, you agree to the terms &amp; privacy policy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjo-5b-SFP">
-                                                    <rect key="frame" x="8" y="19" width="359" height="6"/>
+                                                    <rect key="frame" x="8" y="15" width="359" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -515,8 +515,6 @@
                                             <constraints>
                                                 <constraint firstItem="cjo-5b-SFP" firstAttribute="centerY" secondItem="3wN-mj-mCd" secondAttribute="centerY" id="1fr-tL-TpK"/>
                                                 <constraint firstItem="cjo-5b-SFP" firstAttribute="leading" secondItem="3wN-mj-mCd" secondAttribute="leading" constant="8" id="cHA-7M-W6Y"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="cjo-5b-SFP" secondAttribute="bottom" constant="8" id="kaP-jB-wYD"/>
-                                                <constraint firstItem="cjo-5b-SFP" firstAttribute="top" secondItem="3wN-mj-mCd" secondAttribute="topMargin" constant="8" id="oQy-XB-aDf"/>
                                                 <constraint firstAttribute="trailing" secondItem="cjo-5b-SFP" secondAttribute="trailing" constant="8" id="voW-ic-9XM"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -525,32 +523,35 @@
                             </tableViewSection>
                             <tableViewSection id="UqI-aQ-8zA">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="Ffz-Cn-oGC">
-                                        <rect key="frame" x="0.0" y="389" width="375" height="66"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ffz-Cn-oGC">
+                                        <rect key="frame" x="0.0" y="389" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ffz-Cn-oGC" id="Qbl-mT-hoy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already a Funbooker?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u83-zC-noE">
-                                                    <rect key="frame" x="24" y="15" width="327" height="14.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already a Funbooker?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u83-zC-noE">
+                                                    <rect key="frame" x="8" y="15" width="251" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAK-Mn-HfV">
-                                                    <rect key="frame" x="24" y="33.5" width="327" height="32"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uB-Nt-0CL">
+                                                    <rect key="frame" x="267" y="0.0" width="100" height="43.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="XRl-LU-hED"/>
+                                                    </constraints>
                                                     <state key="normal" title="Login"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="pAK-Mn-HfV" firstAttribute="top" secondItem="u83-zC-noE" secondAttribute="bottom" constant="4" id="Dmd-LK-rCa"/>
+                                                <constraint firstItem="5uB-Nt-0CL" firstAttribute="leading" secondItem="u83-zC-noE" secondAttribute="trailing" constant="8" id="6NZ-eL-ewl"/>
+                                                <constraint firstAttribute="trailing" secondItem="5uB-Nt-0CL" secondAttribute="trailing" constant="8" id="EgI-Th-RXv"/>
+                                                <constraint firstAttribute="bottom" secondItem="5uB-Nt-0CL" secondAttribute="bottom" id="LCa-8b-BsY"/>
                                                 <constraint firstItem="u83-zC-noE" firstAttribute="top" secondItem="Qbl-mT-hoy" secondAttribute="topMargin" constant="4" id="a63-DG-vac"/>
-                                                <constraint firstItem="pAK-Mn-HfV" firstAttribute="leading" secondItem="u83-zC-noE" secondAttribute="leading" id="cBW-Xf-F44"/>
-                                                <constraint firstAttribute="bottom" secondItem="pAK-Mn-HfV" secondAttribute="bottom" id="hLj-z4-hyF"/>
-                                                <constraint firstItem="u83-zC-noE" firstAttribute="leading" secondItem="Qbl-mT-hoy" secondAttribute="leadingMargin" constant="8" id="opq-K3-ZA4"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="u83-zC-noE" secondAttribute="trailing" constant="8" id="rdL-Q5-sYD"/>
-                                                <constraint firstItem="pAK-Mn-HfV" firstAttribute="trailing" secondItem="u83-zC-noE" secondAttribute="trailing" id="zbS-nk-yiV"/>
+                                                <constraint firstItem="5uB-Nt-0CL" firstAttribute="centerY" secondItem="u83-zC-noE" secondAttribute="centerY" id="bN5-kH-I49"/>
+                                                <constraint firstItem="5uB-Nt-0CL" firstAttribute="top" secondItem="Qbl-mT-hoy" secondAttribute="top" id="n0y-dh-0Le"/>
+                                                <constraint firstItem="u83-zC-noE" firstAttribute="leading" secondItem="Qbl-mT-hoy" secondAttribute="leading" constant="8" id="nTj-20-HWN"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -559,7 +560,7 @@
                             <tableViewSection id="J9g-Tt-38F">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="qLs-Df-4bS">
-                                        <rect key="frame" x="0.0" y="491" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="469" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qLs-Df-4bS" id="EYS-Sn-cUN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>

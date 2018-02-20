@@ -60,16 +60,13 @@ class RegisterTableViewController: BaseTableViewController {
             showAlert("Error", message: "Password cannot be empty")
             
         } else {
-            
             print("validation passed hit api")
-            
             let param = ["name": name,"email": email,"password": password]
             register(param)
         }
     }
     
     func register(_ param: [String: Any]) {
-
         RegisterPostService.executeRequest(param, vc: self) { (response) in
             
             if response.status == true && response.statusCode == 200 {
@@ -84,7 +81,6 @@ class RegisterTableViewController: BaseTableViewController {
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
             self.navigationController?.popViewController(animated: true)
         }
-        
         alertView.addAction(OKAction)
         self.present(alertView, animated: true, completion: nil)
     }

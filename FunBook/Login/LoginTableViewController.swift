@@ -56,14 +56,9 @@ class LoginTableViewController: BaseTableViewController {
     
     func login(_ param: [String: Any]) {
         
-//        let param = ["email": email,"password": password,"deviceType": "2","deviceID" : "234567890"]
         LoginPostService.executeRequest(param, vc: self) { (response) in
-            
-            print(response)
-            
             if response.status == true && response.statusCode == 200 {
                 self.userLoginToHome(response.user)
-                
             }
         }
     }
@@ -73,6 +68,5 @@ class LoginTableViewController: BaseTableViewController {
         LoginUtils.setCurrentMemberUser(user)
         let application = UIApplication.shared.delegate as! AppDelegate
         application.setHomeUser()
-        
     }
 }

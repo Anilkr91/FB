@@ -22,7 +22,7 @@ class BaseViewController: UIViewController {
     func setupNavigationAppearance() {
         self.navigationController?.navigationBar.barStyle = .default
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "33AEF5")
+        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "1DA1F2")
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
     
@@ -66,7 +66,7 @@ class BaseTableViewController: UITableViewController {
     func setupNavigationAppearance() {
         self.navigationController?.navigationBar.barStyle = .default
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "33AEF5")
+        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "1DA1F2")
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
     
@@ -108,9 +108,9 @@ class BaseCollectionViewController: UICollectionViewController {
     }
     
     func setupNavigationAppearance() {
-        self.navigationController?.navigationBar.barStyle = .default
+//        self.navigationController?.navigationBar.barStyle = 
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "33AEF5")
+        self.navigationController?.navigationBar.barTintColor = UIColor(hex: "1DA1F2")
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
     

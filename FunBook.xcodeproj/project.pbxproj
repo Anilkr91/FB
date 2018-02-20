@@ -8,21 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7FF694E26A8C276316FA29DE /* Pods_FunBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */; };
-		8409CB18201794DD007BB614 /* ShippingChargesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB17201794DD007BB614 /* ShippingChargesTableViewController.swift */; };
-		8409CB1A20179513007BB614 /* CheckOutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB1920179513007BB614 /* CheckOutTableViewController.swift */; };
 		8409CB1C20179589007BB614 /* ShippingPriceService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB1B20179589007BB614 /* ShippingPriceService+GET.swift */; };
 		840CA5332011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */; };
 		840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */; };
 		840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */; };
-		840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */; };
 		8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D11E2015BC1900036376 /* AddAddressService+POST.swift */; };
 		8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1202015C64100036376 /* AllAddressService+GET.swift */; };
 		8420D1232015CAAE00036376 /* AddressDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */; };
 		8420D1252015CB4600036376 /* EditAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1242015CB4600036376 /* EditAddressService+POST.swift */; };
 		8420D1272015CF5500036376 /* DeleteAddressService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */; };
-		8420D1292015E5BD00036376 /* AddAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1282015E5BD00036376 /* AddAddressTableViewController.swift */; };
-		8420D12B2015EAAE00036376 /* AddressListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D12A2015EAAE00036376 /* AddressListingTableViewController.swift */; };
-		8420D12D2015ED9100036376 /* EditAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D12C2015ED9100036376 /* EditAddressTableViewController.swift */; };
 		8420D12F2015F41100036376 /* AddressListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */; };
 		8420D1322015FF2900036376 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1312015FF2800036376 /* LoginTableViewController.swift */; };
 		8420D1342017445700036376 /* PaypalConfig+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1332017445700036376 /* PaypalConfig+Helpers.swift */; };
@@ -30,9 +24,7 @@
 		84225FC62030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FC52030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift */; };
 		84225FC8203162160077A0C4 /* CircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FC7203162160077A0C4 /* CircleImageView.swift */; };
 		84225FCA203404B60077A0C4 /* FunBookEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FC9203404B60077A0C4 /* FunBookEnums.swift */; };
-		84225FCC20343A520077A0C4 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FCB20343A520077A0C4 /* WalkthroughViewController.swift */; };
 		84225FCE20343A740077A0C4 /* WalkthroughModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FCD20343A740077A0C4 /* WalkthroughModel.swift */; };
-		84225FD020343AA60077A0C4 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225FCF20343AA60077A0C4 /* PageItemController.swift */; };
 		8425BFE5200F8B59002CFEF6 /* AlbumDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */; };
 		8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */; };
 		8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */; };
@@ -56,23 +48,15 @@
 		8425BFF9200F8B59002CFEF6 /* SuccessResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD2200F8B59002CFEF6 /* SuccessResponseModel.swift */; };
 		8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD3200F8B59002CFEF6 /* UserModel.swift */; };
 		8425BFFB200F8B59002CFEF6 /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */; };
-		8425BFFC200F8B59002CFEF6 /* AlbumInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD6200F8B59002CFEF6 /* AlbumInformationTableViewController.swift */; };
 		8425BFFD200F8B59002CFEF6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */; };
 		8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */; };
-		8425BFFF200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD9200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift */; };
-		8425C000200F8B59002CFEF6 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDA200F8B59002CFEF6 /* GalleryViewController.swift */; };
-		8425C001200F8B59002CFEF6 /* ImageOperationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDB200F8B59002CFEF6 /* ImageOperationsTableViewController.swift */; };
 		8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */; };
-		8425C003200F8B59002CFEF6 /* OTPVerifyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDD200F8B59002CFEF6 /* OTPVerifyTableViewController.swift */; };
 		8425C004200F8B59002CFEF6 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDE200F8B59002CFEF6 /* RegisterTableViewController.swift */; };
-		8425C005200F8B59002CFEF6 /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDF200F8B59002CFEF6 /* ResetPasswordTableViewController.swift */; };
-		8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE0200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift */; };
 		8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE2200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift */; };
 		8425C008200F8B59002CFEF6 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE3200F8B59002CFEF6 /* AlbumTableViewCell.swift */; };
 		8425C009200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFE4200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift */; };
 		8425C00B201079E0002CFEF6 /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425C00A201079E0002CFEF6 /* CropViewController.swift */; };
 		8471E74F2011BFF100D6BA7F /* AlbumTypeService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E74E2011BFF100D6BA7F /* AlbumTypeService+GET.swift */; };
-		8471E7512011C04400D6BA7F /* AlbumTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7502011C04400D6BA7F /* AlbumTypeTableViewController.swift */; };
 		8471E7532011CDC300D6BA7F /* AlbumTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7522011CDC300D6BA7F /* AlbumTypeTableViewCell.swift */; };
 		8471E7552011CFEB00D6BA7F /* AlbumTypeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7542011CFEB00D6BA7F /* AlbumTypeModel.swift */; };
 		8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471E7562011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift */; };
@@ -88,7 +72,6 @@
 		84AB5A32202DABF300521EB8 /* AddressRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5A31202DABF300521EB8 /* AddressRequestModel.swift */; };
 		84AB5A34202DB53F00521EB8 /* AddressResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5A33202DB53F00521EB8 /* AddressResponseModel.swift */; };
 		84AB5A36202DBA3700521EB8 /* AddressResponseArrayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5A35202DBA3700521EB8 /* AddressResponseArrayModel.swift */; };
-		84AB5A38202DD0F800521EB8 /* AlbumAddressListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB5A37202DD0F800521EB8 /* AlbumAddressListingTableViewController.swift */; };
 		84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D79EBC1FF3758100D26134 /* AppDelegate.swift */; };
 		84D79EC21FF3758100D26134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC01FF3758100D26134 /* Main.storyboard */; };
 		84D79EC41FF3758100D26134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D79EC31FF3758100D26134 /* Assets.xcassets */; };
@@ -105,28 +88,39 @@
 		84ED894A203577B7000673A0 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8949203577B7000673A0 /* CountryModel.swift */; };
 		84ED894C2038A0E1000673A0 /* MaxLengthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED894B2038A0E1000673A0 /* MaxLengthTextField.swift */; };
 		84ED894E203A9003000673A0 /* GettingStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED894D203A9003000673A0 /* GettingStartedViewController.swift */; };
-		84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */; };
+		84ED8953203BFFAD000673A0 /* AddAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8950203BFFAC000673A0 /* AddAddressTableViewController.swift */; };
+		84ED8954203BFFAD000673A0 /* AddressListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8951203BFFAC000673A0 /* AddressListingTableViewController.swift */; };
+		84ED8955203BFFAD000673A0 /* EditAddressTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8952203BFFAC000673A0 /* EditAddressTableViewController.swift */; };
+		84ED895B203BFFE4000673A0 /* AlbumInformationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8957203BFFE4000673A0 /* AlbumInformationTableViewController.swift */; };
+		84ED895C203BFFE4000673A0 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8958203BFFE4000673A0 /* GalleryViewController.swift */; };
+		84ED895D203BFFE4000673A0 /* ImageOperationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8959203BFFE4000673A0 /* ImageOperationsTableViewController.swift */; };
+		84ED895E203BFFE4000673A0 /* SelectedImagesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED895A203BFFE4000673A0 /* SelectedImagesCollectionViewController.swift */; };
+		84ED8962203C0025000673A0 /* PageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8960203C0024000673A0 /* PageItemController.swift */; };
+		84ED8963203C0025000673A0 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8961203C0024000673A0 /* WalkthroughViewController.swift */; };
+		84ED8968203C02EB000673A0 /* ForgotPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8965203C02EB000673A0 /* ForgotPasswordTableViewController.swift */; };
+		84ED8969203C02EB000673A0 /* OTPVerifyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8966203C02EB000673A0 /* OTPVerifyTableViewController.swift */; };
+		84ED896A203C02EB000673A0 /* ResetPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8967203C02EB000673A0 /* ResetPasswordTableViewController.swift */; };
+		84ED8971203C0378000673A0 /* AlbumTypeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED896B203C0377000673A0 /* AlbumTypeDetailTableViewController.swift */; };
+		84ED8972203C0378000673A0 /* AlbumTypeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED896C203C0377000673A0 /* AlbumTypeTableViewController.swift */; };
+		84ED8973203C0378000673A0 /* CheckOutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED896D203C0377000673A0 /* CheckOutTableViewController.swift */; };
+		84ED8974203C0378000673A0 /* AlbumAddressListingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED896E203C0377000673A0 /* AlbumAddressListingTableViewController.swift */; };
+		84ED8975203C0378000673A0 /* ShippingChargesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED896F203C0378000673A0 /* ShippingChargesTableViewController.swift */; };
+		84ED8976203C0378000673A0 /* UserAlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8970203C0378000673A0 /* UserAlbumDetailTableViewController.swift */; };
 		84F89A32201892530029ADA7 /* PaypalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F89A31201892530029ADA7 /* PaypalResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AC387EC8C848F7FCBE075DF /* Pods-FunBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.debug.xcconfig"; sourceTree = "<group>"; };
 		8409CB13201756CE007BB614 /* FunBook-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FunBook-Bridging-Header.h"; sourceTree = "<group>"; };
-		8409CB17201794DD007BB614 /* ShippingChargesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingChargesTableViewController.swift; sourceTree = "<group>"; };
-		8409CB1920179513007BB614 /* CheckOutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOutTableViewController.swift; sourceTree = "<group>"; };
 		8409CB1B20179589007BB614 /* ShippingPriceService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShippingPriceService+GET.swift"; sourceTree = "<group>"; };
 		840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumTypeDetailService+GET.swift"; sourceTree = "<group>"; };
 		840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailModel.swift; sourceTree = "<group>"; };
 		840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailResponseModel.swift; sourceTree = "<group>"; };
-		840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailTableViewController.swift; sourceTree = "<group>"; };
 		8420D11E2015BC1900036376 /* AddAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAddressService+POST.swift"; sourceTree = "<group>"; };
 		8420D1202015C64100036376 /* AllAddressService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AllAddressService+GET.swift"; sourceTree = "<group>"; };
 		8420D1222015CAAE00036376 /* AddressDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddressDetailService+GET.swift"; sourceTree = "<group>"; };
 		8420D1242015CB4600036376 /* EditAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditAddressService+POST.swift"; sourceTree = "<group>"; };
 		8420D1262015CF5500036376 /* DeleteAddressService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeleteAddressService+POST.swift"; sourceTree = "<group>"; };
-		8420D1282015E5BD00036376 /* AddAddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAddressTableViewController.swift; sourceTree = "<group>"; };
-		8420D12A2015EAAE00036376 /* AddressListingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListingTableViewController.swift; sourceTree = "<group>"; };
-		8420D12C2015ED9100036376 /* EditAddressTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAddressTableViewController.swift; sourceTree = "<group>"; };
 		8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListingTableViewCell.swift; sourceTree = "<group>"; };
 		8420D1312015FF2800036376 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		8420D1332017445700036376 /* PaypalConfig+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaypalConfig+Helpers.swift"; sourceTree = "<group>"; };
@@ -134,9 +128,7 @@
 		84225FC52030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareAlbumTransformerModel.swift; sourceTree = "<group>"; };
 		84225FC7203162160077A0C4 /* CircleImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageView.swift; sourceTree = "<group>"; };
 		84225FC9203404B60077A0C4 /* FunBookEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunBookEnums.swift; sourceTree = "<group>"; };
-		84225FCB20343A520077A0C4 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		84225FCD20343A740077A0C4 /* WalkthroughModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughModel.swift; sourceTree = "<group>"; };
-		84225FCF20343AA60077A0C4 /* PageItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
 		8425BFBD200F8B59002CFEF6 /* AlbumDetailService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumDetailService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBE200F8B59002CFEF6 /* AlbumListingService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumListingService+GET.swift"; sourceTree = "<group>"; };
 		8425BFBF200F8B59002CFEF6 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
@@ -160,23 +152,15 @@
 		8425BFD2200F8B59002CFEF6 /* SuccessResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessResponseModel.swift; sourceTree = "<group>"; };
 		8425BFD3200F8B59002CFEF6 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
-		8425BFD6200F8B59002CFEF6 /* AlbumInformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumInformationTableViewController.swift; sourceTree = "<group>"; };
 		8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
-		8425BFD9200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
-		8425BFDA200F8B59002CFEF6 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
-		8425BFDB200F8B59002CFEF6 /* ImageOperationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperationsTableViewController.swift; sourceTree = "<group>"; };
 		8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
-		8425BFDD200F8B59002CFEF6 /* OTPVerifyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyTableViewController.swift; sourceTree = "<group>"; };
 		8425BFDE200F8B59002CFEF6 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
-		8425BFDF200F8B59002CFEF6 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
-		8425BFE0200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImagesCollectionViewController.swift; sourceTree = "<group>"; };
 		8425BFE2200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewCell.swift; sourceTree = "<group>"; };
 		8425BFE3200F8B59002CFEF6 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		8425BFE4200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		8425C00A201079E0002CFEF6 /* CropViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropViewController.swift; sourceTree = "<group>"; };
 		8471E74E2011BFF100D6BA7F /* AlbumTypeService+GET.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlbumTypeService+GET.swift"; sourceTree = "<group>"; };
-		8471E7502011C04400D6BA7F /* AlbumTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeTableViewController.swift; sourceTree = "<group>"; };
 		8471E7522011CDC300D6BA7F /* AlbumTypeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeTableViewCell.swift; sourceTree = "<group>"; };
 		8471E7542011CFEB00D6BA7F /* AlbumTypeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeModel.swift; sourceTree = "<group>"; };
 		8471E7562011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeResponseArrayModel.swift; sourceTree = "<group>"; };
@@ -192,7 +176,6 @@
 		84AB5A31202DABF300521EB8 /* AddressRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressRequestModel.swift; sourceTree = "<group>"; };
 		84AB5A33202DB53F00521EB8 /* AddressResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResponseModel.swift; sourceTree = "<group>"; };
 		84AB5A35202DBA3700521EB8 /* AddressResponseArrayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResponseArrayModel.swift; sourceTree = "<group>"; };
-		84AB5A37202DD0F800521EB8 /* AlbumAddressListingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAddressListingTableViewController.swift; sourceTree = "<group>"; };
 		84D79EB91FF3758100D26134 /* FunBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D79EBC1FF3758100D26134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D79EC11FF3758100D26134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,7 +194,24 @@
 		84ED8949203577B7000673A0 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		84ED894B2038A0E1000673A0 /* MaxLengthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxLengthTextField.swift; sourceTree = "<group>"; };
 		84ED894D203A9003000673A0 /* GettingStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStartedViewController.swift; sourceTree = "<group>"; };
-		84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAlbumDetailTableViewController.swift; sourceTree = "<group>"; };
+		84ED8950203BFFAC000673A0 /* AddAddressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAddressTableViewController.swift; sourceTree = "<group>"; };
+		84ED8951203BFFAC000673A0 /* AddressListingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressListingTableViewController.swift; sourceTree = "<group>"; };
+		84ED8952203BFFAC000673A0 /* EditAddressTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditAddressTableViewController.swift; sourceTree = "<group>"; };
+		84ED8957203BFFE4000673A0 /* AlbumInformationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumInformationTableViewController.swift; sourceTree = "<group>"; };
+		84ED8958203BFFE4000673A0 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		84ED8959203BFFE4000673A0 /* ImageOperationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperationsTableViewController.swift; sourceTree = "<group>"; };
+		84ED895A203BFFE4000673A0 /* SelectedImagesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedImagesCollectionViewController.swift; sourceTree = "<group>"; };
+		84ED8960203C0024000673A0 /* PageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageItemController.swift; sourceTree = "<group>"; };
+		84ED8961203C0024000673A0 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		84ED8965203C02EB000673A0 /* ForgotPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewController.swift; sourceTree = "<group>"; };
+		84ED8966203C02EB000673A0 /* OTPVerifyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPVerifyTableViewController.swift; sourceTree = "<group>"; };
+		84ED8967203C02EB000673A0 /* ResetPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordTableViewController.swift; sourceTree = "<group>"; };
+		84ED896B203C0377000673A0 /* AlbumTypeDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailTableViewController.swift; sourceTree = "<group>"; };
+		84ED896C203C0377000673A0 /* AlbumTypeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTypeTableViewController.swift; sourceTree = "<group>"; };
+		84ED896D203C0377000673A0 /* CheckOutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckOutTableViewController.swift; sourceTree = "<group>"; };
+		84ED896E203C0377000673A0 /* AlbumAddressListingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumAddressListingTableViewController.swift; sourceTree = "<group>"; };
+		84ED896F203C0378000673A0 /* ShippingChargesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingChargesTableViewController.swift; sourceTree = "<group>"; };
+		84ED8970203C0378000673A0 /* UserAlbumDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAlbumDetailTableViewController.swift; sourceTree = "<group>"; };
 		84F89A31201892530029ADA7 /* PaypalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalResponse.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,31 +311,17 @@
 		8425BFD4200F8B59002CFEF6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84ED8964203C02EB000673A0 /* ForgotPassword */,
+				84ED895F203C0024000673A0 /* Walkthrough */,
+				84ED8956203BFFE4000673A0 /* Album */,
+				84ED894F203BFFAC000673A0 /* Address */,
 				8420D1302015FF2800036376 /* Login */,
 				8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */,
-				8425BFD6200F8B59002CFEF6 /* AlbumInformationTableViewController.swift */,
 				8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */,
 				8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */,
-				8425BFD9200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift */,
-				8425BFDA200F8B59002CFEF6 /* GalleryViewController.swift */,
-				8425BFDB200F8B59002CFEF6 /* ImageOperationsTableViewController.swift */,
 				8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */,
-				8425BFDD200F8B59002CFEF6 /* OTPVerifyTableViewController.swift */,
 				8425BFDE200F8B59002CFEF6 /* RegisterTableViewController.swift */,
-				8425BFDF200F8B59002CFEF6 /* ResetPasswordTableViewController.swift */,
-				8425BFE0200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift */,
-				8471E7502011C04400D6BA7F /* AlbumTypeTableViewController.swift */,
-				840CA5382011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift */,
-				84F14A4820121E8D003E371E /* UserAlbumDetailTableViewController.swift */,
-				8420D1282015E5BD00036376 /* AddAddressTableViewController.swift */,
-				8420D12A2015EAAE00036376 /* AddressListingTableViewController.swift */,
-				8420D12C2015ED9100036376 /* EditAddressTableViewController.swift */,
-				8409CB17201794DD007BB614 /* ShippingChargesTableViewController.swift */,
-				8409CB1920179513007BB614 /* CheckOutTableViewController.swift */,
 				84AA6E5E2029C31600706F05 /* OrderHistoryTableViewController.swift */,
-				84AB5A37202DD0F800521EB8 /* AlbumAddressListingTableViewController.swift */,
-				84225FCB20343A520077A0C4 /* WalkthroughViewController.swift */,
-				84225FCF20343AA60077A0C4 /* PageItemController.swift */,
 				84ED894D203A9003000673A0 /* GettingStartedViewController.swift */,
 			);
 			path = Controllers;
@@ -410,6 +396,52 @@
 				84225FC7203162160077A0C4 /* CircleImageView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84ED894F203BFFAC000673A0 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				84ED8950203BFFAC000673A0 /* AddAddressTableViewController.swift */,
+				84ED8951203BFFAC000673A0 /* AddressListingTableViewController.swift */,
+				84ED8952203BFFAC000673A0 /* EditAddressTableViewController.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		84ED8956203BFFE4000673A0 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				84ED896E203C0377000673A0 /* AlbumAddressListingTableViewController.swift */,
+				84ED896B203C0377000673A0 /* AlbumTypeDetailTableViewController.swift */,
+				84ED896C203C0377000673A0 /* AlbumTypeTableViewController.swift */,
+				84ED896D203C0377000673A0 /* CheckOutTableViewController.swift */,
+				84ED896F203C0378000673A0 /* ShippingChargesTableViewController.swift */,
+				84ED8970203C0378000673A0 /* UserAlbumDetailTableViewController.swift */,
+				84ED8957203BFFE4000673A0 /* AlbumInformationTableViewController.swift */,
+				84ED8958203BFFE4000673A0 /* GalleryViewController.swift */,
+				84ED8959203BFFE4000673A0 /* ImageOperationsTableViewController.swift */,
+				84ED895A203BFFE4000673A0 /* SelectedImagesCollectionViewController.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		84ED895F203C0024000673A0 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				84ED8960203C0024000673A0 /* PageItemController.swift */,
+				84ED8961203C0024000673A0 /* WalkthroughViewController.swift */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		84ED8964203C02EB000673A0 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				84ED8965203C02EB000673A0 /* ForgotPasswordTableViewController.swift */,
+				84ED8966203C02EB000673A0 /* OTPVerifyTableViewController.swift */,
+				84ED8967203C02EB000673A0 /* ResetPasswordTableViewController.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		B581DFC684078799E8C0A129 /* Pods */ = {
@@ -572,26 +604,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8425C001200F8B59002CFEF6 /* ImageOperationsTableViewController.swift in Sources */,
 				8425BFF5200F8B59002CFEF6 /* LoginResponseModel.swift in Sources */,
 				8425BFEE200F8B59002CFEF6 /* AlbumDetailModel.swift in Sources */,
 				8425C008200F8B59002CFEF6 /* AlbumTableViewCell.swift in Sources */,
 				8425BFFD200F8B59002CFEF6 /* BaseViewController.swift in Sources */,
 				840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */,
-				8420D1292015E5BD00036376 /* AddAddressTableViewController.swift in Sources */,
-				8425BFFC200F8B59002CFEF6 /* AlbumInformationTableViewController.swift in Sources */,
 				84ED894A203577B7000673A0 /* CountryModel.swift in Sources */,
 				8420D1272015CF5500036376 /* DeleteAddressService+POST.swift in Sources */,
-				8409CB1A20179513007BB614 /* CheckOutTableViewController.swift in Sources */,
+				84ED8969203C02EB000673A0 /* OTPVerifyTableViewController.swift in Sources */,
 				84ED8948203572B3000673A0 /* ProgressBarView.swift in Sources */,
 				8420D11F2015BC1900036376 /* AddAddressService+POST.swift in Sources */,
 				8471E74F2011BFF100D6BA7F /* AlbumTypeService+GET.swift in Sources */,
 				84ED894C2038A0E1000673A0 /* MaxLengthTextField.swift in Sources */,
+				84ED8953203BFFAD000673A0 /* AddAddressTableViewController.swift in Sources */,
 				8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */,
 				84E09DD71FFE33A900D8D66B /* ErrorUtils.swift in Sources */,
 				8425BFEB200F8B59002CFEF6 /* OTPVerifyService+POST.swift in Sources */,
 				84AB5A30202DA24600521EB8 /* StateListingService+GET.swift in Sources */,
+				84ED8973203C0378000673A0 /* CheckOutTableViewController.swift in Sources */,
+				84ED8976203C0378000673A0 /* UserAlbumDetailTableViewController.swift in Sources */,
 				8425BFFB200F8B59002CFEF6 /* AlbumDetailTableViewController.swift in Sources */,
+				84ED895D203BFFE4000673A0 /* ImageOperationsTableViewController.swift in Sources */,
 				84ED894620356199000673A0 /* RealmPaymentCompleteTableViewCell.swift in Sources */,
 				84225FCA203404B60077A0C4 /* FunBookEnums.swift in Sources */,
 				8425BFEF200F8B59002CFEF6 /* AlbumDetailResponseModel.swift in Sources */,
@@ -599,21 +632,20 @@
 				84225FC62030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift in Sources */,
 				8425BFEA200F8B59002CFEF6 /* LoginService+POST.swift in Sources */,
 				84AB5A2C202D913C00521EB8 /* StateModel.swift in Sources */,
-				8420D12D2015ED9100036376 /* EditAddressTableViewController.swift in Sources */,
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
 				8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */,
+				84ED8968203C02EB000673A0 /* ForgotPasswordTableViewController.swift in Sources */,
 				8425BFE8200F8B59002CFEF6 /* ForgotPasswordService+POST.swift in Sources */,
 				8420D1342017445700036376 /* PaypalConfig+Helpers.swift in Sources */,
 				8420D1232015CAAE00036376 /* AddressDetailService+GET.swift in Sources */,
-				8420D12B2015EAAE00036376 /* AddressListingTableViewController.swift in Sources */,
 				8425BFF1200F8B59002CFEF6 /* AlbumModel.swift in Sources */,
 				84E09DD61FFE33A900D8D66B /* DeviceType+Helper.swift in Sources */,
 				8425BFF3200F8B59002CFEF6 /* AlbumResponseModel.swift in Sources */,
-				8471E7512011C04400D6BA7F /* AlbumTypeTableViewController.swift in Sources */,
+				84ED8962203C0025000673A0 /* PageItemController.swift in Sources */,
+				84ED895E203BFFE4000673A0 /* SelectedImagesCollectionViewController.swift in Sources */,
 				8425C004200F8B59002CFEF6 /* RegisterTableViewController.swift in Sources */,
 				8425BFED200F8B59002CFEF6 /* ResetPasswordService+POST.swift in Sources */,
 				8471E7532011CDC300D6BA7F /* AlbumTypeTableViewCell.swift in Sources */,
-				84AB5A38202DD0F800521EB8 /* AlbumAddressListingTableViewController.swift in Sources */,
 				84AB5A2E202D91C200521EB8 /* StateArrayModel.swift in Sources */,
 				8425BFF8200F8B59002CFEF6 /* RegisterRequestModel.swift in Sources */,
 				8425BFF0200F8B59002CFEF6 /* AlbumImagesModel.swift in Sources */,
@@ -622,20 +654,22 @@
 				84AA6E63202C229500706F05 /* ShippingRealmModel.swift in Sources */,
 				8425BFF7200F8B59002CFEF6 /* PrepareAlbumModel.swift in Sources */,
 				84AB5A32202DABF300521EB8 /* AddressRequestModel.swift in Sources */,
+				84ED8972203C0378000673A0 /* AlbumTypeTableViewController.swift in Sources */,
 				8474BD6720179D870013EEFD /* ShippingChargesTableViewCell.swift in Sources */,
 				84AB5A36202DBA3700521EB8 /* AddressResponseArrayModel.swift in Sources */,
 				8425BFE7200F8B59002CFEF6 /* EditProfileService+POST.swift in Sources */,
 				840CA5332011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift in Sources */,
 				8425C00B201079E0002CFEF6 /* CropViewController.swift in Sources */,
-				84225FCC20343A520077A0C4 /* WalkthroughViewController.swift in Sources */,
-				8425C003200F8B59002CFEF6 /* OTPVerifyTableViewController.swift in Sources */,
 				84ED894E203A9003000673A0 /* GettingStartedViewController.swift in Sources */,
+				84ED8963203C0025000673A0 /* WalkthroughViewController.swift in Sources */,
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
+				84ED895C203BFFE4000673A0 /* GalleryViewController.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
 				8471E7552011CFEB00D6BA7F /* AlbumTypeModel.swift in Sources */,
+				84ED896A203C02EB000673A0 /* ResetPasswordTableViewController.swift in Sources */,
 				84225FC42030B7CE0077A0C4 /* AlbumTransformerModel.swift in Sources */,
 				84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */,
-				8425C005200F8B59002CFEF6 /* ResetPasswordTableViewController.swift in Sources */,
+				84ED8971203C0378000673A0 /* AlbumTypeDetailTableViewController.swift in Sources */,
 				8425BFEC200F8B59002CFEF6 /* RegisterService+POST.swift in Sources */,
 				84D79EBD1FF3758100D26134 /* AppDelegate.swift in Sources */,
 				8425BFF9200F8B59002CFEF6 /* SuccessResponseModel.swift in Sources */,
@@ -645,26 +679,24 @@
 				8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */,
 				84225FCE20343A740077A0C4 /* WalkthroughModel.swift in Sources */,
 				8474BD6520179A060013EEFD /*  ShippingArrayModel.swift in Sources */,
+				84ED8975203C0378000673A0 /* ShippingChargesTableViewController.swift in Sources */,
 				8409CB1C20179589007BB614 /* ShippingPriceService+GET.swift in Sources */,
 				84AA6E612029D1D600706F05 /* RealmAlbumTableViewCell.swift in Sources */,
 				84AB5A34202DB53F00521EB8 /* AddressResponseModel.swift in Sources */,
-				84F14A4920121E8D003E371E /* UserAlbumDetailTableViewController.swift in Sources */,
 				8425BFF4200F8B59002CFEF6 /* ErrorResponseModel.swift in Sources */,
-				840CA5392011F655008DCBB6 /* AlbumTypeDetailTableViewController.swift in Sources */,
 				84AA6E5F2029C31600706F05 /* OrderHistoryTableViewController.swift in Sources */,
 				8420D1252015CB4600036376 /* EditAddressService+POST.swift in Sources */,
 				84225FC8203162160077A0C4 /* CircleImageView.swift in Sources */,
+				84ED895B203BFFE4000673A0 /* AlbumInformationTableViewController.swift in Sources */,
 				8420D1212015C64100036376 /* AllAddressService+GET.swift in Sources */,
 				8425BFF2200F8B59002CFEF6 /* AlbumResponseArrayModel.swift in Sources */,
-				8425C006200F8B59002CFEF6 /* SelectedImagesCollectionViewController.swift in Sources */,
+				84ED8955203BFFAD000673A0 /* EditAddressTableViewController.swift in Sources */,
+				84ED8954203BFFAD000673A0 /* AddressListingTableViewController.swift in Sources */,
+				84ED8974203C0378000673A0 /* AlbumAddressListingTableViewController.swift in Sources */,
 				8474BD63201799400013EEFD /* ShippingModel.swift in Sources */,
 				8420D1322015FF2900036376 /* LoginTableViewController.swift in Sources */,
-				8409CB18201794DD007BB614 /* ShippingChargesTableViewController.swift in Sources */,
 				8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */,
-				8425C000200F8B59002CFEF6 /* GalleryViewController.swift in Sources */,
-				84225FD020343AA60077A0C4 /* PageItemController.swift in Sources */,
 				8425C007200F8B59002CFEF6 /* AlbumDetailTableViewCell.swift in Sources */,
-				8425BFFF200F8B59002CFEF6 /* ForgotPasswordTableViewController.swift in Sources */,
 				8425BFE6200F8B59002CFEF6 /* AlbumListingService+GET.swift in Sources */,
 				840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */,
 				84F89A32201892530029ADA7 /* PaypalResponse.swift in Sources */,

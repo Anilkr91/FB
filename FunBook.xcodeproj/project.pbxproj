@@ -106,6 +106,8 @@
 		84ED8988203C09F2000673A0 /* ResetPasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED8985203C09F2000673A0 /* ResetPasswordService+POST.swift */; };
 		84ED898C203C0BC0000673A0 /* EditProfileService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED898A203C0BC0000673A0 /* EditProfileService+POST.swift */; };
 		84ED898D203C0BC0000673A0 /* ImageUploadService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED898B203C0BC0000673A0 /* ImageUploadService+POST.swift */; };
+		84F7E160203D4C09006D79E4 /* ChangePasswordService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7E15F203D4C09006D79E4 /* ChangePasswordService+POST.swift */; };
+		84F7E162203D4DF1006D79E4 /* ChangePasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7E161203D4DF1006D79E4 /* ChangePasswordTableViewController.swift */; };
 		84F89A32201892530029ADA7 /* PaypalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F89A31201892530029ADA7 /* PaypalResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -212,6 +214,8 @@
 		84ED8985203C09F2000673A0 /* ResetPasswordService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ResetPasswordService+POST.swift"; sourceTree = "<group>"; };
 		84ED898A203C0BC0000673A0 /* EditProfileService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EditProfileService+POST.swift"; sourceTree = "<group>"; };
 		84ED898B203C0BC0000673A0 /* ImageUploadService+POST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageUploadService+POST.swift"; sourceTree = "<group>"; };
+		84F7E15F203D4C09006D79E4 /* ChangePasswordService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordService+POST.swift"; sourceTree = "<group>"; };
+		84F7E161203D4DF1006D79E4 /* ChangePasswordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewController.swift; sourceTree = "<group>"; };
 		84F89A31201892530029ADA7 /* PaypalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaypalResponse.swift; sourceTree = "<group>"; };
 		DA30EF44FBE6F426CFBEA044 /* Pods-FunBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBook/Pods-FunBook.release.xcconfig"; sourceTree = "<group>"; };
 		DA752360B9AAEAB24735FA96 /* Pods_FunBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -259,6 +263,7 @@
 				8471E74E2011BFF100D6BA7F /* AlbumTypeService+GET.swift */,
 				840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */,
 				8409CB1B20179589007BB614 /* ShippingPriceService+GET.swift */,
+				84F7E15F203D4C09006D79E4 /* ChangePasswordService+POST.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 				8425BFDE200F8B59002CFEF6 /* RegisterTableViewController.swift */,
 				84AA6E5E2029C31600706F05 /* OrderHistoryTableViewController.swift */,
 				84ED894D203A9003000673A0 /* GettingStartedViewController.swift */,
+				84F7E161203D4DF1006D79E4 /* ChangePasswordTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -675,6 +681,7 @@
 				84AA6E63202C229500706F05 /* ShippingRealmModel.swift in Sources */,
 				8425BFF7200F8B59002CFEF6 /* PrepareAlbumModel.swift in Sources */,
 				84AB5A32202DABF300521EB8 /* AddressRequestModel.swift in Sources */,
+				84F7E160203D4C09006D79E4 /* ChangePasswordService+POST.swift in Sources */,
 				84ED8972203C0378000673A0 /* AlbumTypeTableViewController.swift in Sources */,
 				8474BD6720179D870013EEFD /* ShippingChargesTableViewCell.swift in Sources */,
 				84AB5A36202DBA3700521EB8 /* AddressResponseArrayModel.swift in Sources */,
@@ -689,6 +696,7 @@
 				84ED8981203C085A000673A0 /* EditAddressService+POST.swift in Sources */,
 				84ED8986203C09F2000673A0 /* ForgotPasswordService+POST.swift in Sources */,
 				8471E7552011CFEB00D6BA7F /* AlbumTypeModel.swift in Sources */,
+				84F7E162203D4DF1006D79E4 /* ChangePasswordTableViewController.swift in Sources */,
 				84ED896A203C02EB000673A0 /* ResetPasswordTableViewController.swift in Sources */,
 				84225FC42030B7CE0077A0C4 /* AlbumTransformerModel.swift in Sources */,
 				84E09DDA1FFE33A900D8D66B /* LoginUtils.swift in Sources */,

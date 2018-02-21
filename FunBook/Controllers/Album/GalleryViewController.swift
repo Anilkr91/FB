@@ -26,8 +26,6 @@ class GalleryViewController: BaseViewController {
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,7 +99,7 @@ extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
         if albums[indexPath.section].status == AlbumStatus.Pending.rawValue {
             self.performSegue(withIdentifier: "showSelectedImagesSegue", sender: self)
             
-        } else if albums[indexPath.section].status == AlbumStatus.Pending.rawValue {
+        } else if albums[indexPath.section].status == AlbumStatus.PaymentComplete.rawValue {
             return
             
         } else {
@@ -154,10 +152,10 @@ extension GalleryViewController {
     }
     
     func uploadAlbum(_ sender: UIButton) {
-        
+        ProgressBarView.showHUD(textString: "Upload in Progress...")
         let album = albums[sender.tag]
         
-        var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, addressId: album.addressId, images: [])
+        var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, addressId: album.addressId, images: [], albumTypeId: album.albumTypeId, albumQuantity: album.albumQuantity, albumPrice: album.albumPrice, albumTotalPrice: album.albumTotalPrice, paypalResponseId: album.paypalResponseId, shippingId: album.shipping!.id)
         
         for image in album.images.enumerated() {
             let img = UIImage(data: image.element.image!)
@@ -169,10 +167,6 @@ extension GalleryViewController {
     }
     
     func uploadAlbumToServer(param: AlbumTransformerModel, album: AlbumModel) {
-        
-        print(param)
-        print(album)
-        
         let user = LoginUtils.getCurrentMemberUserLogin()!
         let URL = Constants.BASE_URL
         
@@ -195,10 +189,13 @@ extension GalleryViewController {
             multipartFormData.append(param.name.data(using: String.Encoding.utf8)!, withName: "albumName")
             multipartFormData.append(param.description.data(using: String.Encoding.utf8)!, withName: "albumDescription")
             multipartFormData.append(param.date.data(using: String.Encoding.utf8)!, withName: "albumDate")
-            
-            // TODO: Mark (Remove static address id
-            
-            multipartFormData.append("4".data(using: .utf8)!, withName: "addressID")
+            multipartFormData.append(param.addressId.data(using: .utf8)!, withName: "addressID")
+            multipartFormData.append("\(param.albumQuantity)".data(using: .utf8)!, withName: "quantity")
+            multipartFormData.append(param.albumPrice.data(using: .utf8)!, withName: "price")
+            multipartFormData.append(param.albumTypeId.data(using: .utf8)!, withName: "albumType")
+            multipartFormData.append(param.shippingId.data(using: .utf8)!, withName: "shippingCharges")
+            multipartFormData.append(param.paypalResponseId.data(using: .utf8)!, withName: "paymentId")
+            multipartFormData.append(param.albumTotalPrice.data(using: .utf8)!, withName: "totalPrice")
             multipartFormData.append("\(param.coverImage)".data(using: String.Encoding.utf8)!, withName: "coverImage")
             
         },
@@ -214,7 +211,8 @@ extension GalleryViewController {
                                         debugPrint(upload)
                                         upload.responseJSON { response in
                                             print(response)
-                                            //                                            self.deleteAlbumFromLocalDB()
+                                            ProgressBarView.hideHUD()
+                                            self.deleteObjectFromRealmDB(album: album)
                                             
                                         }
                                     case .failure(let error):
@@ -224,8 +222,6 @@ extension GalleryViewController {
         })
         debugPrint(r)
     }
-    
-    
 }
 
 extension Results {

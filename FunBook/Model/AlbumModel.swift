@@ -35,4 +35,5 @@ class AlbumModel: Object {
     dynamic var addressId: String = ""
     dynamic var albumPrice: String = ""
     dynamic var albumTotalPrice: String = ""
+    dynamic var paypalResponseId: String = ""
 }

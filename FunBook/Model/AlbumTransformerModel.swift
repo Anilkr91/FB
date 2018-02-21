@@ -37,6 +37,32 @@
 //}
 
 
+//dynamic var name: String = ""
+//dynamic var definition: String = ""
+//dynamic var date: String = ""
+//dynamic var status: String = AlbumStatus.Pending.rawValue
+
+// Album coverImage
+//dynamic var coverImage: Int = 0
+
+// Album captionBool for setting the same caption to all images
+//dynamic var isCaptionSetToAll: Bool = false
+
+// Album Images
+//let images = List<PrepareAlbumModel>()
+
+// Shipping details
+//dynamic var shipping: ShippingRealmModel?
+//    dynamic var address =
+
+//dynamic var albumTypeId: String = ""
+//dynamic var albumQuantity: Int = 1
+//dynamic var addressId: String = ""
+//dynamic var albumPrice: String = ""
+//dynamic var albumTotalPrice: String = ""
+//dynamic var paypalResponseId: String = ""
+
+
 import UIKit
 
 struct AlbumTransformerModel {
@@ -50,7 +76,15 @@ struct AlbumTransformerModel {
     var images: [PrepareAlbumTransformerModel]
     
     
-    init(coverImage: Int, name: String, description: String, date: String,addressId: String , images:  [PrepareAlbumTransformerModel]) {
+    // create album properties
+    let albumTypeId: String
+    let albumQuantity: Int
+    let albumPrice: String
+    let albumTotalPrice: String
+    let paypalResponseId: String
+    let shippingId: String
+    
+    init(coverImage: Int, name: String, description: String, date: String,addressId: String , images:  [PrepareAlbumTransformerModel], albumTypeId: String, albumQuantity: Int, albumPrice: String, albumTotalPrice: String, paypalResponseId: String, shippingId: String) {
         
         self.coverImage = coverImage
         self.name = name
@@ -58,6 +92,12 @@ struct AlbumTransformerModel {
         self.date = date
         self.addressId = addressId
         self.images = images
+        self.albumTypeId = albumTypeId
+        self.albumQuantity = albumQuantity
+        self.albumPrice = albumPrice
+        self.albumTotalPrice = albumTotalPrice
+        self.paypalResponseId = paypalResponseId
+        self.shippingId = shippingId
     }
 }
 

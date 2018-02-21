@@ -9,7 +9,7 @@
 import UIKit
 
 class EditProfileTableViewController: BaseTableViewController {
-
+    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -17,7 +17,7 @@ class EditProfileTableViewController: BaseTableViewController {
     // User
     let user = LoginUtils.getCurrentMemberUserLogin()!
     let tapGesture =  UITapGestureRecognizer()
-     let imagePickerController = UIImagePickerController()
+    let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class EditProfileTableViewController: BaseTableViewController {
         userImageView.isUserInteractionEnabled  = true
         tapGesture.addTarget(self, action: #selector(EditProfileTableViewController.uploadImage))
         userImageView.addGestureRecognizer(tapGesture)
-
+        
         setupViewWithUserData()
         // Do any additional setup after loading the view.
     }
@@ -52,11 +52,11 @@ class EditProfileTableViewController: BaseTableViewController {
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
-
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.selectionStyle = .none
     }
-
+    
     func setupViewWithUserData() {
         nameTextField.text = user.name
         emailTextField.text = user.email
@@ -66,7 +66,7 @@ class EditProfileTableViewController: BaseTableViewController {
         let placeholderImage = UIImage(named: "placeholder-profile")
         userImageView.kf.setImage(with: url, placeholder: placeholderImage)
     }
-   
+    
     @IBAction func updateButtonTapped(_ sender: Any) {
         
         let name = nameTextField.text!
@@ -87,7 +87,7 @@ class EditProfileTableViewController: BaseTableViewController {
         EditProfilePostService.executeRequest(param, vc: self) { (response) in
             
             if response.status == true && response.statusCode == 200 {
-                 LoginUtils.setCurrentMemberUserLogin(response.user)
+                LoginUtils.setCurrentMemberUserLogin(response.user)
                 self.showSucessAlert("Success", message: response.success)
             }
         }
@@ -145,22 +145,22 @@ extension EditProfileTableViewController: UIImagePickerControllerDelegate, UINav
         
         if let imageData = image?.jpeg(.low)  {
             
-////            print(imageData.count)
-//
-////            print("size of image in KB: %f ", Double(imageData.count) / 1024.0 )
-//
-//
-//            let countBytes = ByteCountFormatter()
-//            countBytes.allowedUnits = [.useMB]
-//            countBytes.countStyle = .file
-//            let fileSize = countBytes.string(fromByteCount: Int64(imageData.count))
-//
-//            print("File size: \(fileSize)")
-//
-    
+            ////            print(imageData.count)
+            //
+            ////            print("size of image in KB: %f ", Double(imageData.count) / 1024.0 )
+            //
+            //
+            //            let countBytes = ByteCountFormatter()
+            //            countBytes.allowedUnits = [.useMB]
+            //            countBytes.countStyle = .file
+            //            let fileSize = countBytes.string(fromByteCount: Int64(imageData.count))
+            //
+            //            print("File size: \(fileSize)")
+            //
+            
             UploadImagePostService.executeRequest(imageData, image: "", completionHandler: { (response) in
                 
-                 LoginUtils.setCurrentMemberUserLogin(response.user)
+                LoginUtils.setCurrentMemberUserLogin(response.user)
                 self.userImageView.image = image
             })
         }

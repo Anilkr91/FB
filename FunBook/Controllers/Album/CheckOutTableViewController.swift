@@ -59,11 +59,7 @@ class CheckOutTableViewController: BaseTableViewController {
             quantityLabel.text = "\(albumQuantity)"
         }
         priceTotal = Double(albumQuantity!) * (albumAmount + shippingPrice)
-        
-        print(priceTotal)
         totalPrice.text = "$\(priceTotal)"
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -148,12 +144,9 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             }
         }
     }
-
-//    paymentId,albumName,addressID,albumType,quantity,shippingCharges,price,totalPrice,albumDate(dd-mm-yyyy),imageDate[](dd-mm-yyyy),gallery[],caption[],coverImage
-    
     
     func uploadAlbum(param: AlbumTransformerModel) {
-        print(param)
+        ProgressBarView.showHUD(textString: "Upload in Progress...")
         let user = LoginUtils.getCurrentMemberUserLogin()!
         let URL = Constants.BASE_URL
         
@@ -189,8 +182,10 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                 multipartFormData.append("\(albumType.id)".data(using: .utf8)!, withName: "albumType")
             }
             
+            if let shippingObject = self.shippingObject {
+                multipartFormData.append("\(shippingObject.id)".data(using: .utf8)!, withName: "shippingCharges")
+            }
             multipartFormData.append(self.paypalResponseId.data(using: .utf8)!, withName: "paymentId")
-            multipartFormData.append("\(1)".data(using: .utf8)!, withName: "shippingCharges")
             multipartFormData.append("\(self.priceTotal)".data(using: .utf8)!, withName: "totalPrice")
             multipartFormData.append("\(param.coverImage)".data(using: String.Encoding.utf8)!, withName: "coverImage")
             
@@ -206,7 +201,8 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                                     case .success(let upload, _, _):
                                         debugPrint(upload)
                                         upload.responseJSON { response in
-                                            print(response)
+                                            //                                            print(response)
+                                            ProgressBarView.hideHUD()
                                             self.deleteAlbumFromLocalDB()
                                             
                                         }
@@ -225,7 +221,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             
             if let album = self.album {
                 
-                var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, addressId: album.addressId, images: [])
+                var param =  AlbumTransformerModel(coverImage: album.coverImage, name: album.name, description: album.definition, date: album.date, addressId: album.addressId, images: [], albumTypeId: album.albumTypeId, albumQuantity: album.albumQuantity, albumPrice: album.albumPrice, albumTotalPrice: album.albumTotalPrice, paypalResponseId: album.paypalResponseId, shippingId: album.shipping!.id)
                 
                 for image in album.images.enumerated() {
                     let img = UIImage(data: image.element.image!)
@@ -233,7 +229,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
                     let obj = PrepareAlbumTransformerModel(image: img!, caption: image.element.caption, date: image.element.date, index: image.element.index)
                     param.images.append(obj)
                 }
-//                self.saveAlbumtoRealmDB()
+                //                self.saveAlbumtoRealmDB()
                 self.uploadAlbum(param: param)
             }
         }
@@ -269,6 +265,7 @@ extension CheckOutTableViewController: PayPalPaymentDelegate {
             if let object = object {
                 album!.albumPrice = object.amount
             }
+            album!.paypalResponseId = paypalResponseId
             album!.albumTotalPrice = "\(priceTotal)"
             album!.status = AlbumStatus.PaymentComplete.rawValue
             realm.add(album!)

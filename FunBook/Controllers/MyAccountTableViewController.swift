@@ -11,25 +11,21 @@ import Kingfisher
 
 class MyAccountTableViewController: BaseTableViewController {
     
+    let user = LoginUtils.getCurrentMemberUserLogin()!
+    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var nameLabelTextField: UILabel!
     @IBOutlet weak var emailTextField: UILabel!
     
-    let user = LoginUtils.getCurrentMemberUserLogin()!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         print(user)
-        
-         setupViewWithUserData()
+        setupViewWithUserData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -72,10 +68,14 @@ class MyAccountTableViewController: BaseTableViewController {
         print(indexPath.section)
         
         if indexPath.section == 1 {
-        performSegue(withIdentifier: "EditAcountSegue", sender: self)
+            performSegue(withIdentifier: "EditAcountSegue", sender: self)
             
         } else if indexPath.section == 3 {
-           performSegue(withIdentifier: "AddressBookSegue", sender: self)
+            performSegue(withIdentifier: "AddressBookSegue", sender: self)
+            
+        } else if indexPath.section == 6 {
+            performSegue(withIdentifier: "showChangePasswordSegue", sender: self)
+            
         }
     }
     

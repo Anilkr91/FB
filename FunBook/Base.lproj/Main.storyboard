@@ -964,8 +964,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w5u-Nj-6qy">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="w5u-Nj-6qy" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="19" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="w5u-Nj-6qy" secondAttribute="height" multiplier="1:1" id="48A-2h-XlL"/>
                                                         <constraint firstAttribute="width" constant="30" id="JFk-tM-MRc"/>
@@ -978,8 +979,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgA-A7-tUz">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="bgA-A7-tUz" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="57" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="BWo-BL-89h"/>
                                                         <constraint firstAttribute="width" secondItem="bgA-A7-tUz" secondAttribute="height" multiplier="1:1" id="JcI-5b-zx8"/>
@@ -3547,14 +3549,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t80-FQ-5cH">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Country" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t80-FQ-5cH">
                                                     <rect key="frame" x="62" y="10" width="289" height="30"/>
                                                     <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-VT-1A6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-VT-1A6" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="10" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="DbT-eN-eZw"/>
                                                         <constraint firstAttribute="width" secondItem="4fA-VT-1A6" secondAttribute="height" multiplier="1:1" id="fCX-x6-glz"/>
@@ -3589,8 +3591,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rcJ-XF-aDV">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="rcJ-XF-aDV" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="19" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="Hnp-b0-kyH"/>
                                                         <constraint firstAttribute="width" secondItem="rcJ-XF-aDV" secondAttribute="height" multiplier="1:1" id="KsZ-HF-AwH"/>
@@ -3603,8 +3606,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhd-tG-RA6">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="hhd-tG-RA6" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="57" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="X4K-0L-wpm"/>
                                                         <constraint firstAttribute="height" constant="30" id="fP7-oL-7Nw"/>
@@ -3647,8 +3651,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jAQ-hq-3EP">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="street-address" translatesAutoresizingMaskIntoConstraints="NO" id="jAQ-hq-3EP" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="19" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="jAQ-hq-3EP" secondAttribute="height" multiplier="1:1" id="4Bh-L3-0UO"/>
                                                         <constraint firstAttribute="height" constant="30" id="TRB-DE-DOI"/>
@@ -3661,8 +3666,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gUm-fN-IOL">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="street-address" translatesAutoresizingMaskIntoConstraints="NO" id="gUm-fN-IOL" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="57" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="esC-JU-Ot6"/>
                                                         <constraint firstAttribute="width" secondItem="gUm-fN-IOL" secondAttribute="height" multiplier="1:1" id="y4K-nH-M5i"/>
@@ -3705,8 +3711,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="547-cB-5ll">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suburb" translatesAutoresizingMaskIntoConstraints="NO" id="547-cB-5ll" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="19" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="V57-mq-35n"/>
                                                         <constraint firstAttribute="height" constant="30" id="p6J-tc-jra"/>
@@ -3719,8 +3726,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="59r-mk-L8V">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="suburb" translatesAutoresizingMaskIntoConstraints="NO" id="59r-mk-L8V" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="57" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="3su-qv-ReQ"/>
                                                         <constraint firstAttribute="width" secondItem="59r-mk-L8V" secondAttribute="height" multiplier="1:1" id="WLD-2w-usM"/>
@@ -3761,10 +3769,11 @@
                                                     <rect key="frame" x="62" y="8" width="289" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5l8-cN-V4H">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post-code" translatesAutoresizingMaskIntoConstraints="NO" id="5l8-cN-V4H" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="8" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="4Ee-K8-qIl"/>
                                                         <constraint firstAttribute="width" secondItem="5l8-cN-V4H" secondAttribute="height" multiplier="1:1" id="FYI-98-3Ol"/>
@@ -3785,36 +3794,10 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="" id="Chg-qa-gNm">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="W6F-At-vd5">
-                                        <rect key="frame" x="0.0" y="615" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W6F-At-vd5" id="dec-Xy-ISZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cq-w2-cyi">
-                                                    <rect key="frame" x="8" y="7" width="359" height="30"/>
-                                                    <state key="normal" title="To set a default address, Check the link below.">
-                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="4Cq-w2-cyi" secondAttribute="trailing" constant="8" id="PJJ-a7-Vl5"/>
-                                                <constraint firstItem="4Cq-w2-cyi" firstAttribute="leading" secondItem="dec-Xy-ISZ" secondAttribute="leading" constant="8" id="gj2-tA-U4c"/>
-                                                <constraint firstItem="4Cq-w2-cyi" firstAttribute="centerX" secondItem="dec-Xy-ISZ" secondAttribute="centerX" id="uVh-lS-MaY"/>
-                                                <constraint firstItem="4Cq-w2-cyi" firstAttribute="centerY" secondItem="dec-Xy-ISZ" secondAttribute="centerY" id="yEX-AL-dy9"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
                             <tableViewSection id="Fdi-C0-aJH">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="wyD-36-Obc">
-                                        <rect key="frame" x="0.0" y="695" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="615" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wyD-36-Obc" id="Llq-GU-stO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -4328,7 +4311,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="adm-UX-BLa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.89411764709999997" green="0.90980392160000001" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.89411764709999997" green="0.90980392160000001" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
                             <tableViewSection id="qqE-ZX-Cwf">
                                 <cells>
@@ -4345,14 +4329,16 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vfw-gc-A6Q">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="Vfw-gc-A6Q" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="8" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="IRL-Ga-QtP"/>
                                                         <constraint firstAttribute="height" constant="30" id="NvO-c8-afH"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.89411764709999997" green="0.90980392160000001" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="3op-TZ-WDb" firstAttribute="centerY" secondItem="Vfw-gc-A6Q" secondAttribute="centerY" id="Dez-YW-o85"/>
                                                 <constraint firstItem="Vfw-gc-A6Q" firstAttribute="leading" secondItem="qrB-D4-NCF" secondAttribute="leadingMargin" constant="8" id="F5V-eh-foD"/>
@@ -4377,16 +4363,18 @@
                                                     <rect key="frame" x="62" y="8" width="305" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZUP-gT-k4u">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="ZUP-gT-k4u" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="8" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="D9F-uV-ILS"/>
                                                         <constraint firstAttribute="width" constant="30" id="fhV-kv-wbk"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.89411764709999997" green="0.90980392160000001" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="T8r-Bu-PKf" secondAttribute="trailing" constant="8" id="6qK-by-mXV"/>
                                                 <constraint firstItem="T8r-Bu-PKf" firstAttribute="centerY" secondItem="ZUP-gT-k4u" secondAttribute="centerY" id="ALW-hi-nkd"/>
@@ -4411,16 +4399,18 @@
                                                     <rect key="frame" x="62" y="8" width="305" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-AH-atd">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-AH-atd" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="8" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="EJk-cd-XlT"/>
                                                         <constraint firstAttribute="width" constant="30" id="HRl-56-knf"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.89411764709999997" green="0.90980392160000001" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="REl-3b-89w" secondAttribute="trailing" constant="8" id="Awp-Hu-PgD"/>
                                                 <constraint firstItem="6gA-AH-atd" firstAttribute="top" secondItem="BHc-Ux-k7d" secondAttribute="top" constant="8" id="MOq-St-2vC"/>
@@ -4445,10 +4435,11 @@
                                                     <rect key="frame" x="62" y="8" width="305" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gh5-v9-LYF">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="gh5-v9-LYF" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
                                                     <rect key="frame" x="24" y="8" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="0uc-kK-hxu"/>
                                                         <constraint firstAttribute="width" constant="30" id="YuJ-8k-bXa"/>
@@ -4463,6 +4454,7 @@
                                                 <constraint firstItem="FQd-NT-p2B" firstAttribute="leading" secondItem="gh5-v9-LYF" secondAttribute="trailing" constant="8" id="tQ1-Md-CtU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89411764709999997" green="0.90980392160000001" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -4519,16 +4511,21 @@
         <image name="address-book" width="21" height="21"/>
         <image name="album-edit" width="21" height="21"/>
         <image name="change-password" width="21" height="21"/>
+        <image name="country" width="21" height="21"/>
         <image name="credits" width="21" height="21"/>
         <image name="edit" width="21" height="21"/>
         <image name="email" width="21" height="21"/>
         <image name="getting-started" width="320" height="568"/>
         <image name="history" width="21" height="21"/>
         <image name="home" width="21" height="21"/>
+        <image name="name" width="21" height="21"/>
         <image name="notification" width="250" height="250"/>
         <image name="password" width="21" height="21"/>
         <image name="placeholder-profile" width="75" height="75"/>
+        <image name="post-code" width="21" height="21"/>
+        <image name="street-address" width="21" height="21"/>
         <image name="subscription" width="21" height="21"/>
+        <image name="suburb" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zDD-np-xOK"/>

@@ -37,7 +37,7 @@
 		8425BFF8200F8B59002CFEF6 /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD1200F8B59002CFEF6 /* RegisterRequestModel.swift */; };
 		8425BFF9200F8B59002CFEF6 /* SuccessResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD2200F8B59002CFEF6 /* SuccessResponseModel.swift */; };
 		8425BFFA200F8B59002CFEF6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD3200F8B59002CFEF6 /* UserModel.swift */; };
-		8425BFFB200F8B59002CFEF6 /* AlbumDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */; };
+		8425BFFB200F8B59002CFEF6 /* OrderDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD5200F8B59002CFEF6 /* OrderDetailTableViewController.swift */; };
 		8425BFFD200F8B59002CFEF6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */; };
 		8425BFFE200F8B59002CFEF6 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */; };
 		8425C002200F8B59002CFEF6 /* MyAccountTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */; };
@@ -143,7 +143,7 @@
 		8425BFD1200F8B59002CFEF6 /* RegisterRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
 		8425BFD2200F8B59002CFEF6 /* SuccessResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessResponseModel.swift; sourceTree = "<group>"; };
 		8425BFD3200F8B59002CFEF6 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailTableViewController.swift; sourceTree = "<group>"; };
+		8425BFD5200F8B59002CFEF6 /* OrderDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailTableViewController.swift; sourceTree = "<group>"; };
 		8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountTableViewController.swift; sourceTree = "<group>"; };
@@ -313,7 +313,7 @@
 				84ED8956203BFFE4000673A0 /* Album */,
 				84ED894F203BFFAC000673A0 /* Address */,
 				8420D1302015FF2800036376 /* Login */,
-				8425BFD5200F8B59002CFEF6 /* AlbumDetailTableViewController.swift */,
+				8425BFD5200F8B59002CFEF6 /* OrderDetailTableViewController.swift */,
 				8425BFD7200F8B59002CFEF6 /* BaseViewController.swift */,
 				8425BFD8200F8B59002CFEF6 /* EditProfileTableViewController.swift */,
 				8425BFDC200F8B59002CFEF6 /* MyAccountTableViewController.swift */,
@@ -653,7 +653,7 @@
 				84AB5A30202DA24600521EB8 /* StateListingService+GET.swift in Sources */,
 				84ED8973203C0378000673A0 /* CheckOutTableViewController.swift in Sources */,
 				84ED8976203C0378000673A0 /* UserAlbumDetailTableViewController.swift in Sources */,
-				8425BFFB200F8B59002CFEF6 /* AlbumDetailTableViewController.swift in Sources */,
+				8425BFFB200F8B59002CFEF6 /* OrderDetailTableViewController.swift in Sources */,
 				84ED895D203BFFE4000673A0 /* ImageOperationsTableViewController.swift in Sources */,
 				84ED894620356199000673A0 /* RealmPaymentCompleteTableViewCell.swift in Sources */,
 				84225FCA203404B60077A0C4 /* FunBookEnums.swift in Sources */,

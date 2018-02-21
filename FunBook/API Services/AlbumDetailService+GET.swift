@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class AlbumDetailGetService {
-    static func executeRequest (_ albumId:String, vc: UIViewController, completionHandler: @escaping ([AlbumImagesModel]) -> Void) {
+    static func executeRequest (_ albumId:String, vc: UIViewController, completionHandler: @escaping (AlbumDetailModel) -> Void) {
         
         ProgressBarView.showHUD(textString: "Fetching Album Detail")
         
@@ -34,15 +34,12 @@ class AlbumDetailGetService {
                 print(value)
                 
                 if let json = AlbumDetailResponseModel(json: value as! JSON) {
-                    completionHandler(json.data.images)
-                    
-                      ProgressBarView.hideHUD()
-                    
-                    
+                    completionHandler(json.data)
+                    ProgressBarView.hideHUD()
                 }
                 
             case .failure(let error):
-                  ProgressBarView.hideHUD()
+                ProgressBarView.hideHUD()
                 print(error.localizedDescription)
             }
         }

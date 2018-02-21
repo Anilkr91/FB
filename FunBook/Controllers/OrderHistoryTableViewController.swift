@@ -65,7 +65,8 @@ class OrderHistoryTableViewController: BaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         album = albumModel[indexPath.section]
-        self.performSegue(withIdentifier: "showAlbumDetail", sender: self)
+        print(album)
+        self.performSegue(withIdentifier: "showOrderDetail", sender: self)
     }
 }
 
@@ -81,9 +82,9 @@ extension OrderHistoryTableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showAlbumDetail" {
-            
-            let dvc = segue.destination as! AlbumDetailTableViewController
+        if segue.identifier == "showOrderDetail" {
+        
+            let dvc = segue.destination as! OrderDetailTableViewController
             dvc.navigationItem.title = album?.albumName
             dvc.albumId = album!.albumID
         }

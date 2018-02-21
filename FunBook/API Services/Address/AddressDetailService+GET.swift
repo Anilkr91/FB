@@ -10,7 +10,7 @@ import Alamofire
 import Gloss
 
 class AddressDetailGetService {
-    static func executeRequest (_ addressId:String, vc: UIViewController, completionHandler: @escaping ([AlbumImagesModel]) -> Void) {
+    static func executeRequest (_ addressId:String, vc: UIViewController, completionHandler: @escaping (AlbumDetailModel) -> Void) {
         
          ProgressBarView.showHUD(textString: "Adding Address..")
         let user = LoginUtils.getCurrentMemberUserLogin()!
@@ -33,7 +33,7 @@ class AddressDetailGetService {
                 print(value)
                 
                 if let json = AlbumDetailResponseModel(json: value as! JSON) {
-                    completionHandler(json.data.images)
+                    completionHandler(json.data)
                     ProgressBarView.hideHUD()
                     
                 }

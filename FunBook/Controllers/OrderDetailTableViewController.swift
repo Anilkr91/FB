@@ -40,12 +40,14 @@ class OrderDetailTableViewController: BaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getAlbumDetail(albumId: albumId)
-        print(" ALbum Detail")
+    }
+    
+    @IBAction func orderAgainButton(_ sender: Any) {
+        let param = ["orderID": albumId]
         
-        //        albumNameLabel.text = "Album Name"
-        //         albumDateLabel.text = "Album Date"
-        //         albumDescriptionLabel.text = "Album Description"
-        
+        OrderAgainPostService.executeRequest(param, vc: self) { (response) in
+            print(response)
+        }
     }
     
     func getAlbumDetail(albumId: String) {
@@ -95,14 +97,8 @@ class OrderDetailTableViewController: BaseTableViewController {
     
     // MARK: - Table view data source
     
-    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        if section == 0 {
-            return 0.001
-        } else {
-         return 15
-        }
+        return section == 0 ? 0.001 : 15
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

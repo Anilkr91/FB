@@ -12,6 +12,8 @@
 		840CA5332011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */; };
 		840CA5352011F26B008DCBB6 /* AlbumTypeDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */; };
 		840CA5372011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */; };
+		841774C4203E846500D3EF25 /* OrderAgainService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841774C3203E846500D3EF25 /* OrderAgainService+POST.swift */; };
+		841774C6203ECDB500D3EF25 /* LogoutService+POST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841774C5203ECDB500D3EF25 /* LogoutService+POST.swift */; };
 		8420D12F2015F41100036376 /* AddressListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */; };
 		8420D1322015FF2900036376 /* LoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1312015FF2800036376 /* LoginTableViewController.swift */; };
 		8420D1342017445700036376 /* PaypalConfig+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420D1332017445700036376 /* PaypalConfig+Helpers.swift */; };
@@ -118,6 +120,8 @@
 		840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlbumTypeDetailService+GET.swift"; sourceTree = "<group>"; };
 		840CA5342011F26B008DCBB6 /* AlbumTypeDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailModel.swift; sourceTree = "<group>"; };
 		840CA5362011F5D5008DCBB6 /* AlbumTypeDetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTypeDetailResponseModel.swift; sourceTree = "<group>"; };
+		841774C3203E846500D3EF25 /* OrderAgainService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderAgainService+POST.swift"; sourceTree = "<group>"; };
+		841774C5203ECDB500D3EF25 /* LogoutService+POST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogoutService+POST.swift"; sourceTree = "<group>"; };
 		8420D12E2015F41100036376 /* AddressListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListingTableViewCell.swift; sourceTree = "<group>"; };
 		8420D1312015FF2800036376 /* LoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginTableViewController.swift; sourceTree = "<group>"; };
 		8420D1332017445700036376 /* PaypalConfig+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaypalConfig+Helpers.swift"; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 				840CA5322011F1E3008DCBB6 /* AlbumTypeDetailService+GET.swift */,
 				8409CB1B20179589007BB614 /* ShippingPriceService+GET.swift */,
 				84F7E15F203D4C09006D79E4 /* ChangePasswordService+POST.swift */,
+				841774C3203E846500D3EF25 /* OrderAgainService+POST.swift */,
+				841774C5203ECDB500D3EF25 /* LogoutService+POST.swift */,
 			);
 			path = "API Services";
 			sourceTree = "<group>";
@@ -582,6 +588,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FunBook/Pods-FunBook-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -596,6 +603,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -661,6 +669,7 @@
 				8425C009200F8B59002CFEF6 /* SelectedImageCollectionViewCell.swift in Sources */,
 				84225FC62030B7F90077A0C4 /* PrepareAlbumTransformerModel.swift in Sources */,
 				8425BFEA200F8B59002CFEF6 /* LoginService+POST.swift in Sources */,
+				841774C4203E846500D3EF25 /* OrderAgainService+POST.swift in Sources */,
 				84AB5A2C202D913C00521EB8 /* StateModel.swift in Sources */,
 				84E09DD81FFE33A900D8D66B /* Extension+Helpers.swift in Sources */,
 				8471E7572011D19A00D6BA7F /* AlbumTypeResponseArrayModel.swift in Sources */,
@@ -692,6 +701,7 @@
 				84E09DD51FFE33A900D8D66B /* DefaultKeys.swift in Sources */,
 				84ED8980203C085A000673A0 /* DeleteAddressService+POST.swift in Sources */,
 				84ED895C203BFFE4000673A0 /* GalleryViewController.swift in Sources */,
+				841774C6203ECDB500D3EF25 /* LogoutService+POST.swift in Sources */,
 				84E09DBF1FFE009600D8D66B /* FunBookConstants.swift in Sources */,
 				84ED8981203C085A000673A0 /* EditAddressService+POST.swift in Sources */,
 				84ED8986203C09F2000673A0 /* ForgotPasswordService+POST.swift in Sources */,

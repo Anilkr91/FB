@@ -11,21 +11,34 @@ import OpalImagePicker
 import Photos
 import Alamofire
 import RealmSwift
+import FSPagerView
 
-class GalleryViewController: BaseViewController {
+class GalleryViewController: BaseViewController, FSPagerViewDataSource, FSPagerViewDelegate {
     
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var pagerView: FSPagerView! {
+        didSet {
+            self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
+            
+//            let transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            self.pagerView.itemSize = .zero
+//            pagerView.transformer = FSPagerViewTransformer(type: .linear)
+        }
+    }
     
     var albumName: String = ""
     var album: AlbumModel?
     var albums: [AlbumModel] = []
     
     let realm = try! Realm()
-    
+    fileprivate var numberOfItems = 7
+    fileprivate let imageNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableview.delegate = self
         tableview.dataSource = self
+        pagerView.automaticSlidingInterval = 3.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,13 +121,8 @@ extension GalleryViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        
-        if albums[indexPath.section].status == AlbumStatus.PaymentComplete.rawValue {
-            return false
-            
-        } else {
-            return true
-        }
+        return albums[indexPath.section].status == AlbumStatus.PaymentComplete.rawValue  ? false : true
+
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -221,6 +229,26 @@ extension GalleryViewController {
                                     
         })
         debugPrint(r)
+    }
+
+    public func numberOfItems(in pagerView: FSPagerView) -> Int {
+        return self.numberOfItems
+    }
+    
+    public func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
+        let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.image = UIImage(named: self.imageNames[index])
+        cell.imageView?.contentMode = .scaleAspectFill
+        cell.imageView?.clipsToBounds = true
+        cell.textLabel?.text = "Offers"
+        cell.textLabel?.textAlignment = .center
+        return cell
+    }
+    
+    // MARK:- FSPagerView Delegate
+    
+    func pagerView(_ pagerView: FSPagerView, didSelectItemAt index: Int) {
+        print(index)
     }
 }
 

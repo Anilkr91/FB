@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.6.0)
   - CardIO (5.4.1)
+  - FSPagerView (0.7.1)
   - Gloss (2.0.0)
   - IQKeyboardManager (5.0.7)
   - Kingfisher (4.6.1)
@@ -23,6 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FSPagerView
   - Gloss
   - IQKeyboardManager
   - Kingfisher
@@ -37,6 +39,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
+  FSPagerView: 958aba39684e1573755ddcfcc29f7eebb8413cee
   Gloss: b67617f327406adfd47adf20172d00680a3a31bd
   IQKeyboardManager: 0bfa4607d39924116b5c0c8b55b5d789288b5cba
   Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
@@ -49,6 +52,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   TOCropViewController: 6d972f2c609372312648f96758e13a7f689efbc0
 
-PODFILE CHECKSUM: cc03f00a4419bf494bc2b2a5672087a999d25b92
+PODFILE CHECKSUM: f5d93843207ca50cfa10beab3c6dc73c596de94d
 
 COCOAPODS: 1.3.1

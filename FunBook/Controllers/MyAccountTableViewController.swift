@@ -80,8 +80,12 @@ class MyAccountTableViewController: BaseTableViewController {
     }
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
-        LoginUtils.setCurrentMemberUserLogin(nil)
-        let application = UIApplication.shared.delegate as! AppDelegate
-        application.setHomeGuest()
+        let param = ["deviceType": "iOS" , "deviceID": "12345678"]
+        LogoutPostService.executeRequest(param, vc: self) { (response) in
+            print(response)
+            LoginUtils.setCurrentMemberUserLogin(nil)
+            let application = UIApplication.shared.delegate as! AppDelegate
+            application.setHomeGuest()
+        }
     }
 }

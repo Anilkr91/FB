@@ -1175,7 +1175,7 @@
             </objects>
             <point key="canvasLocation" x="2218" y="177"/>
         </scene>
-        <!--Home-->
+        <!--Data Source-->
         <scene sceneID="BoW-gg-VQi">
             <objects>
                 <viewController id="wOb-UQ-OrI" customClass="GalleryViewController" customModule="FunBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -1187,12 +1187,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-vE-Fuo">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaG-vE-Fuo" customClass="FSPagerView" customModule="FSPagerView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="150"/>
-                                <color key="backgroundColor" red="0.26274509800000001" green="0.36862745099999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="5v1-EM-34N"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="wOb-UQ-OrI" id="ggq-as-Q5C"/>
+                                    <outlet property="delegate" destination="wOb-UQ-OrI" id="xh3-uh-Biy"/>
+                                </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="rUO-hx-Nsi">
                                 <rect key="frame" x="0.0" y="214" width="375" height="404"/>
@@ -1391,6 +1394,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="pagerView" destination="xaG-vE-Fuo" id="01p-W2-fge"/>
                         <outlet property="tableview" destination="rUO-hx-Nsi" id="k69-5O-9ch"/>
                         <segue destination="F0I-rs-RWX" kind="show" identifier="showAlbumSegue" id="yBl-pf-cKt"/>
                         <segue destination="S4e-rV-hPf" kind="show" identifier="showSelectedImagesSegue" id="yRf-a5-UHL"/>
@@ -4011,6 +4015,36 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Uyp-Xb-z0O">
+                                        <rect key="frame" x="0.0" y="1464" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uyp-Xb-z0O" id="CaI-Bj-Svo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaX-lT-iqn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <color key="backgroundColor" red="0.1137254902" green="0.63137254899999995" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43.5" id="hNi-Lg-OG0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <state key="normal" title="Order Again">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="orderAgainButton:" destination="JqT-R2-Q0F" eventType="touchUpInside" id="6Wl-eA-ic1"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FaX-lT-iqn" firstAttribute="top" secondItem="CaI-Bj-Svo" secondAttribute="top" id="Gug-dl-LVy"/>
+                                                <constraint firstAttribute="bottom" secondItem="FaX-lT-iqn" secondAttribute="bottom" id="PgM-82-axH"/>
+                                                <constraint firstAttribute="trailing" secondItem="FaX-lT-iqn" secondAttribute="trailing" id="YKW-4Y-FYd"/>
+                                                <constraint firstItem="FaX-lT-iqn" firstAttribute="leading" secondItem="CaI-Bj-Svo" secondAttribute="leading" id="rFj-y4-EpL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -4068,6 +4102,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Country" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t80-FQ-5cH">
                                                     <rect key="frame" x="62" y="10" width="289" height="30"/>
                                                     <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                 </textField>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="country" translatesAutoresizingMaskIntoConstraints="NO" id="4fA-VT-1A6" customClass="CircleImageView" customModule="FunBook" customModuleProvider="target">
@@ -5046,6 +5081,6 @@
         <image name="suburb" width="21" height="21"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zDD-np-xOK"/>
+        <segue reference="yRf-a5-UHL"/>
     </inferredMetricsTieBreakers>
 </document>

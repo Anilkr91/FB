@@ -12,7 +12,7 @@ import Gloss
 class LoginPostService {
     static func executeRequest (_ params:[String: Any], vc: UIViewController, completionHandler: @escaping (LoginResponseModel) -> Void) {
         
-         ProgressBarView.showHUD(textString: "Please Wait..")
+         ProgressBarView.showHUD(textString: "Logging in..")
         
         let header: HTTPHeaders = ["APIAUTH" : Constants.API_KEY]
         let URL = Constants.BASE_URL

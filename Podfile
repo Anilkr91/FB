@@ -17,5 +17,6 @@ target 'FunBook' do
     pod 'TOCropViewController'
     pod 'PayPal-iOS-SDK'
     pod 'RealmSwift'
+    pod 'FSPagerView'
     
 end
